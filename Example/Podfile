@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'TuyaSmartKit_Example' do
+  pod 'TuyaSmartKit', :path => '../'
+
+  target 'TuyaSmartKit_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
