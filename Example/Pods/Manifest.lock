@@ -14,9 +14,9 @@ PODS:
     - CocoaLumberjack/Core
   - CocoaLumberjack/Extensions (2.3.0):
     - CocoaLumberjack/Default
-  - Mantle (1.5.6):
-    - Mantle/extobjc (= 1.5.6)
-  - Mantle/extobjc (1.5.6)
+  - Mantle (2.0.7):
+    - Mantle/extobjc (= 2.0.7)
+  - Mantle/extobjc (2.0.7)
   - MQTTClient (0.7.4):
     - MQTTClient/Core (= 0.7.4)
   - MQTTClient/Core (0.7.4):
@@ -40,10 +40,10 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   CocoaAsyncSocket: a18c75dca4b08723628a0bacca6e94803d90be91
   CocoaLumberjack: 97fab7ee5f507fe54445cca7ea80f926729cfd15
-  Mantle: a197db93e0f1e36194b1fdbc078219a8492eaef2
+  Mantle: bc40bb061d8c2c6fb48d5083e04d928c3b7f73d9
   MQTTClient: 1c1bedf87249a317ee9324b93252867bbc443ec7
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
-  TuyaSmartKit: 1a720effd2abdafa50d50751f1517eefee3d3c38
+  TuyaSmartKit: 7c4423394e508790b0d9aa43f7732c949287807f
   UICKeyChainStore: f1cbd42216a113f0165de1e733e62905b8823432
 
 PODFILE CHECKSUM: ee3b05a97e231f8e63435995ad4f3e1af7f0489b

@@ -36,9 +36,6 @@ Pod::Spec.new do |s|
 
   s.vendored_frameworks = 'TuyaSmartKit.framework'
   s.preserve_paths      = 'TuyaSmartKit.framework'
-  s.public_header_files = 'TuyaSmartKit.framework/Headers/*.h'
-  s.source_files        = 'TuyaSmartKit.framework/Headers/*.h'
-  # s.resource            = 'TuyaSmartKit.framework/Resources/**/*'
 
   s.frameworks = 'Foundation'
   s.libraries  = 'c++', 'z'

@@ -20,8 +20,6 @@
   },
   "vendored_frameworks": "TuyaSmartKit.framework",
   "preserve_paths": "TuyaSmartKit.framework",
-  "public_header_files": "TuyaSmartKit.framework/Headers/*.h",
-  "source_files": "TuyaSmartKit.framework/Headers/*.h",
   "frameworks": "Foundation",
   "libraries": [
     "c++",
