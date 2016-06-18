@@ -188,7 +188,7 @@
 		0530154E46DAF5D313BCCDCB97EA3671 /* Reachability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		07C420E533CBE9349D400E987FE70123 /* MTLModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MTLModel.h; path = Mantle/MTLModel.h; sourceTree = "<group>"; };
 		084DDA56F4C29DAD5536CE41274CABDB /* DDLog+LOGV.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "DDLog+LOGV.h"; path = "Classes/DDLog+LOGV.h"; sourceTree = "<group>"; };
-		0C527C305F454F29F629EED06A4F501B /* TuyaSmartKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TuyaSmartKit.framework; sourceTree = "<group>"; };
+		0A8FF51C91AEABBD17B83D02B87CD49A /* TuyaSmartKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TuyaSmartKit.framework; sourceTree = "<group>"; };
 		0CD1D4C203FC3AEE30F2729FA6E57252 /* CocoaAsyncSocket-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CocoaAsyncSocket-dummy.m"; sourceTree = "<group>"; };
 		0FEC99C729D7A86491062E0B0DBAB9A1 /* NSValueTransformer+MTLPredefinedTransformerAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSValueTransformer+MTLPredefinedTransformerAdditions.m"; path = "Mantle/NSValueTransformer+MTLPredefinedTransformerAdditions.m"; sourceTree = "<group>"; };
 		1016E1112573EB62B14820E9ECC4F138 /* MTLEXTScope.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MTLEXTScope.m; path = Mantle/extobjc/MTLEXTScope.m; sourceTree = "<group>"; };
@@ -206,9 +206,11 @@
 		2213D87423317FAA217BBF4EF283B882 /* MTLReflection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MTLReflection.m; path = Mantle/MTLReflection.m; sourceTree = "<group>"; };
 		259B4D85A29656A1FBE63BE773599985 /* MTLValueTransformer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MTLValueTransformer.h; path = Mantle/MTLValueTransformer.h; sourceTree = "<group>"; };
 		29035BB3E9ED04B10118381F3FA7211B /* Pods-TuyaSmartKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TuyaSmartKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		29801B91269852615DE32B9BB2313BD6 /* TuyaSmartGroup.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TuyaSmartGroup.h; sourceTree = "<group>"; };
 		2A7972CC5D1B16829F1CA9A5EBF0F0DB /* Pods-TuyaSmartKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TuyaSmartKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		2A97B60831FA60C4BCB765A7858BF681 /* MQTTMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MQTTMessage.h; path = MQTTClient/MQTTClient/MQTTMessage.h; sourceTree = "<group>"; };
 		2AD4603CE1F3EC167F0F4CB1A4991ECB /* Pods-TuyaSmartKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TuyaSmartKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		2B185C1D27A25E62A79318526BFBBF17 /* TuyaSmartGroupModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TuyaSmartGroupModel.h; sourceTree = "<group>"; };
 		2B2CB2B5B873981342770158473179FC /* MTLJSONAdapter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MTLJSONAdapter.m; path = Mantle/MTLJSONAdapter.m; sourceTree = "<group>"; };
 		2D44AB3D5996A706967657BEDBE86101 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncSocket.m; path = Source/GCD/GCDAsyncSocket.m; sourceTree = "<group>"; };
 		2DCE3C3031B9C6C3EE7FBFA24211A115 /* MQTTDecoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MQTTDecoder.h; path = MQTTClient/MQTTClient/MQTTDecoder.h; sourceTree = "<group>"; };
@@ -219,10 +221,12 @@
 		3928EDF603958837DA1481D1552C1239 /* MQTTTransport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MQTTTransport.m; path = MQTTClient/MQTTClient/MQTTTransport.m; sourceTree = "<group>"; };
 		39E6898AFDAC2F1C0CF915814AD2A56C /* MQTTSession.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MQTTSession.m; path = MQTTClient/MQTTClient/MQTTSession.m; sourceTree = "<group>"; };
 		3C0F5E9F06038B111F8966BFCDFC6FDE /* MTLEXTScope.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MTLEXTScope.h; path = Mantle/extobjc/MTLEXTScope.h; sourceTree = "<group>"; };
+		3C8B93D660E7D046ADD0730D239A3F10 /* TuyaSmartSchemaPropertyModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TuyaSmartSchemaPropertyModel.h; sourceTree = "<group>"; };
 		3D1068B261FA8984D824376E6B01DCDD /* NSArray+MTLManipulationAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MTLManipulationAdditions.h"; path = "Mantle/NSArray+MTLManipulationAdditions.h"; sourceTree = "<group>"; };
 		3E361B3B513637C88271DA220E3E0367 /* NSObject+MTLComparisonAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MTLComparisonAdditions.m"; path = "Mantle/NSObject+MTLComparisonAdditions.m"; sourceTree = "<group>"; };
 		419F08967EEE1B5FF865E8818F8D1816 /* Pods-TuyaSmartKit_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TuyaSmartKit_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		44730DE5A46895BAD98E27B02862CB74 /* DDASLLogCapture.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDASLLogCapture.h; path = Classes/DDASLLogCapture.h; sourceTree = "<group>"; };
+		454789D1F435A118CFC0594D4D45BF25 /* TuyaSmartTimer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TuyaSmartTimer.h; sourceTree = "<group>"; };
 		459B7A0D9603DE5548FB917DCA7C1502 /* MQTTSSLSecurityPolicy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MQTTSSLSecurityPolicy.m; path = MQTTClient/MQTTClient/MQTTSSLSecurityPolicy.m; sourceTree = "<group>"; };
 		463714BEE949A3DA4FD3764A783CAC97 /* UICKeyChainStore-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UICKeyChainStore-dummy.m"; sourceTree = "<group>"; };
 		46AFC432B535F5A011FCEB2AD23276EB /* MQTTSSLSecurityPolicyEncoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MQTTSSLSecurityPolicyEncoder.h; path = MQTTClient/MQTTClient/MQTTSSLSecurityPolicyEncoder.h; sourceTree = "<group>"; };
@@ -238,14 +242,17 @@
 		51078793EB94FCD85BB95A8F3476A0C8 /* MQTTMessage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MQTTMessage.m; path = MQTTClient/MQTTClient/MQTTMessage.m; sourceTree = "<group>"; };
 		5403FE25AB9B854E46149E0F23D2E64F /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDAsyncUdpSocket.h; path = Source/GCD/GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
 		5477523B116B1254C1343A0DC2EAC781 /* NSError+MTLModelException.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSError+MTLModelException.m"; path = "Mantle/NSError+MTLModelException.m"; sourceTree = "<group>"; };
+		56370BB97A6997D18B4CE721D610094C /* TuyaSmartSDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TuyaSmartSDK.h; sourceTree = "<group>"; };
 		5D6056E0781EE0D1EA0A88F27DA7426A /* libCocoaAsyncSocket.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCocoaAsyncSocket.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D6A13C8F694C82E4867770F0F25073F /* DDLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDLog.h; path = Classes/DDLog.h; sourceTree = "<group>"; };
 		5F87247E6937624255EEF95B374A62FD /* MQTTInMemoryPersistence.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MQTTInMemoryPersistence.m; path = MQTTClient/MQTTClient/MQTTInMemoryPersistence.m; sourceTree = "<group>"; };
 		61B893140AF58028280AC24B7F6A37DE /* metamacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = metamacros.h; path = Mantle/extobjc/metamacros.h; sourceTree = "<group>"; };
 		62903AF4F4E508870D1B896D6D9F37EA /* libUICKeyChainStore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libUICKeyChainStore.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		630B942E7B260CAEA7BC0D2E4FF6DB7A /* TuyaSmartUser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TuyaSmartUser.h; sourceTree = "<group>"; };
 		632E87943F896D5C3348D99442371DD6 /* MQTTSSLSecurityPolicy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MQTTSSLSecurityPolicy.h; path = MQTTClient/MQTTClient/MQTTSSLSecurityPolicy.h; sourceTree = "<group>"; };
 		6400535556279D937DDE97E1B8ADF0D5 /* MQTTTransport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MQTTTransport.h; path = MQTTClient/MQTTClient/MQTTTransport.h; sourceTree = "<group>"; };
 		649969A8DFF5593E7A2FD7D72A147929 /* Pods-TuyaSmartKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TuyaSmartKit_Example.release.xcconfig"; sourceTree = "<group>"; };
+		668703663C3E3EBE3F69D5E071F01564 /* TuyaSmartMember.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TuyaSmartMember.h; sourceTree = "<group>"; };
 		668C11ABBA06117CF57E3D31409DD958 /* NSObject+MTLComparisonAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MTLComparisonAdditions.h"; path = "Mantle/NSObject+MTLComparisonAdditions.h"; sourceTree = "<group>"; };
 		68A0A74A0DB6A43D8A5561836745BBAC /* NSDictionary+MTLManipulationAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+MTLManipulationAdditions.m"; path = "Mantle/NSDictionary+MTLManipulationAdditions.m"; sourceTree = "<group>"; };
 		6A6E88AD92DD71344111AB5944F948FC /* MQTTDecoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MQTTDecoder.m; path = MQTTClient/MQTTClient/MQTTDecoder.m; sourceTree = "<group>"; };
@@ -270,14 +277,18 @@
 		86788AB79EAAA8241F2B22477FF4CE31 /* MTLReflection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MTLReflection.h; path = Mantle/MTLReflection.h; sourceTree = "<group>"; };
 		87287D82FCA6018E064F0AE2B21C7DDE /* CocoaLumberjack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CocoaLumberjack.h; path = Classes/CocoaLumberjack.h; sourceTree = "<group>"; };
 		88BF1814BF1BF40DF941C882C96BA49C /* libCocoaLumberjack.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCocoaLumberjack.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B79EC683946F7191618E30DC737EF2D /* TuyaSmartKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TuyaSmartKit.h; sourceTree = "<group>"; };
 		8C2AEBFA84D627ED5314765F95D7E495 /* MQTTCFSocketTransport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MQTTCFSocketTransport.h; path = MQTTClient/MQTTClient/MQTTCFSocketTransport.h; sourceTree = "<group>"; };
 		8E4F17F14AFBAA008462BDF5196C48B7 /* CocoaLumberjack.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CocoaLumberjack.xcconfig; sourceTree = "<group>"; };
+		8E5780C8BF0C510970F84CE81BB4784D /* TuyaSmartSchemaModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TuyaSmartSchemaModel.h; sourceTree = "<group>"; };
 		8F064E0421E5ED8397B595C1EC823582 /* MQTTSessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MQTTSessionManager.h; path = MQTTClient/MQTTClient/MQTTSessionManager.h; sourceTree = "<group>"; };
 		909AD09E0A057DC210850F3339E873F8 /* DDLogMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDLogMacros.h; path = Classes/DDLogMacros.h; sourceTree = "<group>"; };
+		91346DCC10D1534EDD94F0814F1A1C0E /* TuyaSmartFeedback.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TuyaSmartFeedback.h; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		96B1D706AAB9EE8865CE900CAEDBF0B9 /* MTLManagedObjectAdapter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MTLManagedObjectAdapter.m; path = Mantle/MTLManagedObjectAdapter.m; sourceTree = "<group>"; };
 		96D9DEBE47996EEDE5D3B7F7A1A7603C /* MQTTSSLSecurityPolicyDecoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MQTTSSLSecurityPolicyDecoder.h; path = MQTTClient/MQTTClient/MQTTSSLSecurityPolicyDecoder.h; sourceTree = "<group>"; };
 		98144598AB88AA6E2CC7D47F81288F19 /* Mantle-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Mantle-prefix.pch"; sourceTree = "<group>"; };
+		98553E523359B1E8A47FF883D5D1FF17 /* TuyaSmartMemberModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TuyaSmartMemberModel.h; sourceTree = "<group>"; };
 		98DBF1F3C87669E4C39884C6F35A82DB /* DDContextFilterLogFormatter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDContextFilterLogFormatter.h; path = Classes/Extensions/DDContextFilterLogFormatter.h; sourceTree = "<group>"; };
 		99582C585FD1E77F26B3D17F09DA6DA1 /* MQTTSessionLegacy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MQTTSessionLegacy.h; path = MQTTClient/MQTTClient/MQTTSessionLegacy.h; sourceTree = "<group>"; };
 		9B2564F38CC67F08B549F3B38452FB86 /* DDFileLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDFileLogger.m; path = Classes/DDFileLogger.m; sourceTree = "<group>"; };
@@ -299,12 +310,14 @@
 		B886E490D0B90E88BB35B09750338918 /* CocoaAsyncSocket-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaAsyncSocket-prefix.pch"; sourceTree = "<group>"; };
 		B9AE681656FAF510397236BC2F03290C /* DDASLLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDASLLogger.h; path = Classes/DDASLLogger.h; sourceTree = "<group>"; };
 		BF8A1E1A5E73D620CBAB691E3D6AAE5D /* UICKeyChainStore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UICKeyChainStore.xcconfig; sourceTree = "<group>"; };
+		C0595E7FA938BEDF3DC67490E78D578E /* TYModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TYModel.h; sourceTree = "<group>"; };
 		C29335C431D5990CE135EEAFDAF18162 /* UICKeyChainStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UICKeyChainStore.h; path = Lib/UICKeyChainStore/UICKeyChainStore.h; sourceTree = "<group>"; };
 		C377C8E3D7F512B848A031674A22C00D /* MQTTSSLSecurityPolicyTransport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MQTTSSLSecurityPolicyTransport.m; path = MQTTClient/MQTTClient/MQTTSSLSecurityPolicyTransport.m; sourceTree = "<group>"; };
 		C61224C70102DEB9217C1A095039CBF5 /* AsyncUdpSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AsyncUdpSocket.h; path = Source/RunLoop/AsyncUdpSocket.h; sourceTree = "<group>"; };
 		C850A887681F5C4B64218DA07D5DBB41 /* libPods-TuyaSmartKit_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TuyaSmartKit_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAFDA8862F3FAE437C4E6525EA08B61E /* Mantle-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Mantle-dummy.m"; sourceTree = "<group>"; };
 		CC84335FCC3D1EF5497389AB40A0482F /* CocoaAsyncSocket.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CocoaAsyncSocket.xcconfig; sourceTree = "<group>"; };
+		CCD80AD8F550664FFA54F15F7C9C856E /* TuyaSmartRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TuyaSmartRequest.h; sourceTree = "<group>"; };
 		CFBD53EAF11BBFB1D50DF99EA6F93E64 /* Pods-TuyaSmartKit_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TuyaSmartKit_Example-resources.sh"; sourceTree = "<group>"; };
 		D1598BF53032CBCD4AAC80005DB58695 /* MQTTCFSocketEncoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MQTTCFSocketEncoder.h; path = MQTTClient/MQTTClient/MQTTCFSocketEncoder.h; sourceTree = "<group>"; };
 		D3E993FB18983A712B8731DB1C0A65EE /* NSValueTransformer+MTLInversionAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSValueTransformer+MTLInversionAdditions.h"; path = "Mantle/NSValueTransformer+MTLInversionAdditions.h"; sourceTree = "<group>"; };
@@ -315,6 +328,7 @@
 		DF0AEA63CA809BE046FF88975090796A /* MQTTClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MQTTClient.h; path = MQTTClient/MQTTClient/MQTTClient.h; sourceTree = "<group>"; };
 		E10A5C4CFEAC2AC0B43E8A4C08F693AC /* libMantle.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMantle.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E18B0484D05D9EE3763AD0D6288280B2 /* DDAssertMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDAssertMacros.h; path = Classes/DDAssertMacros.h; sourceTree = "<group>"; };
+		E19492C2E3267F9F54A441F8764AB9C7 /* TuyaSmartKitConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TuyaSmartKitConstants.h; sourceTree = "<group>"; };
 		E65A057850E92BF229CD2308BC55EB79 /* Reachability-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Reachability-dummy.m"; sourceTree = "<group>"; };
 		E9E9CBE190D498336322C759D3F40CCA /* MQTTCFSocketDecoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MQTTCFSocketDecoder.h; path = MQTTClient/MQTTClient/MQTTCFSocketDecoder.h; sourceTree = "<group>"; };
 		EA348E1536EBE6A0C80B2035A4B9682A /* Pods-TuyaSmartKit_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TuyaSmartKit_Tests-resources.sh"; sourceTree = "<group>"; };
@@ -322,12 +336,16 @@
 		EBDE8C22EE614B228B0AF6DD012C9F5F /* DDAbstractDatabaseLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDAbstractDatabaseLogger.m; path = Classes/DDAbstractDatabaseLogger.m; sourceTree = "<group>"; };
 		EEA43587EE27E05C82D026DF902B3DC0 /* DDMultiFormatter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDMultiFormatter.h; path = Classes/Extensions/DDMultiFormatter.h; sourceTree = "<group>"; };
 		F09C5007830917E54FB126C21727777B /* MTLJSONAdapter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MTLJSONAdapter.h; path = Mantle/MTLJSONAdapter.h; sourceTree = "<group>"; };
+		F0EE3EA53E72A457D1689F1D5B6E9D25 /* TuyaSmartDeviceModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TuyaSmartDeviceModel.h; sourceTree = "<group>"; };
 		F35DD898614CF3CE007D1C532F0D2A60 /* MQTTCFSocketTransport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MQTTCFSocketTransport.m; path = MQTTClient/MQTTClient/MQTTCFSocketTransport.m; sourceTree = "<group>"; };
+		F3CC95C95B4B98F403E0E49DA33BCC92 /* TuyaSmartActivator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TuyaSmartActivator.h; sourceTree = "<group>"; };
 		F58D0A89CED0D4C98F5024EDDC253EC8 /* MTLModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MTLModel.m; path = Mantle/MTLModel.m; sourceTree = "<group>"; };
 		F67946466DB5CC5D98BEF09DA96D54DD /* DDDispatchQueueLogFormatter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDDispatchQueueLogFormatter.h; path = Classes/Extensions/DDDispatchQueueLogFormatter.h; sourceTree = "<group>"; };
 		F690A6225BCEA184EE0BD4C341B4F888 /* MQTTClient.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MQTTClient.xcconfig; sourceTree = "<group>"; };
+		F8721E811624BFCC1A0E631A109701F3 /* TuyaSmartFirmwareUpgradeModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TuyaSmartFirmwareUpgradeModel.h; sourceTree = "<group>"; };
 		F99A26AA4DF0454EA08438C7284284AC /* DDASLLogCapture.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDASLLogCapture.m; path = Classes/DDASLLogCapture.m; sourceTree = "<group>"; };
 		FA3DF885308A741C466A4C9DF62825B8 /* MQTTCFSocketEncoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MQTTCFSocketEncoder.m; path = MQTTClient/MQTTClient/MQTTCFSocketEncoder.m; sourceTree = "<group>"; };
+		FAC848DC142D6A41B81C59CF623BF226 /* TuyaSmartDevice.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TuyaSmartDevice.h; sourceTree = "<group>"; };
 		FD3BA84C8942779D150990E9F6CE6440 /* UICKeyChainStore-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UICKeyChainStore-prefix.pch"; sourceTree = "<group>"; };
 		FF3A4EF9039CB3FEC352364471CA73F5 /* NSValueTransformer+MTLInversionAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSValueTransformer+MTLInversionAdditions.m"; path = "Mantle/NSValueTransformer+MTLInversionAdditions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -430,6 +448,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		1720E60FECB75043CAE8DC5694897AE5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0A8FF51C91AEABBD17B83D02B87CD49A /* TuyaSmartKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		21C91B280D7EB041CDC29EEF6CB8F435 /* Pods-TuyaSmartKit_Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -506,6 +532,14 @@
 			path = "../Target Support Files/UICKeyChainStore";
 			sourceTree = "<group>";
 		};
+		54F6B3681951E8A903C4A93FC852036F /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				61D6F1B116515E7125E3A31848D63C68 /* TuyaSmartKit */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
 		5737F08EC244A6C1EFB043D3479ABBCF /* CocoaLumberjack */ = {
 			isa = PBXGroup;
 			children = (
@@ -517,20 +551,29 @@
 			path = CocoaLumberjack;
 			sourceTree = "<group>";
 		};
-		6477BD9111C6AC55F5110EC0DEF36DA9 /* TuyaSmartKit */ = {
+		61D6F1B116515E7125E3A31848D63C68 /* TuyaSmartKit */ = {
 			isa = PBXGroup;
 			children = (
-				968943D5E5B8B2F9A280973F7F39BE13 /* Frameworks */,
+				1720E60FECB75043CAE8DC5694897AE5 /* Frameworks */,
+				7A3AD03F5387CB53386F70402B42045B /* TuyaSmartKit.framework */,
 			);
 			name = TuyaSmartKit;
 			path = ../..;
+			sourceTree = "<group>";
+		};
+		7A3AD03F5387CB53386F70402B42045B /* TuyaSmartKit.framework */ = {
+			isa = PBXGroup;
+			children = (
+				936AE12C613DE39012EE7CD4AA6CB986 /* Headers */,
+			);
+			path = TuyaSmartKit.framework;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				B867C522161B8AF669F937B62050A51F /* Development Pods */,
+				54F6B3681951E8A903C4A93FC852036F /* Development Pods */,
 				14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */,
 				48F0A4AC4A42CF918BAE8514A0265A3B /* Pods */,
 				A3DB54965A3D1AD883A294CC3ECAB7B3 /* Products */,
@@ -560,12 +603,29 @@
 			name = RunLoop;
 			sourceTree = "<group>";
 		};
-		968943D5E5B8B2F9A280973F7F39BE13 /* Frameworks */ = {
+		936AE12C613DE39012EE7CD4AA6CB986 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
-				0C527C305F454F29F629EED06A4F501B /* TuyaSmartKit.framework */,
+				F3CC95C95B4B98F403E0E49DA33BCC92 /* TuyaSmartActivator.h */,
+				FAC848DC142D6A41B81C59CF623BF226 /* TuyaSmartDevice.h */,
+				F0EE3EA53E72A457D1689F1D5B6E9D25 /* TuyaSmartDeviceModel.h */,
+				91346DCC10D1534EDD94F0814F1A1C0E /* TuyaSmartFeedback.h */,
+				F8721E811624BFCC1A0E631A109701F3 /* TuyaSmartFirmwareUpgradeModel.h */,
+				29801B91269852615DE32B9BB2313BD6 /* TuyaSmartGroup.h */,
+				2B185C1D27A25E62A79318526BFBBF17 /* TuyaSmartGroupModel.h */,
+				8B79EC683946F7191618E30DC737EF2D /* TuyaSmartKit.h */,
+				E19492C2E3267F9F54A441F8764AB9C7 /* TuyaSmartKitConstants.h */,
+				668703663C3E3EBE3F69D5E071F01564 /* TuyaSmartMember.h */,
+				98553E523359B1E8A47FF883D5D1FF17 /* TuyaSmartMemberModel.h */,
+				CCD80AD8F550664FFA54F15F7C9C856E /* TuyaSmartRequest.h */,
+				8E5780C8BF0C510970F84CE81BB4784D /* TuyaSmartSchemaModel.h */,
+				3C8B93D660E7D046ADD0730D239A3F10 /* TuyaSmartSchemaPropertyModel.h */,
+				56370BB97A6997D18B4CE721D610094C /* TuyaSmartSDK.h */,
+				454789D1F435A118CFC0594D4D45BF25 /* TuyaSmartTimer.h */,
+				630B942E7B260CAEA7BC0D2E4FF6DB7A /* TuyaSmartUser.h */,
+				C0595E7FA938BEDF3DC67490E78D578E /* TYModel.h */,
 			);
-			name = Frameworks;
+			path = Headers;
 			sourceTree = "<group>";
 		};
 		A3DB54965A3D1AD883A294CC3ECAB7B3 /* Products */ = {
@@ -604,14 +664,6 @@
 				1016E1112573EB62B14820E9ECC4F138 /* MTLEXTScope.m */,
 			);
 			name = extobjc;
-			sourceTree = "<group>";
-		};
-		B867C522161B8AF669F937B62050A51F /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				6477BD9111C6AC55F5110EC0DEF36DA9 /* TuyaSmartKit */,
-			);
-			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		C256DC99A9B3E6AE65E2BE6AA5F2E302 /* Mantle */ = {

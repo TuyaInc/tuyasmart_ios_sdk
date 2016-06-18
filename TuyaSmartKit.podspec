@@ -29,8 +29,6 @@ Pod::Spec.new do |s|
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '7.0'
-
-  # s.source_files = 'TuyaSmartKit/Classes/**/*'
   
   # s.resource_bundles = {
   #   'TuyaSmartKit' => ['TuyaSmartKit/Assets/*.png']
@@ -39,7 +37,8 @@ Pod::Spec.new do |s|
   s.vendored_frameworks = 'TuyaSmartKit.framework'
   s.preserve_paths      = 'TuyaSmartKit.framework'
   s.public_header_files = 'TuyaSmartKit.framework/Headers/*.h'
-  s.resource            = 'TuyaSmartKit.framework/Resources/**/*'
+  s.source_files        = 'TuyaSmartKit.framework/Headers/*.h'
+  # s.resource            = 'TuyaSmartKit.framework/Resources/**/*'
 
   s.frameworks = 'Foundation'
   s.libraries  = 'c++', 'z'
