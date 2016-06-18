@@ -1,29 +1,45 @@
-# TuyaSmartKit
+# 涂鸦智能iOS SDK
 
-[![CI Status](http://img.shields.io/travis/gaosen/TuyaSmartKit.svg?style=flat)](https://travis-ci.org/gaosen/TuyaSmartKit)
-[![Version](https://img.shields.io/cocoapods/v/TuyaSmartKit.svg?style=flat)](http://cocoapods.org/pods/TuyaSmartKit)
-[![License](https://img.shields.io/cocoapods/l/TuyaSmartKit.svg?style=flat)](http://cocoapods.org/pods/TuyaSmartKit)
-[![Platform](https://img.shields.io/cocoapods/p/TuyaSmartKit.svg?style=flat)](http://cocoapods.org/pods/TuyaSmartKit)
+## 功能概述
 
-## Example
+涂鸦智能APP SDK提供了与硬件设备、涂鸦云通讯的接口封装，加速应用开发过程，主要包括了以下功能：
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+- 硬件设备相关（配网、控制、状态上报、定时任务、群组、固件升级、共享）
+- 账户体系（手机号、邮箱的注册、登录、重置密码等通用的账户功能）
+- 消息中心
+- 意见反馈
+- 涂鸦云HTTP API接口封装
 
-## Requirements
+## 快速集成
 
-## Installation
+### 使用Cocoapods集成
 
-TuyaSmartKit is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+在`Podfile`文件中添加以下内容：
 
 ```ruby
 pod "TuyaSmartKit"
 ```
 
-## Author
+然后在项目根目录下执行`pod install`命令，集成第三方库。
 
-gaosen, 0x5e@sina.cn
+CocoaPods的使用请参考：[CocoaPods Guides](https://guides.cocoapods.org/)
 
-## License
+## 初始化SDK
 
-TuyaSmartKit is available under the MIT license. See the LICENSE file for more info.
+在项目的`PrefixHeader.pch`文件添加以下内容：
+
+```objc
+#import <TuyaSmartKit/TuyaSmartKit.h>
+```
+
+打开`AppDelegate.m`文件，在`[AppDelegate application:didFinishLaunchingWithOptions:]`方法中初始化SDK：
+
+```objc
+[[TuyaSmartSDK sharedInstance] startWithAppKey:<#your_app_key#> secretKey:<#your_secret_key#>];
+```
+
+至此，准备工作已经全部完毕，可以开始App开发啦。
+
+## 开发文档
+
+请参考: [涂鸦文档中心 - iOS SDK使用说明](http://docs.tuya.com/develop/app-development/ios-sdk/)
