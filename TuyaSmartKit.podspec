@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TuyaSmartKit'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of TuyaSmartKit.'
+  s.version          = '1.2.4'
+  s.summary          = '涂鸦智能iOS SDK'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,25 +18,38 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+涂鸦智能APP SDK提供了与硬件设备、涂鸦云通讯的接口封装，加速应用开发过程。
                        DESC
 
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/TuyaSmartKit'
+  s.homepage         = 'http://www.tuya.com'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'gaosen' => '0x5e@sina.cn' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/TuyaSmartKit.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/TuyaInc/tuyasmart_ios_sdk.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '7.0'
 
-  s.source_files = 'TuyaSmartKit/Classes/**/*'
+  # s.source_files = 'TuyaSmartKit/Classes/**/*'
   
   # s.resource_bundles = {
   #   'TuyaSmartKit' => ['TuyaSmartKit/Assets/*.png']
   # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.vendored_frameworks = 'TuyaSmartKit.framework'
+  s.preserve_paths      = 'TuyaSmartKit.framework'
+  s.public_header_files = 'TuyaSmartKit.framework/Headers/*.h'
+  s.resource            = 'TuyaSmartKit.framework/Resources/**/*'
+
+  s.frameworks = 'Foundation'
+  s.libraries  = 'c++', 'z'
+
+  s.dependency 'CocoaAsyncSocket'
+  s.dependency 'MQTTClient', '0.7.4'
+  s.dependency 'Mantle'
+  s.dependency 'UICKeyChainStore'
+  s.dependency 'Reachability'
+
+  s.user_target_xcconfig = { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES' }
+
 end

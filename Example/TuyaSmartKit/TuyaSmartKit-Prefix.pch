@@ -13,4 +13,6 @@
 #ifdef __OBJC__
     @import UIKit;
     @import Foundation;
+    @import TuyaSmartKit;
+//    #import <TuyaSmartKit/TuyaSmartKit.h>
 #endif

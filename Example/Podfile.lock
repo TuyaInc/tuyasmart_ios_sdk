@@ -1,0 +1,51 @@
+PODS:
+  - CocoaAsyncSocket (7.4.3):
+    - CocoaAsyncSocket/All (= 7.4.3)
+  - CocoaAsyncSocket/All (7.4.3):
+    - CocoaAsyncSocket/GCD
+    - CocoaAsyncSocket/RunLoop
+  - CocoaAsyncSocket/GCD (7.4.3)
+  - CocoaAsyncSocket/RunLoop (7.4.3)
+  - CocoaLumberjack (2.3.0):
+    - CocoaLumberjack/Default (= 2.3.0)
+    - CocoaLumberjack/Extensions (= 2.3.0)
+  - CocoaLumberjack/Core (2.3.0)
+  - CocoaLumberjack/Default (2.3.0):
+    - CocoaLumberjack/Core
+  - CocoaLumberjack/Extensions (2.3.0):
+    - CocoaLumberjack/Default
+  - Mantle (1.5.6):
+    - Mantle/extobjc (= 1.5.6)
+  - Mantle/extobjc (1.5.6)
+  - MQTTClient (0.7.4):
+    - MQTTClient/Core (= 0.7.4)
+  - MQTTClient/Core (0.7.4):
+    - CocoaLumberjack
+  - Reachability (3.2)
+  - TuyaSmartKit (1.2.4):
+    - CocoaAsyncSocket
+    - Mantle
+    - MQTTClient (= 0.7.4)
+    - Reachability
+    - UICKeyChainStore
+  - UICKeyChainStore (2.1.0)
+
+DEPENDENCIES:
+  - TuyaSmartKit (from `../`)
+
+EXTERNAL SOURCES:
+  TuyaSmartKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CocoaAsyncSocket: a18c75dca4b08723628a0bacca6e94803d90be91
+  CocoaLumberjack: 97fab7ee5f507fe54445cca7ea80f926729cfd15
+  Mantle: a197db93e0f1e36194b1fdbc078219a8492eaef2
+  MQTTClient: 1c1bedf87249a317ee9324b93252867bbc443ec7
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+  TuyaSmartKit: 0c31d3f01a1e336efe76bf313dd561e6194d2701
+  UICKeyChainStore: f1cbd42216a113f0165de1e733e62905b8823432
+
+PODFILE CHECKSUM: ee3b05a97e231f8e63435995ad4f3e1af7f0489b
+
+COCOAPODS: 1.0.1

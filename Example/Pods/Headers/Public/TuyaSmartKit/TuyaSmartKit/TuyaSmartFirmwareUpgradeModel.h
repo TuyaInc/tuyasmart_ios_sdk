@@ -1,0 +1,1 @@
+../../../../../../TuyaSmartKit.framework/Headers/TuyaSmartFirmwareUpgradeModel.h

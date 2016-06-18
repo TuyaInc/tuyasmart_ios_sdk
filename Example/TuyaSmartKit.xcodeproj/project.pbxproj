@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24251DC2B2F10930AFED3A76 /* libPods-TuyaSmartKit_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 996DAC234DFC756A1DB5C345 /* libPods-TuyaSmartKit_Example.a */; };
+		53D912E3D0C42A3FA5DD33B3 /* libPods-TuyaSmartKit_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 89477B9482E23A97EB6990C6 /* libPods-TuyaSmartKit_Tests.a */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -21,8 +23,6 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
-		B09A03BD702D3844B9BD94C9 /* Pods_TuyaSmartKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F24A9530A8DB8B1A7FEC5E4 /* Pods_TuyaSmartKit_Example.framework */; };
-		E926161F502F1B73BEDECD2B /* Pods_TuyaSmartKit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48BD07FB4F34B7BD9B3CD32F /* Pods_TuyaSmartKit_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +37,6 @@
 
 /* Begin PBXFileReference section */
 		34FE03CD180C3D6FF722CBD6 /* Pods-TuyaSmartKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuyaSmartKit_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TuyaSmartKit_Example/Pods-TuyaSmartKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		48BD07FB4F34B7BD9B3CD32F /* Pods_TuyaSmartKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TuyaSmartKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5728632474147E10FD500A10 /* Pods-TuyaSmartKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuyaSmartKit_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TuyaSmartKit_Tests/Pods-TuyaSmartKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* TuyaSmartKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TuyaSmartKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -60,9 +59,10 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		66FE4595EA9748BA3FD8FBE0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		8F24A9530A8DB8B1A7FEC5E4 /* Pods_TuyaSmartKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TuyaSmartKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		89477B9482E23A97EB6990C6 /* libPods-TuyaSmartKit_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TuyaSmartKit_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9687F588FD96516D57EE1EF9 /* Pods-TuyaSmartKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuyaSmartKit_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-TuyaSmartKit_Example/Pods-TuyaSmartKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		9792C7FF0AAFC534D87D1F43 /* Pods-TuyaSmartKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuyaSmartKit_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TuyaSmartKit_Tests/Pods-TuyaSmartKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		996DAC234DFC756A1DB5C345 /* libPods-TuyaSmartKit_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TuyaSmartKit_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B076F9AACB4287E2631C60C6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		D85D2CEE8AB6C7B8F7E904B4 /* TuyaSmartKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = TuyaSmartKit.podspec; path = ../TuyaSmartKit.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,7 +75,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				B09A03BD702D3844B9BD94C9 /* Pods_TuyaSmartKit_Example.framework in Frameworks */,
+				24251DC2B2F10930AFED3A76 /* libPods-TuyaSmartKit_Example.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +86,7 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				E926161F502F1B73BEDECD2B /* Pods_TuyaSmartKit_Tests.framework in Frameworks */,
+				53D912E3D0C42A3FA5DD33B3 /* libPods-TuyaSmartKit_Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,8 +121,8 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				8F24A9530A8DB8B1A7FEC5E4 /* Pods_TuyaSmartKit_Example.framework */,
-				48BD07FB4F34B7BD9B3CD32F /* Pods_TuyaSmartKit_Tests.framework */,
+				996DAC234DFC756A1DB5C345 /* libPods-TuyaSmartKit_Example.a */,
+				89477B9482E23A97EB6990C6 /* libPods-TuyaSmartKit_Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -467,7 +467,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -500,7 +500,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

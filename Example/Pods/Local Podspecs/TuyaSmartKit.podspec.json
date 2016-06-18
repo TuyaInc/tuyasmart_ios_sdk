@@ -1,0 +1,50 @@
+{
+  "name": "TuyaSmartKit",
+  "version": "1.2.4",
+  "summary": "涂鸦智能iOS SDK",
+  "description": "涂鸦智能APP SDK提供了与硬件设备、涂鸦云通讯的接口封装，加速应用开发过程。",
+  "homepage": "http://www.tuya.com",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "gaosen": "0x5e@sina.cn"
+  },
+  "source": {
+    "git": "https://github.com/TuyaInc/tuyasmart_ios_sdk.git",
+    "tag": "1.2.4"
+  },
+  "platforms": {
+    "ios": "7.0"
+  },
+  "vendored_frameworks": "TuyaSmartKit.framework",
+  "preserve_paths": "TuyaSmartKit.framework",
+  "public_header_files": "TuyaSmartKit.framework/Headers/*.h",
+  "resources": "TuyaSmartKit.framework/Resources/**/*",
+  "frameworks": "Foundation",
+  "libraries": [
+    "c++",
+    "z"
+  ],
+  "dependencies": {
+    "CocoaAsyncSocket": [
+
+    ],
+    "MQTTClient": [
+      "0.7.4"
+    ],
+    "Mantle": [
+
+    ],
+    "UICKeyChainStore": [
+
+    ],
+    "Reachability": [
+
+    ]
+  },
+  "user_target_xcconfig": {
+    "CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES": "YES"
+  }
+}
