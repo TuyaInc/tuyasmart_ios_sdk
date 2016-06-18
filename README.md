@@ -17,7 +17,7 @@
 在`Podfile`文件中添加以下内容：
 
 ```ruby
-pod "TuyaSmartKit"
+pod "TuyaSmartKit", :git => "https://github.com/TuyaInc/tuyasmart_ios_sdk.git"
 ```
 
 然后在项目根目录下执行`pod install`命令，集成第三方库。
