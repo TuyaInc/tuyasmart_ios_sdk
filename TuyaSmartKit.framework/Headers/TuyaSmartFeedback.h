@@ -6,6 +6,9 @@
 //  Copyright © 2016年 Tuya. All rights reserved.
 //
 
+#ifndef TuyaSmart_TuyaSmartFeedback
+#define TuyaSmart_TuyaSmartFeedback
+
 #import <Foundation/Foundation.h>
 #import "TYModel.h"
 #import "TuyaSmartKitConstants.h"
@@ -108,3 +111,5 @@ typedef enum : NSUInteger {
 - (void)cancelRequest;
 
 @end
+
+#endif

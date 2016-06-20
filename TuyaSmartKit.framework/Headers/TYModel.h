@@ -6,6 +6,9 @@
 //  Copyright © 2016年 Tuya. All rights reserved.
 //
 
+#ifndef TuyaSmart_TYModel
+#define TuyaSmart_TYModel
+
 #import <Mantle/Mantle.h>
 
 @interface TYModel : MTLModel <MTLJSONSerializing>
@@ -17,3 +20,5 @@
 + (NSDictionary *)modelPropertyKeyMap;
 
 @end
+
+#endif

@@ -6,6 +6,10 @@
 //  Copyright © 2015年 Tuya. All rights reserved.
 //
 
+#ifndef TuyaSmart_TuyaSmartMember
+#define TuyaSmart_TuyaSmartMember
+
+#import <Foundation/Foundation.h>
 #import "TuyaSmartMemberModel.h"
 #import "TuyaSmartDeviceModel.h"
 
@@ -116,3 +120,5 @@ typedef enum : NSUInteger {
 - (void)addNewMember:(TuyaSmartMemberModel *)member success:(TYSuccessHandler)success failure:(TYFailureError)failure __deprecated_msg("Replaced by -addNewMember:phoneCode:userAccount:relationship:success:failure");
 
 @end
+
+#endif

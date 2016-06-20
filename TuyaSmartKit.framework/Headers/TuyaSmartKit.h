@@ -6,23 +6,17 @@
 //  Copyright (c) 2015年 Tuya. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#define TUYA_SDK_VERSION @"1.2.6"
 
-//! Project version number for TuyaSmartKit.
-FOUNDATION_EXPORT double TuyaSmartKitVersionNumber;
+#import <Foundation/Foundation.h>
 
-//! Project version string for TuyaSmartKit.
-FOUNDATION_EXPORT const unsigned char TuyaSmartKitVersionString[];
-
-// In this header, you should import all the public headers of your framework using statements like #import <TuyaSmartKit/PublicHeader.h>
-
-
-#import <TuyaSmartKit/TuyaSmartSDK.h>
-#import <TuyaSmartKit/TuyaSmartActivator.h>
-#import <TuyaSmartKit/TuyaSmartDevice.h>
-#import <TuyaSmartKit/TuyaSmartUser.h>
-#import <TuyaSmartKit/TuyaSmartMember.h>
-#import <TuyaSmartKit/TuyaSmartFeedback.h>
-#import <TuyaSmartKit/TuyaSmartTimer.h>
-#import <TuyaSmartKit/TuyaSmartGroup.h>
-#import <TuyaSmartKit/TuyaSmartRequest.h>
+#import "TuyaSmartKitConstants.h"
+#import "TuyaSmartSDK.h"
+#import "TuyaSmartUser.h"
+#import "TuyaSmartActivator.h"
+#import "TuyaSmartDevice.h"
+#import "TuyaSmartGroup.h"
+#import "TuyaSmartMember.h"
+#import "TuyaSmartFeedback.h"
+#import "TuyaSmartTimer.h"
+#import "TuyaSmartRequest.h"

@@ -6,6 +6,9 @@
 //  Copyright (c) 2015年 Tuya. All rights reserved.
 //
 
+#ifndef TuyaSmart_TuyaSmartSchemaModel
+#define TuyaSmart_TuyaSmartSchemaModel
+
 #import "TYModel.h"
 #import "TuyaSmartSchemaPropertyModel.h"
 
@@ -20,3 +23,5 @@
 @property (nonatomic, strong) TuyaSmartSchemaPropertyModel *property;
 
 @end
+
+#endif

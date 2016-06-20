@@ -6,6 +6,9 @@
 //  Copyright (c) 2015年 Tuya. All rights reserved.
 //
 
+#ifndef TuyaSmart_TuyaSmartUser
+#define TuyaSmart_TuyaSmartUser
+
 #import <Foundation/Foundation.h>
 #import "TuyaSmartKitConstants.h"
 #import "TuyaSmartDeviceModel.h"
@@ -26,11 +29,18 @@ FOUNDATION_EXPORT NSString * const TuyaSmartUserNotificationUserSessionInvalid;
 /// 昵称
 @property (nonatomic, strong, readonly) NSString *nickname;
 
-/// 用户名
+/// 用户名 如果主账号是手机号，userName就是手机号 如果主账号是邮箱，userName就是邮箱
 @property (nonatomic, strong, readonly) NSString *userName;
 
 /// 手机号
 @property (nonatomic, strong, readonly) NSString *phoneNumber;
+
+/// 邮箱
+@property (nonatomic, strong, readonly) NSString *email;
+
+/// 国家区号
+@property (nonatomic, strong, readonly) NSString *countryCode;
+
 
 /// 是否已登录
 @property (nonatomic, assign, readonly) BOOL isLogin;
@@ -293,6 +303,17 @@ FOUNDATION_EXPORT NSString * const TuyaSmartUserNotificationUserSessionInvalid;
 - (void)syncDeviceWithCloud:(TYSuccessHandler)success
                     failure:(TYFailureHandler)failure;
 
+
+/**
+ *  更新用户信息
+ *
+ *  @param success 操作成功回调
+ *  @param failure 操作失败回调
+ */
+- (void)updateUserInfo:(TYSuccessHandler)success
+               failure:(TYFailureError)failure;
+
+
 /**
  *  获取体验中心设备列表
  *
@@ -330,3 +351,5 @@ FOUNDATION_EXPORT NSString * const TuyaSmartUserNotificationUserSessionInvalid;
 - (void)cancelRequest;
 
 @end
+
+#endif

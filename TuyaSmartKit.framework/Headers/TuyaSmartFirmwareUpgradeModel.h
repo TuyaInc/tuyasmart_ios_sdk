@@ -6,6 +6,9 @@
 //  Copyright (c) 2015年 Tuya. All rights reserved.
 //
 
+#ifndef TuyaSmart_TuyaSmartFirmwareUpgradeModel
+#define TuyaSmart_TuyaSmartFirmwareUpgradeModel
+
 #import "TYModel.h"
 
 @interface TuyaSmartFirmwareUpgradeModel : TYModel
@@ -18,3 +21,5 @@
 @property (nonatomic, assign) NSInteger upgradeType;//0:app提醒升级 2:app强制升级 3:检测升级
 
 @end
+
+#endif

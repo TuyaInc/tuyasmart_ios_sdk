@@ -6,6 +6,10 @@
 //  Copyright (c) 2015年 Tuya. All rights reserved.
 //
 
+#ifndef TuyaSmart_TuyaSmartDevice
+#define TuyaSmart_TuyaSmartDevice
+
+#import <Foundation/Foundation.h>
 #import "TuyaSmartFirmwareUpgradeModel.h"
 #import "TuyaSmartDeviceModel.h"
 #import "TuyaSmartKitConstants.h"
@@ -107,23 +111,6 @@ typedef enum : NSUInteger {
  */
 - (void)syncWithCloud:(TYSuccessHandler)success failure:(TYFailureError)failure;
 
-/**
- *  获取统计数据
- *
- *  @param type     统计单位,年月日("hour","day","month")
- *  @param date     时间
- *  @param number   数量(最大值50)
- *  @param dpId     dp点Id
- *  @param success  操作成功回调
- *  @param failure  操作失败回调
- */
-- (void)getStatWithType:(NSString *)type
-                   date:(NSDate *)date
-                 number:(NSUInteger)number
-                   dpId:(NSUInteger)dpId
-                success:(TYSuccessList)success
-                failure:(TYFailureError)failure;
-
 /** 重置设备
  @param success 操作成功回调
  @param failure 操作失败回调
@@ -158,3 +145,4 @@ typedef enum : NSUInteger {
 
 @end
 
+#endif

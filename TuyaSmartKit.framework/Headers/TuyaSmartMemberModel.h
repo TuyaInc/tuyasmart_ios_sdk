@@ -6,6 +6,9 @@
 //  Copyright © 2015年 Tuya. All rights reserved.
 //
 
+#ifndef TuyaSmart_TuyaSmartMemberModel
+#define TuyaSmart_TuyaSmartMemberModel
+
 #import "TYModel.h"
 #import "TuyaSmartDevice.h"
 #import "TuyaSmartGroup.h"
@@ -45,3 +48,4 @@
 
 @end
 
+#endif

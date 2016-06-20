@@ -6,6 +6,9 @@
 //  Copyright (c) 2015年 Tuya. All rights reserved.
 //
 
+#ifndef TuyaSmart_TuyaSmartDeviceModel
+#define TuyaSmart_TuyaSmartDeviceModel
+
 #import "TYModel.h"
 #import "TuyaSmartSchemaModel.h"
 
@@ -47,12 +50,17 @@
 @property (nonatomic, strong) NSString     *uiType;
 @property (nonatomic, assign) BOOL         rnFind;
 @property (nonatomic, assign) BOOL         supportGroup;
+@property (nonatomic, strong) NSString     *runtimeEnv;
+@property (nonatomic, strong) NSString     *gwType;
 @property (nonatomic, assign) double       pv;//网关协议版本
 @property (nonatomic, assign) double       bv;//硬件基线版本
+
+@property (nonatomic, strong) NSString     *ui;
 
 //设备的schema定义
 @property (nonatomic, strong) NSString     *schema;
 @property (nonatomic, strong) NSArray<TuyaSmartSchemaModel *> *schemaArray;
 
-
 @end
+
+#endif

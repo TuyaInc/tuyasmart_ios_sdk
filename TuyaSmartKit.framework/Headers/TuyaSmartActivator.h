@@ -6,6 +6,9 @@
 //  Copyright (c) 2015年 Tuya. All rights reserved.
 //
 
+#ifndef TuyaSmart_TuyaSmartActivator
+#define TuyaSmart_TuyaSmartActivator
+
 #import <Foundation/Foundation.h>
 #import "TuyaSmartKitConstants.h"
 
@@ -81,12 +84,12 @@ typedef enum : NSUInteger {
 - (void)stopConfigWiFi;
 
 
-
 /// 激活模式, EZ模式或AP模式
 @property (nonatomic, assign) TYActivatorMode mode __deprecated_msg("Deprecated");;
 
 /// 设置AP模式专用的热点名称前缀
 @property (nonatomic, strong) NSString *SSIDPrefix __deprecated_msg("Deprecated");
+
 
 @end
 
@@ -106,3 +109,5 @@ typedef enum : NSUInteger {
 - (void)startWithSSID:(NSString *)ssid password:(NSString *)password timeout:(NSTimeInterval)timeout __deprecated_msg("Deprecated");
 
 @end
+
+#endif

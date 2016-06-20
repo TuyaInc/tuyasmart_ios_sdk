@@ -6,6 +6,9 @@
 //  Copyright © 2016年 Tuya. All rights reserved.
 //
 
+#ifndef TuyaSmart_TuyaSmartRequest
+#define TuyaSmart_TuyaSmartRequest
+
 #import <Foundation/Foundation.h>
 
 @interface TuyaSmartRequest : NSObject
@@ -17,3 +20,5 @@
                    failure:(TYFailureError)failure;
 
 @end
+
+#endif

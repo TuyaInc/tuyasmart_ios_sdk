@@ -6,6 +6,9 @@
 //  Copyright © 2016年 Tuya. All rights reserved.
 //
 
+#ifndef TuyaSmart_TuyaSmartTimer
+#define TuyaSmart_TuyaSmartTimer
+
 #import <Foundation/Foundation.h>
 #import "TYModel.h"
 #import "TuyaSmartKitConstants.h"
@@ -107,3 +110,5 @@
 - (void)cancelRequest;
 
 @end
+
+#endif

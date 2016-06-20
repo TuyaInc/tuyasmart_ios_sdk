@@ -6,6 +6,9 @@
 //  Copyright © 2016年 Tuya. All rights reserved.
 //
 
+#ifndef TuyaSmart_TuyaSmartGroupModel
+#define TuyaSmart_TuyaSmartGroupModel
+
 #import "TYModel.h"
 #import "TuyaSmartDevice.h"
 
@@ -24,3 +27,5 @@
 @property (nonatomic, strong) NSArray<TuyaSmartDeviceModel *> *deviceList;
 
 @end
+
+#endif

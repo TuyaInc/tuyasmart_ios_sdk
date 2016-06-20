@@ -6,6 +6,9 @@
 //  Copyright (c) 2015年 Tuya. All rights reserved.
 //
 
+#ifndef TuyaSmart_TuyaSmartSDK
+#define TuyaSmart_TuyaSmartSDK
+
 #import <Foundation/Foundation.h>
 
 @interface TuyaSmartSDK : NSObject
@@ -41,3 +44,5 @@
 - (void)updateLocationWithLatitude:(double)latitude longitude:(double)longitude __deprecated_msg("Deprecated");
 
 @end
+
+#endif

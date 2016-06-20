@@ -6,6 +6,10 @@
 //  Copyright © 2016年 Tuya. All rights reserved.
 //
 
+#ifndef TuyaSmart_TuyaSmartGroup
+#define TuyaSmart_TuyaSmartGroup
+
+#import <Foundation/Foundation.h>
 #import "TuyaSmartGroupModel.h"
 
 @interface TuyaSmartGroup : NSObject
@@ -58,3 +62,5 @@
 - (void)dismissGroup:(TYSuccessHandler)success failure:(TYFailureError)failure;
 
 @end
+
+#endif
