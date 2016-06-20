@@ -13,6 +13,15 @@
 #ifdef __OBJC__
     @import UIKit;
     @import Foundation;
-    @import TuyaSmartKit;
-//    #import <TuyaSmartKit/TuyaSmartKit.h>
+
+    #define APP_SCREEN_BOUNDS   [[UIScreen mainScreen] bounds]
+    #define APP_SCREEN_HEIGHT   (APP_SCREEN_BOUNDS.size.height)
+    #define APP_SCREEN_WIDTH    (APP_SCREEN_BOUNDS.size.width)
+
+    #define WEAKSELF_TY __weak __typeof(&*self)weakSelf_TY = self;
+
+    #import <BlocksKit+UIKit.h>
+    #import <MBProgressHUD.h>
+    #import <TuyaSmartKit/TuyaSmartKit.h>
+
 #endif

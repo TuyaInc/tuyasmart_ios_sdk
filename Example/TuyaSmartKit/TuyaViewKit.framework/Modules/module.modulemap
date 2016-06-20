@@ -1,0 +1,6 @@
+framework module TuyaViewKit {
+  umbrella header "TuyaViewKit.h"
+
+  export *
+  module * { export * }
+}

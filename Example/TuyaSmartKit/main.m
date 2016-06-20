@@ -1,17 +1,16 @@
 //
 //  main.m
-//  TuyaSmartKit
+//  TuyaSmartKitDemo
 //
-//  Created by gaosen on 06/17/2016.
-//  Copyright (c) 2016 gaosen. All rights reserved.
+//  Created by fengyu on 15/9/12.
+//  Copyright (c) 2015年 Tuya. All rights reserved.
 //
 
-@import UIKit;
-#import "TYAppDelegate.h"
+#import <UIKit/UIKit.h>
+#import "AppDelegate.h"
 
-int main(int argc, char * argv[])
-{
+int main(int argc, char * argv[]) {
     @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([TYAppDelegate class]));
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }
 }

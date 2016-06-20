@@ -2,11 +2,13 @@
 # use_frameworks!
 
 target 'TuyaSmartKit_Example' do
-  pod 'TuyaSmartKit', :path => '../'
-
-  target 'TuyaSmartKit_Tests' do
-    inherit! :search_paths
-
+    pod 'MBProgressHUD'
+    pod 'BlocksKit'
     
-  end
+    pod 'TuyaSmartKit', :path => '../'
+
+    target 'TuyaSmartKit_Tests' do
+        inherit! :search_paths
+    end
+    
 end
