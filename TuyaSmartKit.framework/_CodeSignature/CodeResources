@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/TuyaSmartActivator.h</key>
 		<data>
-		sjNbDHQaPqeXjW7zYF23G2Zwvcw=
+		tBA7su6pNOblsIewpZzXdiSoBsI=
 		</data>
 		<key>Headers/TuyaSmartDevice.h</key>
 		<data>
@@ -30,7 +30,11 @@
 		</data>
 		<key>Headers/TuyaSmartGroup.h</key>
 		<data>
-		DJc4sjwcU1U49DPpwLV4c2lJv9w=
+		jElSlhqB3G3LTKz+6PUFXP8tUKw=
+		</data>
+		<key>Headers/TuyaSmartGroupDevListModel.h</key>
+		<data>
+		SslaMRzxQ9WeeFAGmeNhvRpilag=
 		</data>
 		<key>Headers/TuyaSmartGroupModel.h</key>
 		<data>
@@ -38,7 +42,7 @@
 		</data>
 		<key>Headers/TuyaSmartKit.h</key>
 		<data>
-		AaVOSeg2ArGyL75dcyFz13cFdcI=
+		9RuK0e0kzYRj9Xa6Gh9wci18rKk=
 		</data>
 		<key>Headers/TuyaSmartKitConstants.h</key>
 		<data>
@@ -78,7 +82,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		cvQbB5vbz7h0Jeqiovg3PTtI0QM=
+		ACmJBuUlZ7QP3N5EveMmD36t4dE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -102,11 +106,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			sjNbDHQaPqeXjW7zYF23G2Zwvcw=
+			tBA7su6pNOblsIewpZzXdiSoBsI=
 			</data>
 			<key>hash2</key>
 			<data>
-			J1LfBMwunSu9R0rcKa2SNzA62QkKM+Q/NusohcTGmHI=
+			hjO5tF+qaqMhTaRqN9Ovnk4DTpwzPmg1LPbc7+yg3QY=
 			</data>
 		</dict>
 		<key>Headers/TuyaSmartDevice.h</key>
@@ -157,11 +161,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			DJc4sjwcU1U49DPpwLV4c2lJv9w=
+			jElSlhqB3G3LTKz+6PUFXP8tUKw=
 			</data>
 			<key>hash2</key>
 			<data>
-			+JKgXh32gRA7ulCZwh51LSFPNNF5N45ODDAS82WxaPA=
+			xfwgc0FWgxp78DxHlx+HTlqYwZiwVJtJSbBwZywyAAI=
+			</data>
+		</dict>
+		<key>Headers/TuyaSmartGroupDevListModel.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			SslaMRzxQ9WeeFAGmeNhvRpilag=
+			</data>
+			<key>hash2</key>
+			<data>
+			dcXsmC5XOEHGPWoQn+L64FYwkNNDVsVkTxJuXDsB+R0=
 			</data>
 		</dict>
 		<key>Headers/TuyaSmartGroupModel.h</key>
@@ -179,11 +194,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			AaVOSeg2ArGyL75dcyFz13cFdcI=
+			9RuK0e0kzYRj9Xa6Gh9wci18rKk=
 			</data>
 			<key>hash2</key>
 			<data>
-			SpsraqUcfGBxe2IwamKLJNcUgD48iBD8NH+UgkgMEns=
+			KiKelP8k/NkUrzYHNupMH2IhFW1ZxckJUjJ+97pnSmQ=
 			</data>
 		</dict>
 		<key>Headers/TuyaSmartKitConstants.h</key>

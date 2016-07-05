@@ -6,7 +6,7 @@
 //  Copyright (c) 2015年 Tuya. All rights reserved.
 //
 
-#define TUYA_SDK_VERSION @"1.2.6"
+#define TUYA_SDK_VERSION @"1.2.7"
 
 #import <Foundation/Foundation.h>
 
@@ -20,3 +20,4 @@
 #import "TuyaSmartFeedback.h"
 #import "TuyaSmartTimer.h"
 #import "TuyaSmartRequest.h"
+#import "TuyaSmartGroupDevListModel.h"
