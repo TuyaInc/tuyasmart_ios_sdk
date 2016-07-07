@@ -17,12 +17,8 @@
 
 @optional
 
-
-/// 群组主设备被移除
-- (void)groupMainDeviceRemoved;
-
-/// 群组主设备dp数据更新
-- (void)groupMainDeviceDpsUpdate:(NSDictionary *)dps;
+/// 群组dp数据更新
+- (void)groupDpsUpdate:(NSDictionary *)dps;
 
 
 @end
