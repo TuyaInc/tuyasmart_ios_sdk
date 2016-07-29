@@ -15,8 +15,16 @@
 #import "TuyaSmartGroupModel.h"
 
 
+
+
 /// 当用户登录信息过期后发出的通知
 FOUNDATION_EXPORT NSString * const TuyaSmartUserNotificationUserSessionInvalid;
+
+/// 当设备列表的数据有变化时发出的通知
+FOUNDATION_EXPORT NSString * const TuyaSmartUserNotificationDeviceArrayChanged;
+
+
+
 
 /// 用户相关功能
 @interface TuyaSmartUser : NSObject
@@ -40,7 +48,6 @@ FOUNDATION_EXPORT NSString * const TuyaSmartUserNotificationUserSessionInvalid;
 
 /// 国家区号
 @property (nonatomic, strong, readonly) NSString *countryCode;
-
 
 /// 是否已登录
 @property (nonatomic, assign, readonly) BOOL isLogin;

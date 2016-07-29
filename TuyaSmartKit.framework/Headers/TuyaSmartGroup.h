@@ -20,6 +20,8 @@
 /// 群组dp数据更新
 - (void)groupDpsUpdate:(NSDictionary *)dps;
 
+/// 群组信息更新
+- (void)groupInfoUpdate;
 
 @end
 

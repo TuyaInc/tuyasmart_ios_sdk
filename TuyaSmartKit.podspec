@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TuyaSmartKit'
-  s.version          = '1.2.7'
+  s.version          = '1.2.8'
   s.summary          = '涂鸦智能iOS SDK'
 
 # This description is used to generate tags and improve search results.

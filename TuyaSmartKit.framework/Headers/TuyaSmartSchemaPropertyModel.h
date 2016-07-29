@@ -13,12 +13,14 @@
 
 @interface TuyaSmartSchemaPropertyModel : TYModel
 
-@property (nonatomic, strong) NSString *type;
-@property (nonatomic, strong) NSString *unit;
-@property (nonatomic, assign) double   min;
-@property (nonatomic, assign) double   max;
-@property (nonatomic, assign) double   step;
-@property (nonatomic, strong) NSArray  *range;
+@property (nonatomic, strong) NSString   *type;
+@property (nonatomic, strong) NSString   *unit;
+@property (nonatomic, assign) double     min;
+@property (nonatomic, assign) double     max;
+@property (nonatomic, assign) double     step;
+@property (nonatomic, assign) NSInteger  maxlen;
+@property (nonatomic, strong) NSArray    *label;
+@property (nonatomic, strong) NSArray    *range;
 
 @end
 

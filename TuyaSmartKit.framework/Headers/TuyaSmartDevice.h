@@ -52,6 +52,14 @@ typedef enum : NSUInteger {
 /// 固件升级失败
 - (void)deviceFirmwareUpgradeFailure;
 
+/**
+ *
+ *  固件升级进度
+ *  @param type 1 - 联网模块 2 - 设备控制模块
+ *  @param progress 升级进度
+ */
+- (void)deviceFirmwareUpgradeProgress:(NSInteger)type progress:(double)progress;
+
 @end
 
 /// 设备相关功能

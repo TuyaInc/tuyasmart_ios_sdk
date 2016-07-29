@@ -10,15 +10,15 @@
 		</data>
 		<key>Headers/TuyaSmartActivator.h</key>
 		<data>
-		tBA7su6pNOblsIewpZzXdiSoBsI=
+		RQdINsZg1zV8iDYfUaZwMyuh6kg=
 		</data>
 		<key>Headers/TuyaSmartDevice.h</key>
 		<data>
-		O0ATHJNVnL5i17Fa4XYur660TqM=
+		hmDd/o+f47xYWrAWZv7u5f3bWwU=
 		</data>
 		<key>Headers/TuyaSmartDeviceModel.h</key>
 		<data>
-		Z1kdc3B5o1CrZ7mu4/em4fJoWBA=
+		3SRhhIKsD7/CTzaMxWlr8pHv1so=
 		</data>
 		<key>Headers/TuyaSmartFeedback.h</key>
 		<data>
@@ -26,11 +26,11 @@
 		</data>
 		<key>Headers/TuyaSmartFirmwareUpgradeModel.h</key>
 		<data>
-		i4w7B4TK5feVxgV/WlPwatf1ksA=
+		vIupb5jVi623lU6nX1slGrjAWCw=
 		</data>
 		<key>Headers/TuyaSmartGroup.h</key>
 		<data>
-		3oqzpumO6tSmoGslsEhbaolVeYA=
+		OZE7WOL4nh9YXrDt82L3XT7Z10k=
 		</data>
 		<key>Headers/TuyaSmartGroupDevListModel.h</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Headers/TuyaSmartMemberModel.h</key>
 		<data>
-		tAOoWOKIcrsp22dD7tR1IkxzMVc=
+		3fWgdbY8QIFamGSpWJUerGbqm0w=
 		</data>
 		<key>Headers/TuyaSmartRequest.h</key>
 		<data>
@@ -62,7 +62,7 @@
 		</data>
 		<key>Headers/TuyaSmartSDK.h</key>
 		<data>
-		1NyiqOrKVpAzTzGlDYHlabKYvRE=
+		gsaXJZZJ0iISeDwgW+QY19gwQOw=
 		</data>
 		<key>Headers/TuyaSmartSchemaModel.h</key>
 		<data>
@@ -70,7 +70,7 @@
 		</data>
 		<key>Headers/TuyaSmartSchemaPropertyModel.h</key>
 		<data>
-		FEu4lpSkRvbym1E/tun48SJzH9Y=
+		BGEj5CPRt5X3L6B/Xxabhjluc64=
 		</data>
 		<key>Headers/TuyaSmartTimer.h</key>
 		<data>
@@ -78,11 +78,11 @@
 		</data>
 		<key>Headers/TuyaSmartUser.h</key>
 		<data>
-		MpQvBJHPEDpGZR0OzSi5jLb+ljE=
+		QfjwQoTf+FYJyi5dE4M5JS2XcQQ=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		ACmJBuUlZ7QP3N5EveMmD36t4dE=
+		gAiBNCDvuzIUapfwkwHmBntK8Wc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -106,33 +106,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			tBA7su6pNOblsIewpZzXdiSoBsI=
+			RQdINsZg1zV8iDYfUaZwMyuh6kg=
 			</data>
 			<key>hash2</key>
 			<data>
-			hjO5tF+qaqMhTaRqN9Ovnk4DTpwzPmg1LPbc7+yg3QY=
+			MJBmG535V5rgEN8aW86UlqHFLL1529Q0AERPEQycXkY=
 			</data>
 		</dict>
 		<key>Headers/TuyaSmartDevice.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			O0ATHJNVnL5i17Fa4XYur660TqM=
+			hmDd/o+f47xYWrAWZv7u5f3bWwU=
 			</data>
 			<key>hash2</key>
 			<data>
-			XDrApxbjDBS65AlOZIRvwoSdOZQBpWToP++LawKyTvY=
+			HzMIIRM/RzcJLUzT4PYdZgbEkAYpVCwBuEM6awYyWDs=
 			</data>
 		</dict>
 		<key>Headers/TuyaSmartDeviceModel.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Z1kdc3B5o1CrZ7mu4/em4fJoWBA=
+			3SRhhIKsD7/CTzaMxWlr8pHv1so=
 			</data>
 			<key>hash2</key>
 			<data>
-			y4V21DWkTm/PDvPKMy8zk3BwhaXiDpzYrwqwujHXijI=
+			MmW6UTULInsIgAbU3NM8bdKF0gxjQ9e3l6zsCevXAN0=
 			</data>
 		</dict>
 		<key>Headers/TuyaSmartFeedback.h</key>
@@ -150,22 +150,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			i4w7B4TK5feVxgV/WlPwatf1ksA=
+			vIupb5jVi623lU6nX1slGrjAWCw=
 			</data>
 			<key>hash2</key>
 			<data>
-			sObh6GVtZbaDjfpfLm9A7peNDfM1hOHq9+M2RPV2m9E=
+			gvJ0pvB4fXfNCRwJRm47RBUJ77d61J9ORKTaFN06iWo=
 			</data>
 		</dict>
 		<key>Headers/TuyaSmartGroup.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			3oqzpumO6tSmoGslsEhbaolVeYA=
+			OZE7WOL4nh9YXrDt82L3XT7Z10k=
 			</data>
 			<key>hash2</key>
 			<data>
-			R/uXqr7xuC+rk7pwU+yigfp/OdIPDsX09mx6YeoRyBw=
+			DfFrN5rwGTlxH6ZtvRQ9O1mxKvkKBzAjLb5SD4qcx9s=
 			</data>
 		</dict>
 		<key>Headers/TuyaSmartGroupDevListModel.h</key>
@@ -227,11 +227,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			tAOoWOKIcrsp22dD7tR1IkxzMVc=
+			3fWgdbY8QIFamGSpWJUerGbqm0w=
 			</data>
 			<key>hash2</key>
 			<data>
-			0UeEpz+uyYigdekgry4kDVOm3Xc0IpncOx52Heo8LAE=
+			+g2tVN9G1hyzteVYyJW+dszO5fGNERCqhbS2noxMnV0=
 			</data>
 		</dict>
 		<key>Headers/TuyaSmartRequest.h</key>
@@ -249,11 +249,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			1NyiqOrKVpAzTzGlDYHlabKYvRE=
+			gsaXJZZJ0iISeDwgW+QY19gwQOw=
 			</data>
 			<key>hash2</key>
 			<data>
-			+QPwGZe8Wt8NFvf5TNBLNM6gd/fk7CdrVjVGHHE/Vzw=
+			VXMHkKi6KSuyaj2Gq42tccPLsxGvmsPuh9WIENElvN4=
 			</data>
 		</dict>
 		<key>Headers/TuyaSmartSchemaModel.h</key>
@@ -271,11 +271,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			FEu4lpSkRvbym1E/tun48SJzH9Y=
+			BGEj5CPRt5X3L6B/Xxabhjluc64=
 			</data>
 			<key>hash2</key>
 			<data>
-			BkgPB3ozEl4uRkIHYEKdGf2pNTVYFhonR/4+qRMDyBI=
+			aDyICJuecBUPSwjUHbZwmakEWYzmZV5zsbhG8Ixuvwg=
 			</data>
 		</dict>
 		<key>Headers/TuyaSmartTimer.h</key>
@@ -293,11 +293,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			MpQvBJHPEDpGZR0OzSi5jLb+ljE=
+			QfjwQoTf+FYJyi5dE4M5JS2XcQQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			jWdranUn4WNjJcbvarz0bk0aGBBM2nnY80FmCig6MrU=
+			D2ZSD6NIpHGujXtuZvvkIKMELSL3SR4k3EtyBAjoASI=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

@@ -42,9 +42,9 @@
 
 
 
-@property (nonatomic, strong) NSString *phoneCode __deprecated_msg("Deprecated");
-@property (nonatomic, strong) NSString *relationship __deprecated_msg("Deprecated");
-@property (nonatomic, strong) NSArray *device __deprecated_msg("Deprecated, use deviceList/groupList instead");
+@property (nonatomic, strong) NSString *phoneCode __deprecated;
+@property (nonatomic, strong) NSString *relationship __deprecated;
+@property (nonatomic, strong) NSArray *device __deprecated_msg("Please use deviceList/groupList instead");
 
 @end
 

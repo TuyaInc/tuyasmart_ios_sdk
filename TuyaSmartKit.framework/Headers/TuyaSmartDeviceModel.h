@@ -43,6 +43,7 @@
 //设备
 @property (nonatomic, strong) NSString     *verSw;
 @property (nonatomic, strong) NSDictionary *uiConfig;
+@property (nonatomic, strong) NSDictionary *panelConfig;
 
 //设备的当前dp点
 @property (nonatomic, strong) NSDictionary *dps;
@@ -59,6 +60,13 @@
 
 //设备的schema定义
 @property (nonatomic, strong) NSString     *schema;
+
+@property (nonatomic, strong) NSString     *latitude;
+@property (nonatomic, strong) NSString     *longitude;
+
+@property (nonatomic, assign) long         i18nTime;
+
+
 @property (nonatomic, strong) NSArray<TuyaSmartSchemaModel *> *schemaArray;
 
 @end
