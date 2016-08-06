@@ -1,0 +1,100 @@
+//
+//  TYSearchOneDeviceController.m
+//  TuyaSmart
+//
+//  Created by 高森 on 16/1/27.
+//  Copyright © 2016年 Tuya. All rights reserved.
+//
+
+#import "TYSearchOneDeviceController.h"
+#import "TYSearchOneDeviceLayout.h"
+
+#define Timeout 100
+
+@interface TYSearchOneDeviceController () <TuyaSmartActivatorDelegate>
+
+@property (nonatomic, strong) TYSearchOneDeviceLayout     *layout;
+
+@property (nonatomic, strong) NSTimer *timer;
+@property (nonatomic, strong) NSDate  *fireDate;
+
+@property (nonatomic, assign) TYActivatorState            lastState;
+
+@end
+
+@implementation TYSearchOneDeviceController
+
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.view = self.layout;
+    
+    _fireDate = [NSDate date];
+    _timer = [NSTimer scheduledTimerWithTimeInterval:1/60.0 target:self selector:@selector(timerCallBack) userInfo:nil repeats:YES];
+    
+    [TuyaSmartActivator sharedInstance].delegate = self;
+    [[TuyaSmartActivator sharedInstance] startConfigWiFi:_mode ssid:_ssid password:_password token:_token timeout:Timeout];
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    [_timer invalidate];
+    
+    [TuyaSmartActivator sharedInstance].delegate = nil;
+    [[TuyaSmartActivator sharedInstance] stopConfigWiFi];
+}
+
+/// 只用于刷新进度条
+- (void)timerCallBack {
+    CGFloat progress = MIN(fabs([_fireDate timeIntervalSinceNow] / Timeout), 1.0);
+    [self.layout setProgress:progress];
+    if (progress >= 1) {
+        [_timer invalidate];
+    }
+}
+
+- (TYSearchOneDeviceLayout *)layout {
+    if (!_layout) {
+        _layout = [[TYSearchOneDeviceLayout alloc] initWithFrame:self.view.bounds];
+    }
+    return _layout;
+}
+
+#pragma mark - TuyaSmartActivatorDelegate
+
+- (void)activator:(TuyaSmartActivator *)activator didUpdateState:(TYActivatorState)state device:(TuyaSmartDeviceModel *)deviceModel {
+    [self.layout setState:state];
+    
+    //设备配网成功,但一直不上线(超时),也当做成功处理
+    if (self.lastState == TYActivatorStateDeviceLogin
+        && state == TYActivatorStateTimeOut) {
+        state = TYActivatorStateOK;
+    }
+    
+    
+    if (state == TYActivatorStateOK) {
+        [_timer invalidate];
+        [self.layout setProgress:1];
+        
+        [NSObject bk_performBlock:^{
+            [ViewControllerUtils gotoActivatorSuccessViewController:self device:deviceModel];
+        } afterDelay:2.0];
+        
+    } else if (state == TYActivatorStateFailed
+               || state == TYActivatorStateTimeOut) {
+        [_timer invalidate];
+        if (_mode == TYActivatorModeEZ) {
+            [ViewControllerUtils gotoAPPrepareViewController:self isAPReset:YES ssid:_ssid password:_password];
+        } else {
+            [ViewControllerUtils gotoActivatorErrorViewController:self state:state];
+        }
+
+    } else if (state == TYActivatorStateNetworkError) {
+        [_timer invalidate];
+        [ViewControllerUtils gotoActivatorErrorViewController:self state:state];
+    }
+    
+    self.lastState = state;
+}
+
+@end
