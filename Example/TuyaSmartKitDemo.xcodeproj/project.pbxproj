@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1B4CDBEE1A85A75D00EF696E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B4CDBED1A85A75D00EF696E /* main.m */; };
 		1B4CDBF91A85A75D00EF696E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B4CDBF81A85A75D00EF696E /* Images.xcassets */; };
-		1B4D8DFC1AA840560081A4BC /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B4D8DFB1AA840550081A4BC /* libz.1.2.5.dylib */; };
 		1BF05B2D1B41149500B3B8FC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1BF05B2F1B41149500B3B8FC /* InfoPlist.strings */; };
 		1BF05B341B41151600B3B8FC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1BF05B361B41151600B3B8FC /* Localizable.strings */; };
 		1BF05B491B412A9C00B3B8FC /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF05B481B412A9C00B3B8FC /* CoreLocation.framework */; };
@@ -90,7 +89,6 @@
 		6DD945811CDDCA7C0021F557 /* TYAPPrepareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DD945801CDDCA7C0021F557 /* TYAPPrepareViewController.m */; };
 		AD0C2AC31D1BC64C00576414 /* ty_adddevice_light@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD0C2ABF1D1BC64C00576414 /* ty_adddevice_light@2x.png */; };
 		AD0C2AC51D1BC64C00576414 /* ty_adddevice_lighting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD0C2AC11D1BC64C00576414 /* ty_adddevice_lighting@2x.png */; };
-		AD326F701B94A02B0003A990 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AD326F6F1B94A02B0003A990 /* libc++.dylib */; };
 		AD326F751B9557710003A990 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF05B4E1B42803B00B3B8FC /* MapKit.framework */; };
 		AD3AE6B71D011B1B0057CAAD /* TYUserInfoPassCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD3AE6B61D011B1B0057CAAD /* TYUserInfoPassCell.m */; };
 		AD6C41771CC0CCEC00A3F3E9 /* TPSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6C41761CC0CCEC00A3F3E9 /* TPSegmentedControl.m */; };
@@ -209,7 +207,6 @@
 		1B4CDBED1A85A75D00EF696E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1B4CDBF81A85A75D00EF696E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1B4CDC231A85ABAE00EF696E /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		1B4D8DFB1AA840550081A4BC /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
 		1BF05B2E1B41149500B3B8FC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1BF05B301B41149A00B3B8FC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		1BF05B351B41151600B3B8FC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -218,10 +215,8 @@
 		1BF05B4E1B42803B00B3B8FC /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		1BFE2B7E1AD76A0B000EBA2C /* ViewControllerUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerUtils.h; sourceTree = "<group>"; };
 		1BFE2B7F1AD76A0B000EBA2C /* ViewControllerUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerUtils.m; sourceTree = "<group>"; };
-		2DC65047EA5B79ADD52271A6 /* Pods-TuyaSmartPublic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuyaSmartPublic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TuyaSmartPublic/Pods-TuyaSmartPublic.debug.xcconfig"; sourceTree = "<group>"; };
 		65F4A6AD1CE32C3F00977B3F /* ty_list_empty@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ty_list_empty@2x.png"; sourceTree = "<group>"; };
 		65F4A6AE1CE32C3F00977B3F /* ty_list_empty@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ty_list_empty@3x.png"; sourceTree = "<group>"; };
-		66CEA4D01BD11D3851166B8A /* libPods-TuyaSmartPublic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TuyaSmartPublic.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D1766C41CB68B84006277AC /* ATCountryCodeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATCountryCodeModel.h; sourceTree = "<group>"; };
 		6D1766C51CB68B84006277AC /* ATCountryCodeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATCountryCodeModel.m; sourceTree = "<group>"; };
 		6D1766D21CB74AEE006277AC /* MenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuItem.h; sourceTree = "<group>"; };
@@ -354,7 +349,6 @@
 		6DD945801CDDCA7C0021F557 /* TYAPPrepareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYAPPrepareViewController.m; sourceTree = "<group>"; };
 		AD0C2ABF1D1BC64C00576414 /* ty_adddevice_light@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ty_adddevice_light@2x.png"; sourceTree = "<group>"; };
 		AD0C2AC11D1BC64C00576414 /* ty_adddevice_lighting@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ty_adddevice_lighting@2x.png"; sourceTree = "<group>"; };
-		AD326F6F1B94A02B0003A990 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		AD3AE6B51D011B1B0057CAAD /* TYUserInfoPassCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYUserInfoPassCell.h; sourceTree = "<group>"; };
 		AD3AE6B61D011B1B0057CAAD /* TYUserInfoPassCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYUserInfoPassCell.m; sourceTree = "<group>"; };
 		AD6C41751CC0CCEC00A3F3E9 /* TPSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPSegmentedControl.h; sourceTree = "<group>"; };
@@ -521,7 +515,6 @@
 		ADD4508A1CABAB570037CADF /* MobileChangeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobileChangeView.m; sourceTree = "<group>"; };
 		CD4B28A9522A4E25A864AED8 /* Pods-TuyaSmartKitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuyaSmartKitDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TuyaSmartKitDemo/Pods-TuyaSmartKitDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		D748D33C6E59CD9F0CDF79B9 /* libPods-TuyaSmartKitDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TuyaSmartKitDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EC77F20D6B5B2845FC6A842A /* Pods-TuyaSmartPublic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuyaSmartPublic.release.xcconfig"; path = "Pods/Target Support Files/Pods-TuyaSmartPublic/Pods-TuyaSmartPublic.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -531,10 +524,8 @@
 			files = (
 				ADAB19EE1CA93381002500A6 /* libsqlite3.tbd in Frameworks */,
 				ADD1DF8D1C58B27600BF3730 /* Security.framework in Frameworks */,
-				AD326F701B94A02B0003A990 /* libc++.dylib in Frameworks */,
 				1BF05B491B412A9C00B3B8FC /* CoreLocation.framework in Frameworks */,
 				AD326F751B9557710003A990 /* MapKit.framework in Frameworks */,
-				1B4D8DFC1AA840560081A4BC /* libz.1.2.5.dylib in Frameworks */,
 				2B5F566CCF91FDB8B714A309 /* libPods-TuyaSmartKitDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -545,8 +536,6 @@
 		03843F30EBE48A7EB2F715B8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				2DC65047EA5B79ADD52271A6 /* Pods-TuyaSmartPublic.debug.xcconfig */,
-				EC77F20D6B5B2845FC6A842A /* Pods-TuyaSmartPublic.release.xcconfig */,
 				CD4B28A9522A4E25A864AED8 /* Pods-TuyaSmartKitDemo.debug.xcconfig */,
 				6D74197B5AE3141B6E074DCD /* Pods-TuyaSmartKitDemo.release.xcconfig */,
 			);
@@ -626,11 +615,8 @@
 				ADD1DF881C589C9900BF3730 /* Security.framework */,
 				ADA0EE0D1BCFC67F00613AFA /* OpenGLES.framework */,
 				ADA0EE0B1BCFC67400613AFA /* CoreTelephony.framework */,
-				AD326F6F1B94A02B0003A990 /* libc++.dylib */,
 				1BF05B4E1B42803B00B3B8FC /* MapKit.framework */,
 				1BF05B481B412A9C00B3B8FC /* CoreLocation.framework */,
-				1B4D8DFB1AA840550081A4BC /* libz.1.2.5.dylib */,
-				66CEA4D01BD11D3851166B8A /* libPods-TuyaSmartPublic.a */,
 				D748D33C6E59CD9F0CDF79B9 /* libPods-TuyaSmartKitDemo.a */,
 			);
 			name = Frameworks;
