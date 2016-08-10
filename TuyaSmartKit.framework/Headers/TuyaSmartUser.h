@@ -327,7 +327,7 @@ FOUNDATION_EXPORT NSString * const TuyaSmartUserNotificationDeviceArrayChanged;
  *  @param success 操作成功回调
  *  @param failure 操作失败回调
  */
-- (void)getExperienceDeviceWithCloud:(TYSuccessList)success
+- (void)getExperienceDeviceWithCloud:(void(^)(NSArray <TuyaSmartDeviceModel *> *list))success
                              failure:(TYFailureError)failure;
 
 #pragma mark - 消息中心

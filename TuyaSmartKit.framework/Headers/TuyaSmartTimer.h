@@ -107,8 +107,8 @@
  */
 - (void)getAllTimerWithDeviceId:(NSString *)devId success:(TYSuccessDict)success failure:(TYFailureError)failure;
 
+/// 取消未完成的操作
 - (void)cancelRequest;
-
 @end
 
 #endif

@@ -113,6 +113,9 @@ typedef enum : NSUInteger {
 - (void)getReceiveMemberList:(void(^)(NSArray<TuyaSmartMemberModel *> *list))success
                      failure:(TYFailureHandler)failure;
 
+/// 取消未完成的操作
+- (void)cancelRequest;
+
 @end
 
 @interface TuyaSmartMember (Deprecated)

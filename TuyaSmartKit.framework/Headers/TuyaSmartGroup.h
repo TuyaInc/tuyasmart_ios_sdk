@@ -11,6 +11,7 @@
 
 #import <Foundation/Foundation.h>
 #import "TuyaSmartGroupModel.h"
+#import "TuyaSmartGroupDevListModel.h"
 
 
 @protocol TuyaSmartGroupDelegate<NSObject>
@@ -63,7 +64,7 @@
  *  @param success   操作成功回调
  *  @param failure   操作失败回调
  */
-- (void)getGroupDevList:(NSString *)groupId productId:(NSString *)productId success:(TYSuccessList)success failure:(TYFailureError)failure;
+- (void)getGroupDevList:(NSString *)groupId productId:(NSString *)productId success:(void(^)(NSArray <TuyaSmartGroupDevListModel *> *list))success failure:(TYFailureError)failure;
 
 /** 
  *  群组dp命令下发
@@ -86,7 +87,7 @@
  *  @param success 操作成功回调
  *  @param failure 操作失败回调
  */
-- (void)updateGroupRelations:(NSArray *)devList success:(TYSuccessHandler)success failure:(TYFailureError)failure;
+- (void)updateGroupRelations:(NSArray <NSString *>*)devList success:(TYSuccessHandler)success failure:(TYFailureError)failure;
 
 /**
  *  解散群组
@@ -95,6 +96,10 @@
  *  @param failure 操作失败回调
  */
 - (void)dismissGroup:(TYSuccessHandler)success failure:(TYFailureError)failure;
+
+
+/// 取消未完成的操作
+- (void)cancelRequest;
 
 @end
 

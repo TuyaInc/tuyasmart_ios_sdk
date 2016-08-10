@@ -30,7 +30,7 @@
 		</data>
 		<key>Headers/TuyaSmartGroup.h</key>
 		<data>
-		OZE7WOL4nh9YXrDt82L3XT7Z10k=
+		82ELuPqqtZRyr50bX50eoeVGiI4=
 		</data>
 		<key>Headers/TuyaSmartGroupDevListModel.h</key>
 		<data>
@@ -42,7 +42,7 @@
 		</data>
 		<key>Headers/TuyaSmartKit.h</key>
 		<data>
-		2scHqkesmslF5I0law46RUmOLfs=
+		Vj7P7MkwyFclIKlvybZuDikx0Fo=
 		</data>
 		<key>Headers/TuyaSmartKitConstants.h</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Headers/TuyaSmartMember.h</key>
 		<data>
-		jHWu5Zq66YlPIO3wKfTsdHSNTi0=
+		ICtbX6jaiE1ULh21OdmQU9MLB8M=
 		</data>
 		<key>Headers/TuyaSmartMemberModel.h</key>
 		<data>
@@ -74,15 +74,11 @@
 		</data>
 		<key>Headers/TuyaSmartTimer.h</key>
 		<data>
-		l24sUvZ2A473WPtOF9s5Sn0brM4=
+		EHTNJJb+NpDn+Y6XOOHs+bZthtM=
 		</data>
 		<key>Headers/TuyaSmartUser.h</key>
 		<data>
-		QfjwQoTf+FYJyi5dE4M5JS2XcQQ=
-		</data>
-		<key>Info.plist</key>
-		<data>
-		T0ucbUyCVl/x+bir/Ly19bcy96M=
+		9PtHd9iCmAM7ercQfzP4uU7nPZM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -161,11 +157,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			OZE7WOL4nh9YXrDt82L3XT7Z10k=
+			82ELuPqqtZRyr50bX50eoeVGiI4=
 			</data>
 			<key>hash2</key>
 			<data>
-			DfFrN5rwGTlxH6ZtvRQ9O1mxKvkKBzAjLb5SD4qcx9s=
+			gjhiDnHLheL2k8pcVxsXHBAL8mrohQBLlSH4J/TQLkQ=
 			</data>
 		</dict>
 		<key>Headers/TuyaSmartGroupDevListModel.h</key>
@@ -194,11 +190,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			2scHqkesmslF5I0law46RUmOLfs=
+			Vj7P7MkwyFclIKlvybZuDikx0Fo=
 			</data>
 			<key>hash2</key>
 			<data>
-			1OvFZ4MNfkwcdqoRICiurkXB3WRuyg5q8BfNr47BRbw=
+			mGOc0m23/Kk/0/+mnBCUJ+q7Ahc2WjzGmsrcZZSNuus=
 			</data>
 		</dict>
 		<key>Headers/TuyaSmartKitConstants.h</key>
@@ -216,11 +212,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			jHWu5Zq66YlPIO3wKfTsdHSNTi0=
+			ICtbX6jaiE1ULh21OdmQU9MLB8M=
 			</data>
 			<key>hash2</key>
 			<data>
-			2EL+srD4JpdkBM0vtnlQKo5wtHF8vckG1UdsXxl3c1E=
+			ZCtpjL3RajJPj6e0rSULGZW44M6eAKVve5HNlQvtXPw=
 			</data>
 		</dict>
 		<key>Headers/TuyaSmartMemberModel.h</key>
@@ -282,22 +278,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			l24sUvZ2A473WPtOF9s5Sn0brM4=
+			EHTNJJb+NpDn+Y6XOOHs+bZthtM=
 			</data>
 			<key>hash2</key>
 			<data>
-			lPPPoPGqnm06yvBCYHQz6JG5K3je1H8JevLpA3PhNGg=
+			qVmDjPjdtqDe9UxZMC0vZ0CaUHK6HyBqF1qh5NTMWm4=
 			</data>
 		</dict>
 		<key>Headers/TuyaSmartUser.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			QfjwQoTf+FYJyi5dE4M5JS2XcQQ=
+			9PtHd9iCmAM7ercQfzP4uU7nPZM=
 			</data>
 			<key>hash2</key>
 			<data>
-			D2ZSD6NIpHGujXtuZvvkIKMELSL3SR4k3EtyBAjoASI=
+			XBiv0wXAPMlvUIqeKUN14Vt7Og5uFlI0WC7LnTy3/9o=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
