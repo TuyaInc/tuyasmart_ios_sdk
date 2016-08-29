@@ -87,7 +87,7 @@
 
 #pragma mark - TuyaSmartDeviceDelegate
 
-- (void)deviceDpsUpdate:(NSDictionary *)dps {
+- (void)device:(TuyaSmartDevice *)device dpsUpdate:(NSDictionary *)dps {
     NSLog(@"deviceDpsUpdate: %@", dps);
     [self reloadData];
 }

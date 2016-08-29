@@ -47,7 +47,7 @@
     
     [self.tableView reloadData];
     
-    [self deviceDpsUpdate:self.device.deviceModel.dps];
+    [self device:self.device dpsUpdate:self.device.deviceModel.dps];
     
 }
 
@@ -117,7 +117,7 @@
 
 #pragma mark - TuyaSmartDeviceDelegate
 
-- (void)deviceDpsUpdate:(NSDictionary *)dps {
+- (void)device:(TuyaSmartDevice *)device dpsUpdate:(NSDictionary *)dps {
     
     id value = [dps objectForKey:_schemaModel.dpId];
     if (value) {

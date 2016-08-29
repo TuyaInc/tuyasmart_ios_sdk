@@ -38,11 +38,6 @@ typedef enum : NSUInteger {
 /// 配置状态更新的回调
 - (void)activator:(TuyaSmartActivator *)activator didUpdateState:(TYActivatorState)state device:(TuyaSmartDeviceModel *)deviceModel;
 
-@optional
-
-/// 此方法已废弃，请使用[TuyaSmartActivatorDelegate activator:didUpdateState:device:]方法代替
-- (void)smartActivator:(TuyaSmartActivator *)activator didReceiveState:(TYActivatorState)state __deprecated_msg("Please use [TuyaSmartActivatorDelegate activator:didUpdateState:device:] instead.");
-
 @end
 
 /// 配网相关功能

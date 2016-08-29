@@ -178,26 +178,26 @@
 
 #pragma mark - TuyaSmartDeviceDelegate
 
-- (void)deviceInfoUpdate {
+- (void)deviceInfoUpdate:(TuyaSmartDevice *)device {
     NSLog(@"deviceInfoUpdate");
     [self reloadData];
 }
 
-- (void)deviceRemoved {
+- (void)deviceRemoved:(TuyaSmartDevice *)device {
     NSLog(@"deviceRemoved");
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-- (void)deviceDpsUpdate:(NSDictionary *)dps {
+- (void)device:(TuyaSmartDevice *)device dpsUpdate:(NSDictionary *)dps {
     NSLog(@"deviceDpsUpdate: %@", dps);
     [self reloadData];
 }
 
-- (void)deviceFirmwareUpgradeSuccess {
+- (void)deviceFirmwareUpgradeSuccess:(TuyaSmartDevice *)device {
     NSLog(@"deviceFirmwareUpgradeSuccess");
 }
 
-- (void)deviceFirmwareUpgradeFailure {
+- (void)deviceFirmwareUpgradeFailure:(TuyaSmartDevice *)device {
     NSLog(@"deviceFirmwareUpgradeFailure");
 }
 

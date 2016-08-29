@@ -6,7 +6,7 @@
 //  Copyright (c) 2015年 Tuya. All rights reserved.
 //
 
-#define TUYA_SDK_VERSION @"1.2.9"
+#define TUYA_SDK_VERSION @"1.2.10"
 
 #import <Foundation/Foundation.h>
 
