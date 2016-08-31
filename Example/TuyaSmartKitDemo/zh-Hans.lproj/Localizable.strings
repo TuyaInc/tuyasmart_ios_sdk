@@ -608,3 +608,17 @@
 "mobile_binding_notsamecountry" = "请输入和您登录的手机号码所属国家相同的号码";
 
 "Add Test Device" = "添加一个演示设备";
+
+
+"dp_bool" = "布尔型";
+"dp_value" = "数值型";
+"dp_enum" = "枚举型";
+"dp_string" = "字符串型";
+"dp_raw" = "透传型";
+"dp_bitmap" = "故障型";
+
+
+"send_report" = "可下发可上报";
+"only_report" = "只上报";
+"only_send" = "只下发";
+

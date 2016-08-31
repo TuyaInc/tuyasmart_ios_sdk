@@ -8,8 +8,8 @@
 
 #import "TYDeviceListController.h"
 #import "TYDeviceListViewCell.h"
-#import "TYPanelViewController.h"
-#import "TYTestPanelViewController.h"
+#import "TYCommonPanelViewController.h"
+#import "TYSwitchPanelViewController.h"
 
 #define DeviceListCellViewIdentifier    @"DeviceListCellViewIdentifier"
 
@@ -117,20 +117,27 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
-
+    
+    
     TuyaSmartDeviceModel *deviceModel = [[TuyaSmartUser sharedInstance].deviceArray objectAtIndex:indexPath.row];
     
-    TYPanelViewController *vc;
+    
     //演示设备produckId
     if ([deviceModel.productId isEqualToString:@"4eAeY1i5sUPJ8m8d"]) {
-        vc = [[TYTestPanelViewController alloc] init];
+        
+        TYSwitchPanelViewController *vc = [[TYSwitchPanelViewController alloc] init];
+        vc.devId = deviceModel.devId;
+        [ViewControllerUtils pushViewController:vc from:self];
+
     } else {
-        vc = [[TYPanelViewController alloc] init];
+        
+        TYCommonPanelViewController *vc = [[TYCommonPanelViewController alloc] init];
+        vc.devId = deviceModel.devId;
+        [ViewControllerUtils pushViewController:vc from:self];
+        
     }
     
-    vc.devId = deviceModel.devId;
     
-    [ViewControllerUtils pushViewController:vc from:self];
 }
 
 

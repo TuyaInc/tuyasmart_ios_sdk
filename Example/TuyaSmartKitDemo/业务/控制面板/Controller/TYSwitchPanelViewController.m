@@ -1,28 +1,29 @@
 //
-//  TYTestPanelViewController.m
-//  TuyaSmartPublic
+//  TYSwitchPanelViewController.m
+//  TuyaSmartKitDemo
 //
-//  Created by 高森 on 16/7/28.
+//  Created by 冯晓 on 16/8/30.
 //  Copyright © 2016年 Tuya. All rights reserved.
 //
 
-#import "TYTestPanelViewController.h"
+#import "TYSwitchPanelViewController.h"
 
-@interface TYTestPanelViewController()
+@interface TYSwitchPanelViewController()
 
-@property (nonatomic, strong) TuyaSmartDevice *device;
 @property (nonatomic, strong) UIButton        *powerButton;
 @property (nonatomic, assign) BOOL            isOn;
 
 @end
 
-@implementation TYTestPanelViewController
+@implementation TYSwitchPanelViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
     
     [self initView];
     [self reloadData];
+    
+    [super viewDidLoad];
+    
 }
 
 - (void)initView {
@@ -40,6 +41,8 @@
     [self.view addSubview:self.powerButton];
     
     self.view.backgroundColor = MAIN_BACKGROUND_COLOR;
+    
+
 }
 
 - (void)reloadData {
@@ -73,14 +76,6 @@
     }];
 }
 
-- (TuyaSmartDevice *)device {
-    if (!_device) {
-        _device = [TuyaSmartDevice deviceWithDeviceId:self.devId];
-        _device.delegate = self;
-    }
-    return _device;
-}
-
 - (UIStatusBarStyle)preferredStatusBarStyle {
     return UIStatusBarStyleLightContent;
 }
@@ -91,5 +86,7 @@
     NSLog(@"deviceDpsUpdate: %@", dps);
     [self reloadData];
 }
+
+
 
 @end

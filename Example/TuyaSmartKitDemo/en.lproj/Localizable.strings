@@ -607,3 +607,14 @@
 "mobile_binding_notsamecountry" = "Please enter the number with the same country as yours";
 
 "Add Test Device" = "Add Test Device";
+
+"dp_bool" = "Bool";
+"dp_value" = "Value";
+"dp_enum" = "Enum";
+"dp_string" = "String";
+"dp_raw" = "Raw";
+"dp_bitmap" = "Bitmap";
+
+"send_report" = "Send and report";
+"only_report" = "Only report";
+"only_send" = "Only send";
