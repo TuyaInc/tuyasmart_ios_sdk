@@ -61,7 +61,7 @@
 
 - (void)setItem:(NSInteger)num title:(NSString *)title subTitle:(NSString *)subTitle {
  
-    self.numLabel.text = [NSString stringWithFormat:@"%lu",num];
+    self.numLabel.text = [NSString stringWithFormat:@"%lu",(long)num];
     self.titleLabel.text = title;
     self.subTitleLabel.text = subTitle;
     
