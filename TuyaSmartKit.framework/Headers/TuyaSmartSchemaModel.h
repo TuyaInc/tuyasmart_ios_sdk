@@ -14,11 +14,11 @@
 
 @interface TuyaSmartSchemaModel : TYModel
 
-@property (nonatomic, strong) NSString *dpId;
-@property (nonatomic, strong) NSString *code;
-@property (nonatomic, strong) NSString *name;
-@property (nonatomic, strong) NSString *mode;
-@property (nonatomic, strong) NSString *type;
+@property (nonatomic, strong) NSString     *dpId;
+@property (nonatomic, strong) NSString     *code;
+@property (nonatomic, strong) NSString     *name;
+@property (nonatomic, strong) NSString     *mode;
+@property (nonatomic, strong) NSString     *type;
 
 @property (nonatomic, strong) TuyaSmartSchemaPropertyModel *property;
 

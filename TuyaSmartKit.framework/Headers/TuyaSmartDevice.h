@@ -32,25 +32,26 @@ typedef enum : NSUInteger {
     TYDevicePublishModeAuto // 自动(优先局域网)
 } TYDevicePublishMode;
 
+@class TuyaSmartDevice;
 
 @protocol TuyaSmartDeviceDelegate<NSObject>
 
 @optional
 
 /// 设备信息更新
-- (void)deviceInfoUpdate;
+- (void)deviceInfoUpdate:(TuyaSmartDevice *)device;
 
 /// 设备被移除
-- (void)deviceRemoved;
+- (void)deviceRemoved:(TuyaSmartDevice *)device;
 
 /// dp数据更新
-- (void)deviceDpsUpdate:(NSDictionary *)dps;
+- (void)device:(TuyaSmartDevice *)device dpsUpdate:(NSDictionary *)dps;
 
 /// 固件升级成功
-- (void)deviceFirmwareUpgradeSuccess;
+- (void)deviceFirmwareUpgradeSuccess:(TuyaSmartDevice *)device;
 
 /// 固件升级失败
-- (void)deviceFirmwareUpgradeFailure;
+- (void)deviceFirmwareUpgradeFailure:(TuyaSmartDevice *)device;
 
 /**
  *
@@ -58,14 +59,14 @@ typedef enum : NSUInteger {
  *  @param type 1 - 联网模块 2 - 设备控制模块
  *  @param progress 升级进度
  */
-- (void)deviceFirmwareUpgradeProgress:(NSInteger)type progress:(double)progress;
+- (void)device:(TuyaSmartDevice *)device firmwareUpgradeProgress:(NSInteger)type progress:(double)progress;
 
 @end
 
 /// 设备相关功能
 @interface TuyaSmartDevice : NSObject
 
-@property (nonatomic, strong) TuyaSmartDeviceModel *deviceModel;
+@property (nonatomic, strong, readonly) TuyaSmartDeviceModel *deviceModel;
 @property (nonatomic, weak) id<TuyaSmartDeviceDelegate> delegate;
 
 /** 获取设备对象

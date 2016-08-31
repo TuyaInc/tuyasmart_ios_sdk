@@ -69,6 +69,10 @@
 
 @property (nonatomic, strong) NSArray<TuyaSmartSchemaModel *> *schemaArray;
 
+@property (nonatomic, assign) NSInteger    switchDp;
+@property (nonatomic, strong) NSArray      *displayDps;
+@property (nonatomic, strong) NSDictionary *displayMsgs;
+
 @end
 
 #endif

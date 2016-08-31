@@ -13,22 +13,23 @@
 #import "TuyaSmartGroupModel.h"
 #import "TuyaSmartGroupDevListModel.h"
 
+@class TuyaSmartGroup;
 
 @protocol TuyaSmartGroupDelegate<NSObject>
 
 @optional
 
 /// 群组dp数据更新
-- (void)groupDpsUpdate:(NSDictionary *)dps;
+- (void)group:(TuyaSmartGroup *)group dpsUpdate:(NSDictionary *)dps;
 
 /// 群组信息更新
-- (void)groupInfoUpdate;
+- (void)groupInfoUpdate:(TuyaSmartGroup *)group;
 
 @end
 
 @interface TuyaSmartGroup : NSObject
 
-@property (nonatomic, strong) TuyaSmartGroupModel *groupModel;
+@property (nonatomic, strong, readonly) TuyaSmartGroupModel *groupModel;
 @property (nonatomic, weak) id<TuyaSmartGroupDelegate> delegate;
 
 
