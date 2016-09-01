@@ -47,3 +47,6 @@ CocoaPods的使用请参考：[CocoaPods Guides](https://guides.cocoapods.org/)
 ## 版本更新记录
 
 [CHANGELOG.md](./CHANGELOG.md)
+
+## SDK Demo 体验包
+[下载地址](http://fir.im/iOSSDKDemo)
