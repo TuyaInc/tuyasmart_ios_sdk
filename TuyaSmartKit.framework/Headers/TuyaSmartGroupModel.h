@@ -14,16 +14,28 @@
 
 @interface TuyaSmartGroupModel : TYModel
 
+//群组唯一标识符
 @property (nonatomic, strong) NSString  *groupId;
+
+//产品唯一标识符
 @property (nonatomic, strong) NSString  *productId;
 
+//群组名称
 @property (nonatomic, strong) NSString  *name;
+
+//群组iconUrl
 @property (nonatomic, strong) NSString  *iconUrl;
 
-@property (nonatomic, assign) BOOL      isShare;
+//设备在线状态
 @property (nonatomic, assign) BOOL      isOnline;
 
+//设备是否是分享的
+@property (nonatomic, assign) BOOL      isShare;
+
+//主设备
 @property (nonatomic, strong) TuyaSmartDeviceModel *mainDevice;
+
+//设备列表
 @property (nonatomic, strong) NSArray<TuyaSmartDeviceModel *> *deviceList;
 
 @end

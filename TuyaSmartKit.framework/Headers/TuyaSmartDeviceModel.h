@@ -14,7 +14,6 @@
 
 @interface TuyaSmartDeviceModel : TYModel
 
-
 //设备唯一标识符
 @property (nonatomic, strong) NSString     *devId;
 
@@ -33,45 +32,56 @@
 //设备是否是分享的
 @property (nonatomic, assign) BOOL         isShare;
 
-//设备UI包的唯一标识符
-@property (nonatomic, strong) NSString     *uiId;
-
-//设备UI包的版本号
-@property (nonatomic, strong) NSString     *uiVersion;
-@property (nonatomic, strong) NSString     *uiPhase;
-
 //设备
 @property (nonatomic, strong) NSString     *verSw;
-@property (nonatomic, strong) NSDictionary *uiConfig;
-@property (nonatomic, strong) NSDictionary *panelConfig;
 
 //设备的当前dp点
 @property (nonatomic, strong) NSDictionary *dps;
+
+//产品唯一标识符
 @property (nonatomic, strong) NSString     *productId;
-@property (nonatomic, strong) NSString     *uiType;
-@property (nonatomic, assign) BOOL         rnFind;
+
+//是否支持群组
 @property (nonatomic, assign) BOOL         supportGroup;
-@property (nonatomic, strong) NSString     *runtimeEnv;
+
+//网关类型
 @property (nonatomic, strong) NSString     *gwType;
-@property (nonatomic, assign) double       pv;//网关协议版本
-@property (nonatomic, assign) double       bv;//硬件基线版本
 
-@property (nonatomic, strong) NSString     *ui;
+//网关协议版本
+@property (nonatomic, assign) double       pv;
 
-//设备的schema定义
-@property (nonatomic, strong) NSString     *schema;
+//硬件基线版本
+@property (nonatomic, assign) double       bv;
 
+//设备经纬度
 @property (nonatomic, strong) NSString     *latitude;
 @property (nonatomic, strong) NSString     *longitude;
 
-@property (nonatomic, assign) long         i18nTime;
-
-
+//设备的schema定义
+@property (nonatomic, strong) NSString     *schema;
 @property (nonatomic, strong) NSArray<TuyaSmartSchemaModel *> *schemaArray;
 
-@property (nonatomic, assign) NSInteger    switchDp;
+@property (nonatomic, strong) NSString     *runtimeEnv;
+
+#pragma mark - 涂鸦智能 控制面板相关
+
+@property (nonatomic, assign) BOOL         rnFind;
+@property (nonatomic, assign) long         i18nTime;
+@property (nonatomic, strong) NSString     *ui;
+@property (nonatomic, strong) NSString     *uiId;
+@property (nonatomic, strong) NSString     *uiVersion;
+@property (nonatomic, strong) NSString     *uiPhase;
+@property (nonatomic, strong) NSString     *uiType;
+@property (nonatomic, strong) NSDictionary *uiConfig;
+@property (nonatomic, strong) NSDictionary *panelConfig;
+
+@property (nonatomic, strong) NSArray      *quickOpDps;
 @property (nonatomic, strong) NSArray      *displayDps;
 @property (nonatomic, strong) NSDictionary *displayMsgs;
+
+@property (nonatomic, strong) NSString     *uuid;
+
+@property (nonatomic, strong) NSString     *localKey;
 
 @end
 
