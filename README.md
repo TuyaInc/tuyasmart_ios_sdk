@@ -6,8 +6,6 @@
 
 - 硬件设备相关（配网、控制、状态上报、定时任务、群组、固件升级、共享）
 - 账户体系（手机号、邮箱的注册、登录、重置密码等通用的账户功能）
-- 消息中心
-- 意见反馈
 - 涂鸦云HTTP API接口封装
 
 ## 快速集成
@@ -42,7 +40,7 @@ CocoaPods的使用请参考：[CocoaPods Guides](https://guides.cocoapods.org/)
 
 ## 开发文档
 
-请参考: [涂鸦文档中心 - iOS SDK使用说明](http://docs.tuya.com/develop/app-development/ios-sdk/)
+更多请参考: [涂鸦文档中心 - iOS SDK使用说明](http://docs.tuya.com/develop/app-development/ios-sdk/)
 
 ## 版本更新记录
 
