@@ -50,6 +50,9 @@
 //网关协议版本
 @property (nonatomic, assign) double       pv;
 
+//局域网协议版本号，只有在局域网连着的情况下，才能取到值
+@property (nonatomic, assign) double       lpv;
+
 //硬件基线版本
 @property (nonatomic, assign) double       bv;
 

@@ -14,33 +14,33 @@ PODS:
   - BlocksKit/UIKit (2.2.5):
     - BlocksKit/Core
     - BlocksKit/DynamicDelegate
-  - CocoaAsyncSocket (7.5.0):
-    - CocoaAsyncSocket/GCD (= 7.5.0)
-  - CocoaAsyncSocket/GCD (7.5.0)
-  - CocoaLumberjack (2.3.0):
-    - CocoaLumberjack/Default (= 2.3.0)
-    - CocoaLumberjack/Extensions (= 2.3.0)
-  - CocoaLumberjack/Core (2.3.0)
-  - CocoaLumberjack/Default (2.3.0):
+  - CocoaAsyncSocket (7.5.1):
+    - CocoaAsyncSocket/GCD (= 7.5.1)
+  - CocoaAsyncSocket/GCD (7.5.1)
+  - CocoaLumberjack (3.0.0):
+    - CocoaLumberjack/Default (= 3.0.0)
+    - CocoaLumberjack/Extensions (= 3.0.0)
+  - CocoaLumberjack/Core (3.0.0)
+  - CocoaLumberjack/Default (3.0.0):
     - CocoaLumberjack/Core
-  - CocoaLumberjack/Extensions (2.3.0):
+  - CocoaLumberjack/Extensions (3.0.0):
     - CocoaLumberjack/Default
   - DACircularProgress (2.3.1)
-  - Mantle (2.0.7):
-    - Mantle/extobjc (= 2.0.7)
-  - Mantle/extobjc (2.0.7)
+  - Mantle (1.5.8):
+    - Mantle/extobjc (= 1.5.8)
+  - Mantle/extobjc (1.5.8)
   - MBProgressHUD (0.9.2)
   - MQTTClient (0.7.4):
     - MQTTClient/Core (= 0.7.4)
   - MQTTClient/Core (0.7.4):
     - CocoaLumberjack
   - Reachability (3.2)
-  - SDWebImage (3.8.1):
-    - SDWebImage/Core (= 3.8.1)
-  - SDWebImage/Core (3.8.1)
-  - TuyaSmartKit (1.2.8):
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
+  - TuyaSmartKit (1.2.13):
     - CocoaAsyncSocket
-    - Mantle
+    - Mantle (= 1.5.8)
     - MQTTClient (= 0.7.4)
     - Reachability
     - UICKeyChainStore
@@ -59,17 +59,17 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
-  CocoaAsyncSocket: 3baeb1ddd969f81cf9fca81053ae49ef2d1cbbfa
-  CocoaLumberjack: 97fab7ee5f507fe54445cca7ea80f926729cfd15
+  CocoaAsyncSocket: e0a7e93b2ffa411592ff87e58524fbbc9b95b4fa
+  CocoaLumberjack: c823149bccc5519a9447aeb433be7b1212a7d6a5
   DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
-  Mantle: bc40bb061d8c2c6fb48d5083e04d928c3b7f73d9
+  Mantle: f03b2b606c3f0cabd80214ad8a2fed6b464a7359
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   MQTTClient: 1c1bedf87249a317ee9324b93252867bbc443ec7
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
-  SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
-  TuyaSmartKit: b642de92f3ea7b487fe48e4b58ff6726472fb8a1
+  SDWebImage: '098e97e6176540799c27e804c96653ee0833d13c'
+  TuyaSmartKit: 42e42ed6b508d291cef37c11484c79b787a16602
   UICKeyChainStore: f1cbd42216a113f0165de1e733e62905b8823432
 
 PODFILE CHECKSUM: 046b5916ec244ac09052e73730cfba1ce8ad338c
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.1.1

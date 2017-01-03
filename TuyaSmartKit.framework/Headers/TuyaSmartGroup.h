@@ -84,7 +84,7 @@
 
 
 /** 修改群组设备列表
- *  @param devIdList 设备Id列表
+ *  @param devList 设备Id列表
  *  @param success 操作成功回调
  *  @param failure 操作失败回调
  */

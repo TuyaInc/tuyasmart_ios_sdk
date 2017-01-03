@@ -20,10 +20,10 @@ typedef enum : NSUInteger {
 } TYActivatorMode;
 
 typedef enum : NSUInteger {
-    TYActivatorStateSearch, //搜索设备
+    TYActivatorStateSearch = 0, //搜索设备
     TYActivatorStateConfigure, //配置设备
-    TYActivatorStateDeviceLogin, //设备上线至涂鸦云
-    TYActivatorStateOK, //配网成功
+    TYActivatorStateDeviceLogin, //设备绑定至涂鸦云
+    TYActivatorStateOK, //配网成功，并且设备已正常上线
     TYActivatorStateFailed, //配网失败
     TYActivatorStateTimeOut, //配网超时
     TYActivatorStateNetworkError, //网络错误
@@ -87,6 +87,20 @@ typedef enum : NSUInteger {
                 timeout:(NSTimeInterval)timeout;
 
 /**
+ *  开始EZ模式多设备配网
+ *
+ *  @param ssid     路由器热点名称
+ *  @param password 路由器热点密码
+ *  @param token    配网Token
+ *  @param timeout  超时时间, 默认为100秒
+ */
+- (void)startEZMultiConfigWiFiWithSsid:(NSString *)ssid
+                              password:(NSString *)password
+                                 token:(NSString *)token
+                               timeout:(NSTimeInterval)timeout;
+
+
+/**
  *  停止配网
  */
 - (void)stopConfigWiFi;
@@ -108,7 +122,7 @@ typedef enum : NSUInteger {
  *
  *  @param success 操作成功回调
  *  @param failure 操作失败回调
- *  @param 此方法已废弃，请参照最新开发文档迁移至v3配网方式。AP配网版本号3.0以上的设备固件不支持此方法获取SSID列表。
+ *  此方法已废弃，请参照最新开发文档迁移至v3配网方式。AP配网版本号3.0以上的设备固件不支持此方法获取SSID列表。
  */
 - (void)getSSIDList:(TYSuccessDict)success failure:(TYFailureHandler)failure __deprecated;
 
@@ -119,7 +133,7 @@ typedef enum : NSUInteger {
  *  @param ssid     路由器热点名称
  *  @param password 路由器热点密码
  *  @param timeout  超时时间, 默认为100秒
- *  @param 此方法已废弃，请参照最新开发文档迁移至v3配网方式。AP配网版本号3.0以上的设备固件将无法使用此方法进行配网。
+ *  此方法已废弃，请参照最新开发文档迁移至v3配网方式。AP配网版本号3.0以上的设备固件将无法使用此方法进行配网。
  */
 - (void)startConfigWiFi:(TYActivatorMode)mode ssid:(NSString *)ssid password:(NSString *)password timeout:(NSTimeInterval)timeout __deprecated_msg("Please use [TuyaSmartActivator getToken:failure:] and [TuyaSmartActivator startConfigWiFi:ssid:password:token:timeout:] instead.");
 
@@ -131,7 +145,7 @@ typedef enum : NSUInteger {
 + (instancetype)activatorWithMode:(TYActivatorMode)mode SSIDPrefix:(NSString *)SSIDPrefix __deprecated_msg("Replaced by [TuyaSmartActivator activator]");
 
 /** 开始配网
- @param SSID 连接的热点名称
+ @param ssid 连接的热点名称
  @param password 热点密码
  @param timeout 超时时间, 单位秒.
  */

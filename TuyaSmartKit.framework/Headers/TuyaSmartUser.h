@@ -10,6 +10,7 @@
 #define TuyaSmart_TuyaSmartUser
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "TuyaSmartKitConstants.h"
 #import "TuyaSmartDeviceModel.h"
 #import "TuyaSmartGroupModel.h"
@@ -23,6 +24,8 @@ FOUNDATION_EXPORT NSString * const TuyaSmartUserNotificationUserSessionInvalid;
 /// 当设备列表的数据有变化时发出的通知
 FOUNDATION_EXPORT NSString * const TuyaSmartUserNotificationDeviceArrayChanged;
 
+/// 当网络变化的时候发出的通知
+FOUNDATION_EXPORT NSString * const TuyaSmartUserNotificationNetworkChanged;
 
 
 
@@ -33,6 +36,12 @@ FOUNDATION_EXPORT NSString * const TuyaSmartUserNotificationDeviceArrayChanged;
  *  单例
  */
 + (instancetype)sharedInstance;
+
+/// 用户唯一ID
+@property (nonatomic, strong, readonly) NSString *uid;
+
+/// 头像
+@property (nonatomic, strong, readonly) NSString *headIconUrl;
 
 /// 昵称
 @property (nonatomic, strong, readonly) NSString *nickname;
@@ -52,11 +61,18 @@ FOUNDATION_EXPORT NSString * const TuyaSmartUserNotificationDeviceArrayChanged;
 /// 是否已登录
 @property (nonatomic, assign, readonly) BOOL isLogin;
 
+/// 当前账号所在的国家区域 AY - 中国 、 AZ - 美国 、 EU - 欧洲
+@property (nonatomic, strong, readonly) NSString *regionCode;
+
+/// 当前账号所在区域的接口域名地址
+@property (nonatomic, strong, readonly) NSDictionary *domain;
+
 /// 设备列表
 @property (nonatomic, strong, readonly) NSArray<TuyaSmartDeviceModel *> *deviceArray;
 
 /// 群组列表
 @property (nonatomic, strong, readonly) NSArray<TuyaSmartGroupModel *> *groupList;
+
 
 #pragma mark - 手机验证码登录
 
@@ -293,11 +309,22 @@ FOUNDATION_EXPORT NSString * const TuyaSmartUserNotificationDeviceArrayChanged;
 /**
  *  修改昵称
  *
- *  @param nickname 昵称
+ *  @param nickName 昵称
  *  @param success  操作成功回调
  *  @param failure  操作失败回调
  */
 - (void)updateNickname:(NSString *)nickName
+               success:(TYSuccessHandler)success
+               failure:(TYFailureError)failure;
+
+/**
+ *  修改头像
+ *
+ *  @param headIcon 头像
+ *  @param success  操作成功回调
+ *  @param failure  操作失败回调
+ */
+- (void)updateHeadIcon:(UIImage *)headIcon
                success:(TYSuccessHandler)success
                failure:(TYFailureError)failure;
 
@@ -329,28 +356,6 @@ FOUNDATION_EXPORT NSString * const TuyaSmartUserNotificationDeviceArrayChanged;
  */
 - (void)getExperienceDeviceWithCloud:(void(^)(NSArray <TuyaSmartDeviceModel *> *list))success
                              failure:(TYFailureError)failure;
-
-#pragma mark - 消息中心
-
-/**
- *  获取消息类型列表
- *
- *  @param success 操作成功回调
- *  @param failure 操作失败回调
- */
-- (void)getMessageGroup:(TYSuccessList)success
-                failure:(TYFailureError)failure;
-
-/**
- *  获取消息列表
- *
- *  @param msgType 消息类型
- *  @param success 操作成功回调
- *  @param failure 操作失败回调
- */
-- (void)getMessageList:(NSInteger)msgType
-               success:(TYSuccessList)success
-               failure:(TYFailureError)failure;
 
 #pragma mark -
 

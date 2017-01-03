@@ -16,23 +16,10 @@
 	return result;
 }
 
-- (NSDictionary *)mtl_dictionaryByRemovingValuesForKeys:(NSArray *)keys {
+- (NSDictionary *)mtl_dictionaryByRemovingEntriesWithKeys:(NSSet *)keys {
 	NSMutableDictionary *result = [self mutableCopy];
-	[result removeObjectsForKeys:keys];
+	[result removeObjectsForKeys:keys.allObjects];
 	return result;
 }
-
-@end
-
-@implementation NSDictionary (MTLManipulationAdditions_Deprecated)
-
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wdeprecated"
-
-- (NSDictionary *)mtl_dictionaryByRemovingEntriesWithKeys:(NSSet *)keys {
-	return [self mtl_dictionaryByRemovingValuesForKeys:keys.allObjects];
-}
-
-#pragma clang diagnostic pop
 
 @end

@@ -31,7 +31,6 @@
  */
 - (void)startWithAppKey:(NSString *)appKey secretKey:(NSString *)secretKey;
 
-
 @end
 
 @interface TuyaSmartSDK (Deprecated)

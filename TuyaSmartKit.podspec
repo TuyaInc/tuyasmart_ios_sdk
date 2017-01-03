@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TuyaSmartKit'
-  s.version          = '1.2.11'
+  s.version          = '1.2.13'
   s.summary          = '涂鸦智能iOS SDK'
 
 # This description is used to generate tags and improve search results.
@@ -42,7 +42,7 @@ Pod::Spec.new do |s|
 
   s.dependency 'CocoaAsyncSocket'
   s.dependency 'MQTTClient', '0.7.4'
-  s.dependency 'Mantle'
+  s.dependency 'Mantle', '1.5.8'
   s.dependency 'UICKeyChainStore'
   s.dependency 'Reachability'
 
