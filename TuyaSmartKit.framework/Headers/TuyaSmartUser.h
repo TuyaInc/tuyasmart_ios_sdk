@@ -294,6 +294,69 @@ FOUNDATION_EXPORT NSString * const TuyaSmartUserNotificationNetworkChanged;
                    success:(TYSuccessHandler)success
                    failure:(TYFailureError)failure;
 
+
+#pragma mark - 三方登录
+
+/**
+ *  QQ登录
+ *
+ *  @param countryCode 国家区号
+ *  @param userId QQ授权登录获取的userId
+ *  @param accessToken QQ授权登录获取的accessToken
+ *  @param success 操作成功回调
+ *  @param failure 操作失败回调
+ */
+- (void)loginByQQ:(NSString *)countryCode
+           userId:(NSString *)userId
+      accessToken:(NSString *)accessToken
+          success:(TYSuccessHandler)success
+          failure:(TYFailureError)failure;
+
+/**
+ *  微信登录
+ *
+ *  @param countryCode 国家区号
+ *  @param code 微信授权登录获取的code
+ *  @param success 操作成功回调
+ *  @param failure 操作失败回调
+ */
+- (void)loginByWechat:(NSString *)countryCode
+                 code:(NSString *)code
+              success:(TYSuccessHandler)success
+              failure:(TYFailureError)failure;
+
+
+/**
+ *  facebook登录
+ *
+ *  @param countryCode 国家区号
+ *  @param token facebook授权登录获取的token
+ *  @param success 操作成功回调
+ *  @param failure 操作失败回调
+ */
+- (void)loginByFacebook:(NSString *)countryCode
+                  token:(NSString *)token
+                success:(TYSuccessHandler)success
+                failure:(TYFailureError)failure;
+
+
+
+/**
+ *  twitter登录
+ *
+ *  @param countryCode 国家区号
+ *  @param key twitter授权登录获取的key
+ *  @param secret twitter授权登录获取的secret
+ *  @param success 操作成功回调
+ *  @param failure 操作失败回调
+ */
+- (void)loginByTwitter:(NSString *)countryCode
+                   key:(NSString *)key
+                secret:(NSString *)secret
+               success:(TYSuccessHandler)success
+               failure:(TYFailureError)failure;
+
+
 #pragma mark - 
 
 

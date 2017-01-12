@@ -30,6 +30,19 @@
 //0:app提醒升级 2:app强制升级 3:检测升级
 @property (nonatomic, assign) NSInteger upgradeType;
 
+
+//如果是蓝牙设备的升级，需要使用以下两个字段
+
+//固件的下载URL
+@property (nonatomic, strong) NSString *url;
+
+//固件的md5
+@property (nonatomic, strong) NSString *md5;
+
+//固件包的size
+@property (nonatomic, strong) NSString *fileSize;
+
+
 @end
 
 #endif

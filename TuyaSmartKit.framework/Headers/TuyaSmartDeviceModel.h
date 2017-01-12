@@ -29,6 +29,9 @@
 //设备在线状态
 @property (nonatomic, assign) BOOL         isOnline;
 
+//局域网在线状态
+@property (nonatomic, assign) BOOL         isLocalOnline;
+
 //设备是否是分享的
 @property (nonatomic, assign) BOOL         isShare;
 
@@ -85,6 +88,8 @@
 @property (nonatomic, strong) NSString     *uuid;
 
 @property (nonatomic, strong) NSString     *localKey;
+
+@property (nonatomic, assign) NSUInteger    attribute;
 
 @end
 
