@@ -2,7 +2,7 @@
 // MQTTMessage.h
 // MQTTClient.framework
 //
-// Copyright © 2013-2016, Christoph Krey
+// Copyright © 2013-2017, Christoph Krey. All rights reserved.
 //
 // based on
 //
@@ -18,8 +18,24 @@
 //
 
 #import <Foundation/Foundation.h>
+/**
+ Enumeration of MQTT Quality of Service levels
+ */
+typedef NS_ENUM(UInt8, MQTTQosLevel) {
+    MQTTQosLevelAtMostOnce = 0,
+    MQTTQosLevelAtLeastOnce = 1,
+    MQTTQosLevelExactlyOnce = 2
+};
 
-@interface MQTTMessage : NSObject
+/**
+ Enumeration of MQTT protocol version
+ */
+typedef NS_ENUM(UInt8, MQTTProtocolVersion) {
+    MQTTProtocolVersion31 = 3,
+    MQTTProtocolVersion311 = 4,
+    MQTTProtocolVersion50 = 5
+};
+
 typedef NS_ENUM(UInt8, MQTTCommandType) {
     MQTT_None = 0,
     MQTTConnect = 1,
@@ -38,23 +54,7 @@ typedef NS_ENUM(UInt8, MQTTCommandType) {
     MQTTDisconnect = 14
 };
 
-/**
- Enumeration of MQTT Quality of Service levels
- */
-typedef NS_ENUM(UInt8, MQTTQosLevel) {
-    MQTTQosLevelAtMostOnce = 0,
-    MQTTQosLevelAtLeastOnce = 1,
-    MQTTQosLevelExactlyOnce = 2
-};
-
-/**
- Enumeration of MQTT protocol version
- */
-typedef NS_ENUM(UInt8, MQTTProtocolVersion) {
-    MQTTProtocolVersion31 = 3,
-    MQTTProtocolVersion311 = 4
-};
-
+@interface MQTTMessage : NSObject
 @property (nonatomic) MQTTCommandType type;
 @property (nonatomic) MQTTQosLevel qos;
 @property (nonatomic) BOOL retainFlag;

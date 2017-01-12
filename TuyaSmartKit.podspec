@@ -41,7 +41,7 @@ Pod::Spec.new do |s|
   s.libraries  = 'c++', 'z'
 
   s.dependency 'CocoaAsyncSocket'
-  s.dependency 'MQTTClient', '0.7.4'
+  s.dependency 'MQTTClient'
   s.dependency 'Mantle', '1.5.8'
   s.dependency 'UICKeyChainStore'
   s.dependency 'Reachability'

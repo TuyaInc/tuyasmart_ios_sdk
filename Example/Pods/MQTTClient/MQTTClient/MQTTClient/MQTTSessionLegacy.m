@@ -2,7 +2,7 @@
 // MQTTSessionLegacy.m
 // MQTTClient.framework
 //
-// Copyright © 2013-2016, Christoph Krey
+// Copyright © 2013-2017, Christoph Krey. All rights reserved.
 //
 // based on
 //
@@ -345,6 +345,7 @@
         transport.tls = usingSSL;
         transport.securityPolicy = self.securityPolicy;
         transport.certificates = self.certificates;
+        transport.voip = self.voip;
         transport.runLoop = self.runLoop;
         transport.runLoopMode = self.runLoopMode;
         self.transport = transport;
@@ -354,6 +355,8 @@
         transport.host = host;
         transport.port = port;
         transport.tls = usingSSL;
+        transport.certificates = self.certificates;
+        transport.voip = self.voip;
         transport.runLoop = self.runLoop;
         transport.runLoopMode = self.runLoopMode;
         self.transport = transport;

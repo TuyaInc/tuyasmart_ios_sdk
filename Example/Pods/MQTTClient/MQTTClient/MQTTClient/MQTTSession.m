@@ -2,7 +2,7 @@
 // MQTTSession.m
 // MQTTClient.framework
 //
-// Copyright © 2013-2016, Christoph Krey
+// Copyright © 2013-2017, Christoph Krey. All rights reserved.
 //
 
 
@@ -14,6 +14,14 @@
 //#define myLogLevel DDLogLevelVerbose
 
 #import "MQTTLog.h"
+
+#ifdef LUMBERJACK
+#warning with LumberJack
+#else
+#warning without LumberJack
+#endif
+
+NSString * const MQTTSessionErrorDomain = @"MQTT";
 
 @interface MQTTSession() <MQTTDecoderDelegate, MQTTTransportDelegate>
 
@@ -32,14 +40,15 @@
 
 @property (nonatomic) UInt16 txMsgId;
 
-@property (nonatomic) BOOL synchronPub;
 @property (nonatomic) UInt16 synchronPubMid;
-@property (nonatomic) BOOL synchronUnsub;
 @property (nonatomic) UInt16 synchronUnsubMid;
-@property (nonatomic) BOOL synchronSub;
 @property (nonatomic) UInt16 synchronSubMid;
-@property (nonatomic) BOOL synchronConnect;
-@property (nonatomic) BOOL synchronDisconnect;
+
+- (dispatch_semaphore_t)semaphorePub;
+- (dispatch_semaphore_t)semaphoreSub;
+- (dispatch_semaphore_t)semaphoreUnsub;
+- (dispatch_semaphore_t)semaphoreConnect;
+- (dispatch_semaphore_t)semaphoreDisconnect;
 
 @end
 
@@ -122,7 +131,10 @@
 
 - (void)setProtocolLevel:(MQTTProtocolVersion)protocolLevel
 {
-    //NSAssert(protocolLevel == MQTTProtocolVersion31 || protocolLevel == MQTTProtocolVersion311, @"allowed protocolLevel values are 3 or 4 only");
+//    NSAssert(protocolLevel == MQTTProtocolVersion31 ||
+//             protocolLevel == MQTTProtocolVersion311 ||
+//             protocolLevel == MQTTProtocolVersion50,
+//             @"allowed protocolLevel values are 3,4 or 5 only");
     _protocolLevel = protocolLevel;
 }
 
@@ -259,8 +271,8 @@
         }
         if (!flow) {
             DDLogWarn(@"[MQTTSession] dropping outgoing message %d", msgId);
-            NSError *error = [NSError errorWithDomain:@"MQTT"
-                                                 code:-6
+            NSError *error = [NSError errorWithDomain:MQTTSessionErrorDomain
+                                                 code:MQTTSessionErrorDroppingOutgoingMessage
                                              userInfo:@{NSLocalizedDescriptionKey : @"Dropping outgoing Message"}];
             if (publishHandler) {
                 [self onPublish:publishHandler error:error];
@@ -289,8 +301,8 @@
     } else {
         NSError *error = nil;
         if (![self encode:msg]) {
-            error = [NSError errorWithDomain:@"MQTT"
-                                        code:-5
+            error = [NSError errorWithDomain:MQTTSessionErrorDomain
+                                        code:MQTTSessionErrorEncoderNotReady
                                     userInfo:@{NSLocalizedDescriptionKey : @"Encoder not ready"}];
         }
         if (publishHandler) {
@@ -351,8 +363,8 @@
         [self.delegate connectionClosed:self];
     }
     
-    NSError *error = [NSError errorWithDomain:@"MQTT"
-                                         code:-6
+    NSError *error = [NSError errorWithDomain:MQTTSessionErrorDomain
+                                         code:MQTTSessionErrorNoResponse
                                      userInfo:@{NSLocalizedDescriptionKey : @"No response"}];
     
     NSArray *allSubscribeHandlers = self.subscribeHandlers.allValues;
@@ -374,11 +386,12 @@
     }
     
     [self tell];
-    self.synchronPub = FALSE;
+    
+    dispatch_semaphore_signal(self.semaphorePub);
     self.synchronPubMid = 0;
-    self.synchronSub = FALSE;
+    dispatch_semaphore_signal(self.semaphoreSub);
     self.synchronSubMid = 0;
-    self.synchronUnsub = FALSE;
+    dispatch_semaphore_signal(self.semaphoreUnsub);
     self.synchronUnsubMid = 0;
 }
 
@@ -462,7 +475,7 @@
 }
 
 - (void)decoder:(MQTTDecoder*)sender handleEvent:(MQTTDecoderEvent)eventCode error:(NSError *)error {
-    NSArray *events = @[
+    __unused NSArray *events = @[
                         @"MQTTDecoderEventProtocolError",
                         @"MQTTDecoderEventConnectionClosed",
                         @"MQTTDecoderEventConnectionError"
@@ -494,8 +507,8 @@
     MQTTMessage *message = [MQTTMessage messageFromData:data];
     if (!message) {
         DDLogError(@"[MQTTSession] MQTT illegal message received");
-        NSError * error = [NSError errorWithDomain:@"MQTT"
-                                              code:-7
+        NSError * error = [NSError errorWithDomain:MQTTSessionErrorDomain
+                                              code:MQTTSessionErrorIllegalMessageReceived
                                           userInfo:@{NSLocalizedDescriptionKey : @"MQTT illegal message received"}];
         [self protocolError:error];
         
@@ -528,8 +541,8 @@
                 switch (message.type) {
                     case MQTTConnack:
                         if (message.data.length != 2) {
-                            NSError *error = [NSError errorWithDomain:@"MQTT"
-                                                                 code:-2
+                            NSError *error = [NSError errorWithDomain:MQTTSessionErrorDomain
+                                                                 code:MQTTSessionErrorInvalidConnackReceived
                                                              userInfo:@{NSLocalizedDescriptionKey : @"MQTT protocol CONNACK expected"}];
                             
                             [self protocolError:error];
@@ -580,29 +593,36 @@
                                 
                             } else {
                                 NSString *errorDescription;
+                                NSInteger errorCode = 0;
                                 switch (bytes[1]) {
                                     case 1:
                                         errorDescription = @"MQTT CONNACK: unacceptable protocol version";
+                                        errorCode = MQTTSessionErrorConnackUnacceptableProtocolVersion;
                                         break;
                                     case 2:
                                         errorDescription = @"MQTT CONNACK: identifier rejected";
+                                        errorCode = MQTTSessionErrorConnackIdentifierRejected;
                                         break;
                                     case 3:
                                         errorDescription = @"MQTT CONNACK: server unavailable";
+                                        errorCode = MQTTSessionErrorConnackServeUnavailable;
                                         break;
                                     case 4:
                                         errorDescription = @"MQTT CONNACK: bad user name or password";
+                                        errorCode = MQTTSessionErrorConnackBadUsernameOrPassword;
                                         break;
                                     case 5:
                                         errorDescription = @"MQTT CONNACK: not authorized";
+                                        errorCode = MQTTSessionErrorConnackNotAuthorized;
                                         break;
                                     default:
                                         errorDescription = @"MQTT CONNACK: reserved for future use";
+                                        errorCode = MQTTSessionErrorConnackReserved;
                                         break;
                                 }
                                 
-                                NSError *error = [NSError errorWithDomain:@"MQTT"
-                                                                     code:bytes[1]
+                                NSError *error = [NSError errorWithDomain:MQTTSessionErrorDomain
+                                                                     code:errorCode
                                                                  userInfo:@{NSLocalizedDescriptionKey : errorDescription}];
                                 [self error:MQTTSessionEventConnectionRefused error:error];
                                 if ([self.delegate respondsToSelector:@selector(connectionRefused:error:)]) {
@@ -615,12 +635,12 @@
                                 }
                             }
                             
-                            self.synchronConnect = FALSE;
+                            dispatch_semaphore_signal(self.semaphoreConnect);
                         }
                         break;
                     default: {
-                        NSError * error = [NSError errorWithDomain:@"MQTT"
-                                                              code:-1
+                        NSError * error = [NSError errorWithDomain:MQTTSessionErrorDomain
+                                                              code:MQTTSessionErrorNoConnackReceived
                                                           userInfo:@{NSLocalizedDescriptionKey : @"MQTT protocol no CONNACK"}];
                         [self protocolError:error];
                         MQTTConnectHandler connectHandler = self.connectHandler;
@@ -687,7 +707,6 @@
     NSRange range = NSMakeRange(2 + topicLength, [data length] - topicLength - 2);
     data = [data subdataWithRange:range];
     if ([msg qos] == 0) {
-        BOOL processed = true;
         if ([self.delegate respondsToSelector:@selector(newMessage:data:onTopic:qos:retained:mid:)]) {
             [self.delegate newMessage:self
                                  data:data
@@ -697,12 +716,12 @@
                                   mid:0];
         }
         if ([self.delegate respondsToSelector:@selector(newMessageWithFeedback:data:onTopic:qos:retained:mid:)]) {
-            processed = [self.delegate newMessageWithFeedback:self
-                                                         data:data
-                                                      onTopic:topic
-                                                          qos:msg.qos
-                                                     retained:msg.retainFlag
-                                                          mid:0];
+            [self.delegate newMessageWithFeedback:self
+                                             data:data
+                                          onTopic:topic
+                                              qos:msg.qos
+                                         retained:msg.retainFlag
+                                              mid:0];
         }
         if (self.messageHandler) {
             self.messageHandler(data, topic);
@@ -776,8 +795,8 @@
                 if ([self.delegate respondsToSelector:@selector(messageDelivered:msgID:)]) {
                     [self.delegate messageDelivered:self msgID:messageId];
                 }
-                if (self.synchronPub && self.synchronPubMid == messageId) {
-                    self.synchronPub = FALSE;
+                if (self.synchronPubMid == messageId) {
+                    dispatch_semaphore_signal(self.semaphorePub);
                 }
                 MQTTPublishHandler publishHandler = [self.publishHandlers objectForKey:@(msg.mid)];
                 if (publishHandler) {
@@ -802,8 +821,8 @@
         if ([self.delegate respondsToSelector:@selector(subAckReceived:msgID:grantedQoss:)]) {
             [self.delegate subAckReceived:self msgID:msg.mid grantedQoss:qoss];
         }
-        if (self.synchronSub && self.synchronSubMid == msg.mid) {
-            self.synchronSub = FALSE;
+        if (self.synchronSubMid == msg.mid) {
+            dispatch_semaphore_signal(self.semaphoreSub);
         }
         MQTTSubscribeHandler subscribeHandler = [self.subscribeHandlers objectForKey:@(msg.mid)];
         if (subscribeHandler) {
@@ -817,8 +836,8 @@
     if ([self.delegate respondsToSelector:@selector(unsubAckReceived:msgID:)]) {
         [self.delegate unsubAckReceived:self msgID:message.mid];
     }
-    if (self.synchronUnsub && self.synchronUnsubMid == message.mid) {
-        self.synchronUnsub = FALSE;
+    if (self.synchronUnsubMid == message.mid) {
+        dispatch_semaphore_signal(self.semaphoreUnsub);
     }
     MQTTUnsubscribeHandler unsubscribeHandler = [self.unsubscribeHandlers objectForKey:@(message.mid)];
     if (unsubscribeHandler) {
@@ -891,8 +910,8 @@
         if ([self.delegate respondsToSelector:@selector(messageDelivered:msgID:)]) {
             [self.delegate messageDelivered:self msgID:message.mid];
         }
-        if (self.synchronPub && self.synchronPubMid == message.mid) {
-            self.synchronPub = FALSE;
+        if (self.synchronPubMid == message.mid) {
+            dispatch_semaphore_signal(self.semaphorePub);
         }
         MQTTPublishHandler publishHandler = [self.publishHandlers objectForKey:@(message.mid)];
         if (publishHandler) {
@@ -932,15 +951,25 @@
     if(self.connectionHandler){
         self.connectionHandler(eventCode);
     }
+
+    if(eventCode == MQTTSessionEventConnectionClosedByBroker && self.connectHandler) {
+        error = [NSError errorWithDomain:MQTTSessionErrorDomain
+                                    code:MQTTSessionErrorConnectionRefused
+                                userInfo:@{NSLocalizedDescriptionKey : @"Server has closed connection without connack."}];
+
+        MQTTConnectHandler connectHandler = self.connectHandler;
+        self.connectHandler = nil;
+        [self onConnect:connectHandler error:error];
+    }
     
-    self.synchronPub = FALSE;
+    dispatch_semaphore_signal(self.semaphorePub);
     self.synchronPubMid = 0;
-    self.synchronSub = FALSE;
+    dispatch_semaphore_signal(self.semaphoreSub);
     self.synchronSubMid = 0;
-    self.synchronUnsub = FALSE;
+    dispatch_semaphore_signal(self.semaphoreUnsub);
     self.synchronUnsubMid = 0;
-    self.synchronConnect = FALSE;
-    self.synchronDisconnect = FALSE;
+    dispatch_semaphore_signal(self.semaphoreConnect);
+    dispatch_semaphore_signal(self.semaphoreDisconnect);
 }
 
 - (UInt16)nextMsgId {
@@ -1056,6 +1085,53 @@
     MQTTPublishHandler publishHandler = [dict objectForKey:@"Block"];
     NSError *error = [dict objectForKey:@"Error"];
     publishHandler(error);
+}
+
+#pragma mark - Lazy loading
+
+- (dispatch_semaphore_t)semaphorePub {
+    static dispatch_once_t onceToken;
+    static dispatch_semaphore_t semaphorePub;
+    dispatch_once(&onceToken, ^{
+        semaphorePub = dispatch_semaphore_create(1);
+    });
+    return semaphorePub;
+}
+
+- (dispatch_semaphore_t)semaphoreSub {
+    static dispatch_once_t onceToken;
+    static dispatch_semaphore_t semaphoreSub;
+    dispatch_once(&onceToken, ^{
+        semaphoreSub = dispatch_semaphore_create(1);
+    });
+    return semaphoreSub;
+}
+
+- (dispatch_semaphore_t)semaphoreUnsub {
+    static dispatch_once_t onceToken;
+    static dispatch_semaphore_t semaphoreUnsub;
+    dispatch_once(&onceToken, ^{
+        semaphoreUnsub = dispatch_semaphore_create(1);
+    });
+    return semaphoreUnsub;
+}
+
+- (dispatch_semaphore_t)semaphoreConnect {
+    static dispatch_once_t onceToken;
+    static dispatch_semaphore_t semaphoreConnect;
+    dispatch_once(&onceToken, ^{
+        semaphoreConnect = dispatch_semaphore_create(1);
+    });
+    return semaphoreConnect;
+}
+
+- (dispatch_semaphore_t)semaphoreDisconnect {
+    static dispatch_once_t onceToken;
+    static dispatch_semaphore_t semaphoreDisconnect;
+    dispatch_once(&onceToken, ^{
+        semaphoreDisconnect = dispatch_semaphore_create(1);
+    });
+    return semaphoreDisconnect;
 }
 
 #pragma mark - MQTTTransport interface

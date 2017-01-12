@@ -3,7 +3,7 @@
 //  MQTTClient
 //
 //  Created by Christoph Krey on 09.07.14.
-//  Copyright © 2013-2016 Christoph Krey. All rights reserved.
+//  Copyright © 2013-2017 Christoph Krey. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -13,6 +13,8 @@
 #import "MQTTSession.h"
 #import "MQTTSessionLegacy.h"
 #import "MQTTSSLSecurityPolicy.h"
+
+@class MQTTSessionManager;
 
 /** delegate gives your application access to received messages
  */
@@ -44,6 +46,13 @@ typedef NS_ENUM(int, MQTTSessionManagerState) {
  @note this method is called after a publish with qos 1 or 2 only
  */
 - (void)messageDelivered:(UInt16)msgID;
+
+/** gets called when the connection status changes
+ @param sessionManager the instance of MQTTSessionManager whose state changed
+ @param newState the new connection state of the sessionManager. This will be identical to `sessionManager.state`.
+ */
+- (void)sessionManager:(MQTTSessionManager *)sessonManager didChangeState:(MQTTSessionManagerState)newState;
+
 @end
 
 /** SessionManager handles the MQTT session for your application
@@ -107,6 +116,21 @@ typedef NS_ENUM(int, MQTTSessionManagerState) {
  * @param maxWindowSize (a positive number, default is 16) to control the number of messages sent before waiting for acknowledgement in Qos 1 or 2. Additional messages are stored and transmitted later.
  * @param maxSize (a positive number of bytes, default is 64 MB) to limit the size of the persistence file. Messages published after the limit is reached are dropped.
  * @param maxMessages (a positive number, default is 1024) to limit the number of messages stored. Additional messages published are dropped.
+ * @param connectInForeground Whether or not to connect the MQTTSession when the app enters the foreground, and disconnect when it becomes inactive. When NO, the caller is responsible for calling -connectTo: and -disconnect. Defaults to YES.
+ * @return the initialized MQTTSessionManager object
+ */
+
+- (MQTTSessionManager *)initWithPersistence:(BOOL)persistent
+                              maxWindowSize:(NSUInteger)maxWindowSize
+                                maxMessages:(NSUInteger)maxMessages
+                                    maxSize:(NSUInteger)maxSize
+                        connectInForeground:(BOOL)connectInForeground;
+
+/** initWithPersistence sets the MQTTPersistence properties other than default
+ * @param persistent YES or NO (default) to establish file or in memory persistence.
+ * @param maxWindowSize (a positive number, default is 16) to control the number of messages sent before waiting for acknowledgement in Qos 1 or 2. Additional messages are stored and transmitted later.
+ * @param maxSize (a positive number of bytes, default is 64 MB) to limit the size of the persistence file. Messages published after the limit is reached are dropped.
+ * @param maxMessages (a positive number, default is 1024) to limit the number of messages stored. Additional messages published are dropped.
  * @return the initialized MQTTSessionManager object
  */
 
@@ -115,6 +139,43 @@ typedef NS_ENUM(int, MQTTSessionManagerState) {
                                 maxMessages:(NSUInteger)maxMessages
                                     maxSize:(NSUInteger)maxSize;
 
+/** Connects to the MQTT broker and stores the parameters for subsequent reconnects
+ * @param host specifies the hostname or ip address to connect to. Defaults to @"localhost".
+ * @param port specifies the port to connect to
+ * @param tls specifies whether to use SSL or not
+ * @param keepalive The Keep Alive is a time interval measured in seconds. The MQTTClient ensures that the interval between Control Packets being sent does not exceed the Keep Alive value. In the  absence of sending any other Control Packets, the Client sends a PINGREQ Packet.
+ * @param clean specifies if the server should discard previous session information.
+ * @param auth specifies the user and pass parameters should be used for authenthication
+ * @param user an NSString object containing the user's name (or ID) for authentication. May be nil.
+ * @param pass an NSString object containing the user's password. If userName is nil, password must be nil as well.
+ * @param will indicates whether a will shall be sent
+ * @param willTopic the Will Topic is a string, may be nil
+ * @param willMsg the Will Message, might be zero length or nil
+ * @param willQos specifies the QoS level to be used when publishing the Will Message.
+ * @param willRetainFlag indicates if the server should publish the Will Messages with retainFlag.
+ * @param clientId The Client Identifier identifies the Client to the Server. If nil, a random clientId is generated.
+ * @param securityPolicy A custom SSL security policy or nil.
+ * @param certificates An NSArray of the pinned certificates to use or nil.
+ * @param protocolLevel Protocol version of the connection.
+ */
+
+- (void)connectTo:(NSString *)host
+             port:(NSInteger)port
+              tls:(BOOL)tls
+        keepalive:(NSInteger)keepalive
+            clean:(BOOL)clean
+             auth:(BOOL)auth
+             user:(NSString *)user
+             pass:(NSString *)pass
+             will:(BOOL)will
+        willTopic:(NSString *)willTopic
+          willMsg:(NSData *)willMsg
+          willQos:(MQTTQosLevel)willQos
+   willRetainFlag:(BOOL)willRetainFlag
+     withClientId:(NSString *)clientId
+   securityPolicy:(MQTTSSLSecurityPolicy *)securityPolicy
+     certificates:(NSArray *)certificates
+    protocolLevel:(MQTTProtocolVersion)protocolLevel;
 
 
 /** Connects to the MQTT broker and stores the parameters for subsequent reconnects

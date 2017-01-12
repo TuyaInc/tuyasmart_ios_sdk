@@ -17,23 +17,19 @@ PODS:
   - CocoaAsyncSocket (7.5.1):
     - CocoaAsyncSocket/GCD (= 7.5.1)
   - CocoaAsyncSocket/GCD (7.5.1)
-  - CocoaLumberjack (3.0.0):
-    - CocoaLumberjack/Default (= 3.0.0)
-    - CocoaLumberjack/Extensions (= 3.0.0)
-  - CocoaLumberjack/Core (3.0.0)
-  - CocoaLumberjack/Default (3.0.0):
-    - CocoaLumberjack/Core
-  - CocoaLumberjack/Extensions (3.0.0):
-    - CocoaLumberjack/Default
   - DACircularProgress (2.3.1)
   - Mantle (1.5.8):
     - Mantle/extobjc (= 1.5.8)
   - Mantle/extobjc (1.5.8)
   - MBProgressHUD (0.9.2)
-  - MQTTClient (0.7.4):
-    - MQTTClient/Core (= 0.7.4)
-  - MQTTClient/Core (0.7.4):
-    - CocoaLumberjack
+  - MQTTClient (0.8.7):
+    - MQTTClient/Core (= 0.8.7)
+  - MQTTClient/Core (0.8.7):
+    - MQTTClient/Manager
+    - MQTTClient/Min
+  - MQTTClient/Manager (0.8.7):
+    - MQTTClient/Min
+  - MQTTClient/Min (0.8.7)
   - Reachability (3.2)
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
@@ -41,7 +37,7 @@ PODS:
   - TuyaSmartKit (1.2.15):
     - CocoaAsyncSocket
     - Mantle (= 1.5.8)
-    - MQTTClient (= 0.7.4)
+    - MQTTClient
     - Reachability
     - UICKeyChainStore
   - UICKeyChainStore (2.1.0)
@@ -60,14 +56,13 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
   CocoaAsyncSocket: e0a7e93b2ffa411592ff87e58524fbbc9b95b4fa
-  CocoaLumberjack: c823149bccc5519a9447aeb433be7b1212a7d6a5
   DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
   Mantle: f03b2b606c3f0cabd80214ad8a2fed6b464a7359
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
-  MQTTClient: 1c1bedf87249a317ee9324b93252867bbc443ec7
+  MQTTClient: 2842bdeab5a65eec75e0fcbbbd2a300946690fee
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   SDWebImage: '098e97e6176540799c27e804c96653ee0833d13c'
-  TuyaSmartKit: a87d8f1ff1b05ba9e9ee9ae577ac3d2c83e2b8c9
+  TuyaSmartKit: a7b6c1c39065153574f1db4a14239edfae65ace7
   UICKeyChainStore: f1cbd42216a113f0165de1e733e62905b8823432
 
 PODFILE CHECKSUM: 046b5916ec244ac09052e73730cfba1ce8ad338c

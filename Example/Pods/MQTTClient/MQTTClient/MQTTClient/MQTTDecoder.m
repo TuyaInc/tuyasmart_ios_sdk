@@ -2,7 +2,7 @@
 // MQTTDecoder.m
 // MQTTClient.framework
 //
-// Copyright © 2013-2016, Christoph Krey
+// Copyright © 2013-2017, Christoph Krey. All rights reserved.
 //
 
 #import "MQTTDecoder.h"
@@ -22,6 +22,10 @@
     self.runLoopMode = NSRunLoopCommonModes;
     self.streams = [NSMutableArray arrayWithCapacity:5];
     return self;
+}
+
+- (void)dealloc {
+    [self close];
 }
 
 - (void)decodeMessage:(NSData *)data {
@@ -138,6 +142,8 @@
         DDLogVerbose(@"[MQTTDecoder] NSStreamEventEndEncountered");
         
         if (self.streams) {
+            [stream setDelegate:nil];
+            [stream close];
             [self.streams removeObject:stream];
             if (self.streams.count) {
                 NSInputStream *stream = [self.streams objectAtIndex:0];
