@@ -14,7 +14,7 @@
 #import "TuyaSmartKitConstants.h"
 #import "TuyaSmartDeviceModel.h"
 #import "TuyaSmartGroupModel.h"
-
+#import "TuyaSmartDiscoveredDeviceModel.h"
 
 
 
@@ -28,14 +28,28 @@ FOUNDATION_EXPORT NSString * const TuyaSmartUserNotificationDeviceArrayChanged;
 FOUNDATION_EXPORT NSString * const TuyaSmartUserNotificationNetworkChanged;
 
 
+@class TuyaSmartUser;
+
+@protocol TuyaSmartUserDelegate <NSObject>
+
+@optional
+
+//发现局域网设备
+- (void)user:(TuyaSmartUser *)user didDiscoveredLanDevice:(TuyaSmartDiscoveredDeviceModel *)deviceModel;
+
+@end
 
 /// 用户相关功能
 @interface TuyaSmartUser : NSObject
+
 
 /**
  *  单例
  */
 + (instancetype)sharedInstance;
+
+//回调delegate
+@property (nonatomic, weak) id <TuyaSmartUserDelegate> delegate;
 
 /// 用户唯一ID
 @property (nonatomic, strong, readonly) NSString *uid;
