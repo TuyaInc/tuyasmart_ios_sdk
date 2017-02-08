@@ -43,6 +43,11 @@
 
 
 /**
+ *  DP点的iconname
+ */
+@property (nonatomic, strong) NSString     *iconname;
+
+/**
  *  DP点的属性
  */
 @property (nonatomic, strong) TuyaSmartSchemaPropertyModel *property;

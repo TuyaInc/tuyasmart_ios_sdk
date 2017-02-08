@@ -84,6 +84,7 @@
 @property (nonatomic, strong) NSArray      *quickOpDps;
 @property (nonatomic, strong) NSArray      *displayDps;
 @property (nonatomic, strong) NSDictionary *displayMsgs;
+@property (nonatomic, strong) NSString     *switchDp;
 
 @property (nonatomic, strong) NSString     *uuid;
 
