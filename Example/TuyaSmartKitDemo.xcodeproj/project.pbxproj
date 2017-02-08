@@ -18,6 +18,7 @@
 		65F4A6B01CE32C3F00977B3F /* ty_list_empty@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65F4A6AE1CE32C3F00977B3F /* ty_list_empty@3x.png */; };
 		6D1766C81CB68B84006277AC /* ATCountryCodeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1766C51CB68B84006277AC /* ATCountryCodeModel.m */; };
 		6D1766D41CB74AEE006277AC /* MenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1766D31CB74AEE006277AC /* MenuItem.m */; };
+		6D1A22BF1E4AFE3B003960BE /* TuyaSmartKit.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 6D1A22BE1E4AFE3B003960BE /* TuyaSmartKit.podspec */; };
 		6D304A0B1CE96B1A0008A00E /* TYUserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D304A0A1CE96B1A0008A00E /* TYUserInfoViewController.m */; };
 		6D304A151CE9B1420008A00E /* TYUserInfoHeadViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D304A141CE9B1420008A00E /* TYUserInfoHeadViewCell.m */; };
 		6D304A181CE9BC2D0008A00E /* TYUserInfoNickViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D304A171CE9BC2D0008A00E /* TYUserInfoNickViewCell.m */; };
@@ -238,6 +239,7 @@
 		6D1766C51CB68B84006277AC /* ATCountryCodeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATCountryCodeModel.m; sourceTree = "<group>"; };
 		6D1766D21CB74AEE006277AC /* MenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuItem.h; sourceTree = "<group>"; };
 		6D1766D31CB74AEE006277AC /* MenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuItem.m; sourceTree = "<group>"; };
+		6D1A22BE1E4AFE3B003960BE /* TuyaSmartKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; name = TuyaSmartKit.podspec; path = ../../TuyaSmartKit.podspec; sourceTree = "<group>"; tabWidth = 2; };
 		6D304A091CE96B1A0008A00E /* TYUserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYUserInfoViewController.h; sourceTree = "<group>"; };
 		6D304A0A1CE96B1A0008A00E /* TYUserInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYUserInfoViewController.m; sourceTree = "<group>"; };
 		6D304A131CE9B1420008A00E /* TYUserInfoHeadViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYUserInfoHeadViewCell.h; sourceTree = "<group>"; };
@@ -598,6 +600,7 @@
 		1B4CDBEA1A85A75D00EF696E /* TuyaSmartKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				6D1A22BE1E4AFE3B003960BE /* TuyaSmartKit.podspec */,
 				AD95D6871C9D299C00E6AD20 /* AppDelegate.h */,
 				AD95D6861C9D299C00E6AD20 /* AppDelegate.m */,
 				1B4CDBF81A85A75D00EF696E /* Images.xcassets */,
@@ -1434,6 +1437,7 @@
 				6D3ED93F1CCB645700266AEF /* tysmart_addshare_contact@2x.png in Resources */,
 				ADCCCF651C9F8C9200FCAF5C /* ty_adddevice_ap_screen_cn@2x.png in Resources */,
 				ADCCCFD31C9F8CFB00FCAF5C /* ty_mainbt_devicelist_active@3x.png in Resources */,
+				6D1A22BF1E4AFE3B003960BE /* TuyaSmartKit.podspec in Resources */,
 				ADCCCF921C9F8CAC00FCAF5C /* cell_view_arrow@2x.png in Resources */,
 				ADCCCFAF1C9F8CD300FCAF5C /* ty_devicelist_share_gray@3x.png in Resources */,
 				6D3ED9401CCB645700266AEF /* tysmart_addshare_contact@3x.png in Resources */,

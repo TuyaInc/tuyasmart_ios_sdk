@@ -72,6 +72,15 @@ typedef enum : NSUInteger {
 - (void)getToken:(TYSuccessString)success failure:(TYFailureError)failure;
 
 /**
+ *  获取配网Token（有效期10分钟）
+ *
+ *  @param productKey 产品Id
+ *  @param success 操作成功回调，返回配网Token
+ *  @param failure 操作失败回调
+ */
+- (void)getTokenWithProductKey:(NSString *)productKey success:(TYSuccessString)success failure:(TYFailureError)failure;
+
+/**
  *  开始配网
  *
  *  @param mode     配网模式, EZ或AP模式

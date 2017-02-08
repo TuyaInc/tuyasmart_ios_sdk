@@ -40,7 +40,7 @@
 @property (nonatomic, assign) double     step;
 
 /**
- *  数值型中表示 10 的指数,乘以对应的传输数值,等于实际值,用于避免小数传 输
+ *  数值型中表示 10 的指数,乘以对应的传输数值,等于实际值,用于避免小数传输
  */
 @property (nonatomic, assign) NSInteger  scale;
 
