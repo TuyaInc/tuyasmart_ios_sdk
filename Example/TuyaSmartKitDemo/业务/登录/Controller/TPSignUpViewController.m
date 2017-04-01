@@ -107,13 +107,6 @@
 }
 
 - (void)confirmAction {
-    if (_type == TPVerifyTypeSignUp) {
-        [MobClick event:@"event_reg_keyword_ok"];
-    } else if (_type == TPVerifyTypeReset) {
-        [MobClick event:@"event_findkey_keyword_ok"];
-    } else if (_type == TPVerifyTypeModify) {
-        [MobClick event:@"event_change_key_enternewkey_ok"];
-    }
     
     [self.view endEditing:YES];
     

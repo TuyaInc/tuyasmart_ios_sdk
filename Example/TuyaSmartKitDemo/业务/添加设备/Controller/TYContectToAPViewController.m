@@ -73,14 +73,12 @@
 }
 
 - (void)backButtonTap {
-    [MobClick event:@"event_ap_connectDevice_cel"];
     [super backButtonTap];
 }
 
 #pragma mark - TYConnectToAPViewDelegate
 
 - (void)helpAction:(TYContectToAPView *)connectToAPView {
-    [MobClick event:@"event_ap_connectDevice_hel"];
     [ViewControllerUtils gotoWebViewController:NSLocalizedString(@"ty_ez_help", @"") url:@"http://smart.tuya.com/reset" from:self];
 }
 

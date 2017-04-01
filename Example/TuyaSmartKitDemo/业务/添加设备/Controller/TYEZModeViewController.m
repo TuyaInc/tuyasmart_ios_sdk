@@ -62,7 +62,6 @@
 }
 
 - (void)gotoSystemSetting {
-    [MobClick event:@"event_add_device_chose_wifi"];
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"prefs:root=WIFI"]];
 }
 

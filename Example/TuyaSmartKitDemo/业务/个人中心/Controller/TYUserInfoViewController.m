@@ -158,7 +158,6 @@
     if (indexPath.section == 0) {
     
         if (indexPath.row == 1) {
-            [MobClick event:@"event_person_info_name"];
             
             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"edit_nickname", @"") message:nil delegate:self cancelButtonTitle:NSLocalizedString(@"cancel", @"") otherButtonTitles:NSLocalizedString(@"save", @""),nil];
             alertView.alertViewStyle = UIAlertViewStylePlainTextInput;
@@ -171,7 +170,6 @@
     } else {
         
         if (indexPath.row == 0) {
-            [MobClick event:@"event_person_info_change_key"];
             
             //修改登录密码
             
@@ -182,10 +180,8 @@
                 [UIAlertView bk_showAlertViewWithTitle:NSLocalizedString(@"ty_bind_phone_num", @"") message:NSLocalizedString(@"ty_not_bind_phone_num", @"") cancelButtonTitle:NSLocalizedString(@"action_cancel", nil) otherButtonTitles:@[NSLocalizedString(@"ty_bind_phone_num_now", nil)] handler:^(UIAlertView *alertView, NSInteger buttonIndex) {
                     
                     if (buttonIndex == 1) {
-                        [MobClick event:@"event_person_info_change_key_bind"];
                         [weakSelf_AT gotoBindingViewController];
                     } else {
-                        [MobClick event:@"event_person_info_change_cancel"];
                     }
                 }];
                 
@@ -205,7 +201,6 @@
 }
 
 - (void)gotoBindingViewController {
-    [MobClick event:@"user_my_phone"];
     
     if ([[TuyaSmartUser sharedInstance].phoneNumber isEqualToString:[TuyaSmartUser sharedInstance].userName]) {
         return;
@@ -255,7 +250,6 @@
 }
 
 - (void)doModifyNickname:(NSString *)nickname {
-    [MobClick event:@"user_info_name"];
     
     [self showProgressView];
     WEAKSELF_AT

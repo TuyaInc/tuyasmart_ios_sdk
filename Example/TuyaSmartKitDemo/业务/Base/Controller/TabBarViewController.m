@@ -130,7 +130,6 @@
 #pragma mark -
 - (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController {
     if (viewController == self.addDeviceNavigationController) {
-        [MobClick event:@"device_add"];
         [ViewControllerUtils gotoEZPrepareViewController:self];
         return NO;
     } else {

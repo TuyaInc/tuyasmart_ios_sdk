@@ -45,7 +45,6 @@
 }
 
 - (void)CancelButtonTap {
-    [MobClick event:@"event_ez_addDevice_cel"];
     [super CancelButtonTap];
 }
 
@@ -56,12 +55,10 @@
 #pragma mark - TYEZPrepareViewDelegate
 
 - (void)helpAction:(TYEZPrepareView *)prepareView {
-    [MobClick event:@"event_add_device_ez_other_btn"];
     [ViewControllerUtils gotoWebViewController:NSLocalizedString(@"ty_ez_help", @"") url:@"http://smart.tuya.com/reset" from:self];
 }
 
 - (void)nextAction:(TYEZPrepareView *)prepareView {
-    [MobClick event:@"event_add_device_ez_btn"];
     [ViewControllerUtils gotoActivatorInputViewController:self mode:TYActivatorModeEZ];
 }
 
