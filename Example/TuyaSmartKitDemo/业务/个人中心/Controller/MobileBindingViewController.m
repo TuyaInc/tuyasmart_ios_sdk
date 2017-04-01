@@ -67,7 +67,6 @@
 }
 
 - (void)selectCountryCode {
-    [MobClick event:@"login_country"];
     ATSelectCountryViewController *selectCountryViewController = [[ATSelectCountryViewController alloc] init];
     selectCountryViewController.delegate = self;
     [self.navigationController presentViewController:selectCountryViewController animated:YES completion:nil];
@@ -79,7 +78,6 @@
 }
 
 - (void)binding {
-    [MobClick event:@"event_profile_phone"];
     [self.view endEditing:YES];
     
     NSString *countryCode   = _countryCodeModel.countryCode;

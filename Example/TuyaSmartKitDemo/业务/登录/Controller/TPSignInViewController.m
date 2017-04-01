@@ -60,7 +60,6 @@
 }
 
 - (void)selectCountryCode {
-    [MobClick event:@"login_country"];
     ATSelectCountryViewController *selectCountryViewController = [[ATSelectCountryViewController alloc] init];
     selectCountryViewController.delegate = self;
     [self.navigationController presentViewController:selectCountryViewController animated:YES completion:nil];
@@ -91,7 +90,6 @@
     };
     
     if (_phoneCodeLogin == YES) {
-        [MobClick event:@"event_login_reg_sms_login"];
         
         //手机验证码登录
         [[TuyaSmartUser sharedInstance] login:countryCode phoneNumber:phoneNumber code:code success:success failure:failure];
@@ -106,14 +104,12 @@
 }
 
 - (void)gotoSignUpViewController {
-    [MobClick event:@"event_login_reg"];
     TPInputUserAccountController *vc = [TPInputUserAccountController new];
     vc.type = TPVerifyTypeSignUp;
     [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)gotoResetPassViewController {
-    [MobClick event:@"event_forget_keyword"];
     
     TPInputUserAccountController *vc = [TPInputUserAccountController new];
     vc.type = TPVerifyTypeReset;
@@ -177,7 +173,6 @@
 }
 
 - (void)signInViewPhoneCodeLoginButtonTap:(TPSignInView *)signInView {
-    [MobClick event:@"event_login_reg_sms"];
     
     TPSignInViewController *vc = [TPSignInViewController new];
     vc.phoneCodeLogin = YES;

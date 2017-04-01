@@ -16,17 +16,14 @@
 }
 
 - (void)retryAction:(TYSearchDeviceFinishView *)finishView {
-    [MobClick event:@"event_netWorking_again"];
     [tp_topMostViewController().navigationController popToRootViewControllerAnimated:YES];
 }
 
 - (void)callAction:(TYSearchDeviceFinishView *)finishView {
-    [MobClick event:@"event_netWorking_call"];
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel://400-159-4688"]];
 }
 
 - (void)shareAction:(TYSearchDeviceFinishView *)finishView {
-    [MobClick event:@"event_ez_connectDevice_share"];
     [tp_topMostViewController() dismissViewControllerAnimated:NO completion:^{
         [tp_topMostViewController().navigationController pushViewController:[TYMemberListViewController new] animated:YES];
     }];
