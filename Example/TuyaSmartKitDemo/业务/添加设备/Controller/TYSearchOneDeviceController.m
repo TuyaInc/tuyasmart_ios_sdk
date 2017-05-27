@@ -18,7 +18,6 @@
 @property (nonatomic, strong) NSTimer *timer;
 @property (nonatomic, strong) NSDate  *fireDate;
 
-@property (nonatomic, assign) TYActivatorState            lastState;
 
 @end
 
@@ -62,17 +61,10 @@
 
 #pragma mark - TuyaSmartActivatorDelegate
 
-- (void)activator:(TuyaSmartActivator *)activator didUpdateState:(TYActivatorState)state device:(TuyaSmartDeviceModel *)deviceModel {
-    [self.layout setState:state];
-    
-    //设备配网成功,但一直不上线(超时),也当做成功处理
-    if (self.lastState == TYActivatorStateDeviceLogin
-        && state == TYActivatorStateTimeOut) {
-        state = TYActivatorStateOK;
-    }
+- (void)activator:(TuyaSmartActivator *)activator didReceiveDevice:(TuyaSmartDeviceModel *)deviceModel error:(NSError *)error {
     
     
-    if (state == TYActivatorStateOK) {
+    if (!error && deviceModel) {
         [_timer invalidate];
         [self.layout setProgress:1];
         
@@ -80,21 +72,54 @@
             [ViewControllerUtils gotoActivatorSuccessViewController:self device:deviceModel];
         } afterDelay:2.0];
         
-    } else if (state == TYActivatorStateFailed
-               || state == TYActivatorStateTimeOut) {
+    }
+    
+    if (error) {
+        
         [_timer invalidate];
         if (_mode == TYActivatorModeEZ) {
             [ViewControllerUtils gotoAPPrepareViewController:self isAPReset:YES ssid:_ssid password:_password];
         } else {
-            [ViewControllerUtils gotoActivatorErrorViewController:self state:state];
+            [ViewControllerUtils gotoActivatorErrorViewController:self];
         }
-
-    } else if (state == TYActivatorStateNetworkError) {
-        [_timer invalidate];
-        [ViewControllerUtils gotoActivatorErrorViewController:self state:state];
     }
     
-    self.lastState = state;
+    
 }
+
+//- (void)activator:(TuyaSmartActivator *)activator didUpdateState:(TYActivatorState)state device:(TuyaSmartDeviceModel *)deviceModel {
+////    [self.layout setState:state];
+//    
+//    //设备配网成功,但一直不上线(超时),也当做成功处理
+////    if (self.lastState == TYActivatorStateDeviceLogin
+////        && state == TYActivatorStateTimeOut) {
+////        state = TYActivatorStateOK;
+////    }
+//    
+//    
+//    if (!error) {
+//        [_timer invalidate];
+//        [self.layout setProgress:1];
+//        
+//        [NSObject bk_performBlock:^{
+//            [ViewControllerUtils gotoActivatorSuccessViewController:self device:deviceModel];
+//        } afterDelay:2.0];
+//        
+//    } else if (state == TYActivatorStateFailed
+//               || state == TYActivatorStateTimeOut) {
+//        [_timer invalidate];
+//        if (_mode == TYActivatorModeEZ) {
+//            [ViewControllerUtils gotoAPPrepareViewController:self isAPReset:YES ssid:_ssid password:_password];
+//        } else {
+//            [ViewControllerUtils gotoActivatorErrorViewController:self state:state];
+//        }
+//
+//    } else if (state == TYActivatorStateNetworkError) {
+//        [_timer invalidate];
+//        [ViewControllerUtils gotoActivatorErrorViewController:self state:state];
+//    }
+//    
+//    self.lastState = state;
+//}
 
 @end

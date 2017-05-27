@@ -1,50 +1,60 @@
-# 涂鸦智能iOS SDK
+# Tuya Smart iOS SDK
 
-## 功能概述
+[中文版](README-zh.md) | [English](README.md)
 
-涂鸦智能APP SDK提供了与硬件设备、涂鸦云通讯的接口封装，加速应用开发过程，主要包括了以下功能：
+---
 
-- 硬件设备相关（配网、控制、状态上报、定时任务、群组、固件升级、共享）
-- 账户体系（手机号、邮箱的注册、登录、重置密码等通用的账户功能）
-- 涂鸦云HTTP API接口封装
+## Features Overview
 
-## 快速集成
+Tuya Smart APP SDK provides the interface package for the communication with hardware and Tuya Cloud to accelerate the application development process, including the following features:
 
-### 使用Cocoapods集成
+- Hardware functions (network configuration, control, status reporting, regular tasks, groups, firmware upgrades, sharing)
+- Account system (phone number, email registration, login, password reset and other general account functions)
+- Tuya Cloud HTTP API interface package
 
-在`Podfile`文件中添加以下内容：
+## Rapid Integration
+
+### Using CocoaPods integration (version 8.0 or above is supported)
+
+Add the following content in file `Podfile`:
 
 ```ruby
-pod "TuyaSmartKit", :git => "https://github.com/TuyaInc/tuyasmart_ios_sdk.git"
+platform :ios, '8.0'
+
+target 'your_target_name' do
+
+   pod "TuyaSmartKit", :git => "https://github.com/TuyaInc/tuyasmart_ios_sdk.git"
+
+end
 ```
 
-然后在项目根目录下执行`pod install`命令，集成第三方库。
+Execute command `pod update` in the project's root directory to begin integration.
 
-CocoaPods的使用请参考：[CocoaPods Guides](https://guides.cocoapods.org/)
+For the instructions of CocoaPods, please refer to: [CocoaPods Guides](https://guides.cocoapods.org/)
 
-## 初始化SDK
+## Initializing SDK
 
-在项目的`PrefixHeader.pch`文件添加以下内容：
+Add the following to the project file `PrefixHeader.pch`：
 
 ```objc
 #import <TuyaSmartKit/TuyaSmartKit.h>
 ```
 
-打开`AppDelegate.m`文件，在`[AppDelegate application:didFinishLaunchingWithOptions:]`方法中初始化SDK：
+Open file `AppDelegate.m`，and use the `App ID` and `App Secret` obtained from the development platform in the `[AppDelegate application:didFinishLaunchingWithOptions:]`method to initialize SDK:
 
 ```objc
 [[TuyaSmartSDK sharedInstance] startWithAppKey:<#your_app_key#> secretKey:<#your_secret_key#>];
 ```
 
-至此，准备工作已经全部完毕，可以开始App开发啦。
+Now all the preparatory work has been completed. You can set out to develop your application.
 
-## 开发文档
+## Doc
 
-更多请参考: [涂鸦文档中心 - iOS SDK使用说明](http://docs.tuya.com/develop/app-development/ios-sdk/)
+Refer to details: [Tuya Smart Doc - iOS SDK](http://docs.tuya.com/develop/app-development/ios-sdk/)
 
-## 版本更新记录
+## ChangeLog
 
 [CHANGELOG.md](./CHANGELOG.md)
 
-## SDK Demo 体验包
-[下载地址](http://fir.im/iOSSDKDemo)
+## SDK Demo Package
+[Download Url](http://fir.im/iOSSDKDemo)

@@ -51,6 +51,9 @@ FOUNDATION_EXPORT NSString * const TuyaSmartUserNotificationNetworkChanged;
 //回调delegate
 @property (nonatomic, weak) id <TuyaSmartUserDelegate> delegate;
 
+/// Session ID
+@property (nonatomic, strong, readonly) NSString *sid;
+
 /// 用户唯一ID
 @property (nonatomic, strong, readonly) NSString *uid;
 

@@ -10,7 +10,7 @@
 
 @interface TYActivatorFinishViewController : ATBaseViewController
 
-@property (nonatomic, assign) TYActivatorState  state;
+@property (nonatomic, assign) BOOL  isSuccess;
 @property (nonatomic, strong) TuyaSmartDeviceModel *deviceModel;
 
 @end

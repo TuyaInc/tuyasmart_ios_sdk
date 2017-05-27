@@ -25,6 +25,6 @@
 
 @property (nonatomic, weak) id <TYSearchDeviceFinishDelegate> delegate;
 
-- (instancetype)initWithFrame:(CGRect)frame state:(TYActivatorState)state device:(TuyaSmartDeviceModel *)deviceModel;
+- (instancetype)initWithFrame:(CGRect)frame isSuccess:(BOOL)isSuccess device:(TuyaSmartDeviceModel *)deviceModel;
 
 @end

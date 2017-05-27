@@ -41,13 +41,15 @@
 /** 获取群组对象
  @param groupId 群组Id
  */
-- (instancetype)initWithGroupId:(NSString *)groupId;
+- (instancetype)initWithGroupId:(NSString *)groupId NS_DESIGNATED_INITIALIZER;
+
+- (instancetype)init NS_UNAVAILABLE;
 
 /**
  *  创建群组
  *
  *  @param name      群组名称
- *  @param productId 商品Id
+ *  @param productId 产品Id
  *  @param devIdList 设备Id列表
  *  @param success   操作成功回调
  *  @param failure   操作失败回调
@@ -58,14 +60,28 @@
                     success:(void (^)(TuyaSmartGroup *group))success
                     failure:(TYFailureError)failure;
 
+
 /**
- *  获取群组的设备列表
- *  @param groupId   群组Id
- *  @param productId 商品Id
+ *  根据产品ID获取对应的支持群组的设备列表
+ *
+ *  @param productId 产品Id
  *  @param success   操作成功回调
  *  @param failure   操作失败回调
  */
-- (void)getGroupDevList:(NSString *)groupId productId:(NSString *)productId success:(void(^)(NSArray <TuyaSmartGroupDevListModel *> *list))success failure:(TYFailureError)failure;
++ (void)getDevList:(NSString *)productId
+                success:(void(^)(NSArray <TuyaSmartGroupDevListModel *> *list))success
+                failure:(TYFailureError)failure;
+
+/**
+ *  根据产品ID和群组ID获取对应群组下的设备列表
+ *
+ *  @param productId 产品Id
+ *  @param success   操作成功回调
+ *  @param failure   操作失败回调
+ */
+- (void)getDevList:(NSString *)productId
+           success:(void(^)(NSArray <TuyaSmartGroupDevListModel *> *list))success
+           failure:(TYFailureError)failure;
 
 /** 
  *  群组dp命令下发

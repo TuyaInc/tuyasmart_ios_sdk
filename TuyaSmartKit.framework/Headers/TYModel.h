@@ -17,6 +17,7 @@
 
 + (NSArray *)modelArrayWithJSON:(NSArray *)jsonArray;
 
+- (NSDictionary *)JSONFromModel;
 
 @end
 
