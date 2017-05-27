@@ -11,17 +11,17 @@
 /**
  *  当前SDK的版本号
  */
-#define TUYA_SDK_VERSION @"1.3.0"
+#define TUYA_SDK_VERSION @"1.8.1"
 
 /**
  *  当前客户端支持的最高的外网通信协议
  */
-#define TUYA_CURRENT_GW_PROTOCOL_VERSION 2.1
+#define TUYA_CURRENT_GW_PROTOCOL_VERSION 2.2
 
 /**
  *  当前客户端支持的最高的局域网通信协议
  */
-#define TUYA_CURRENT_LAN_PROTOCOL_VERSION 3.1
+#define TUYA_CURRENT_LAN_PROTOCOL_VERSION 3.2
 
 
 #import <Foundation/Foundation.h>
@@ -36,3 +36,4 @@
 #import "TuyaSmartTimer.h"
 #import "TuyaSmartRequest.h"
 #import "TuyaSmartGroupDevListModel.h"
+

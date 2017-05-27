@@ -78,7 +78,6 @@
 		6D6C1FF31CE573F50073911A /* ty_adddevice_icon_ok@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D6C1FED1CE573F50073911A /* ty_adddevice_icon_ok@3x.png */; };
 		6D6C1FF41CE573F50073911A /* ty_adddevice_icon_wrong@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D6C1FEE1CE573F50073911A /* ty_adddevice_icon_wrong@2x.png */; };
 		6D6C1FF51CE573F50073911A /* ty_adddevice_icon_wrong@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D6C1FEF1CE573F50073911A /* ty_adddevice_icon_wrong@3x.png */; };
-		6D8E0E181D3E099700D6C3F3 /* MobClick.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8E0E171D3E099700D6C3F3 /* MobClick.m */; };
 		6D93C9AF1CAA2123009D2C7D /* TYEZPrepareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D93C9AE1CAA2123009D2C7D /* TYEZPrepareViewController.m */; };
 		6D93C9BF1CAA2820009D2C7D /* TYEZPrepareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D93C9BE1CAA2820009D2C7D /* TYEZPrepareView.m */; };
 		6D93CA011CAA7368009D2C7D /* TYActivatorFinishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D93CA001CAA7368009D2C7D /* TYActivatorFinishViewController.m */; };
@@ -344,8 +343,6 @@
 		6D6C1FEE1CE573F50073911A /* ty_adddevice_icon_wrong@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ty_adddevice_icon_wrong@2x.png"; sourceTree = "<group>"; };
 		6D6C1FEF1CE573F50073911A /* ty_adddevice_icon_wrong@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ty_adddevice_icon_wrong@3x.png"; sourceTree = "<group>"; };
 		6D74197B5AE3141B6E074DCD /* Pods-TuyaSmartKitDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuyaSmartKitDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-TuyaSmartKitDemo/Pods-TuyaSmartKitDemo.release.xcconfig"; sourceTree = "<group>"; };
-		6D8E0E161D3E099700D6C3F3 /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClick.h; sourceTree = "<group>"; };
-		6D8E0E171D3E099700D6C3F3 /* MobClick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobClick.m; sourceTree = "<group>"; };
 		6D93C9AD1CAA2123009D2C7D /* TYEZPrepareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYEZPrepareViewController.h; sourceTree = "<group>"; };
 		6D93C9AE1CAA2123009D2C7D /* TYEZPrepareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYEZPrepareViewController.m; sourceTree = "<group>"; };
 		6D93C9BD1CAA2820009D2C7D /* TYEZPrepareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYEZPrepareView.h; sourceTree = "<group>"; };
@@ -620,8 +617,6 @@
 				1B4CDC231A85ABAE00EF696E /* PrefixHeader.pch */,
 				1BF05B2F1B41149500B3B8FC /* InfoPlist.strings */,
 				1BF05B361B41151600B3B8FC /* Localizable.strings */,
-				6D8E0E161D3E099700D6C3F3 /* MobClick.h */,
-				6D8E0E171D3E099700D6C3F3 /* MobClick.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -1380,6 +1375,7 @@
 				TargetAttributes = {
 					1B4CDBE71A85A75D00EF696E = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 94JFPTRDN5;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 0;
@@ -1534,7 +1530,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		A7B104270F5EDA8267B9D788 /* [CP] Embed Pods Frameworks */ = {
@@ -1666,7 +1662,6 @@
 				6D6C1F7A1D34C94200F652D6 /* TPEmptyView.m in Sources */,
 				AD95D5AC1C9D25E000E6AD20 /* TYContectToAPViewController.m in Sources */,
 				6D6C1F7D1D34C94200F652D6 /* TPNavigationController.m in Sources */,
-				6D8E0E181D3E099700D6C3F3 /* MobClick.m in Sources */,
 				AD6C41871CC0CE3C00A3F3E9 /* AddMemberView.m in Sources */,
 				AD95D5851C9D25E000E6AD20 /* ATBaseViewController.m in Sources */,
 				ADBFE0081D74628E0001F26A /* TYPanelLogViewCell.m in Sources */,
@@ -1830,7 +1825,7 @@
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 94JFPTRDN5;
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = TuyaSmartKitDemo/PrefixHeader.pch;
@@ -1858,7 +1853,7 @@
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 94JFPTRDN5;
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = TuyaSmartKitDemo/PrefixHeader.pch;

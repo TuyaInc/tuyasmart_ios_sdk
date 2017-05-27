@@ -50,14 +50,12 @@
 }
 
 - (void)CancelButtonTap {
-    [MobClick event:@"event_ap_iniDevice_cel"];
     [super CancelButtonTap];
 }
 
 #pragma mark - TYAPResetViewDelegate
 
 - (void)helpAction:(TYAPResetView *)resetView {
-    [MobClick event:@"event_netWorking_hel"];
     [ViewControllerUtils gotoWebViewController:NSLocalizedString(@"ty_ez_help", @"") url:@"http://smart.tuya.com/reset" from:self];
 }
 

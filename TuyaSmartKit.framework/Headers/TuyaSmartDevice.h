@@ -79,6 +79,7 @@ typedef enum : NSUInteger {
  */
 - (instancetype)initWithDeviceId:(NSString *)devId NS_DESIGNATED_INITIALIZER;
 
+- (instancetype)init NS_UNAVAILABLE;
 
 /**
  *  获取设备在线状态

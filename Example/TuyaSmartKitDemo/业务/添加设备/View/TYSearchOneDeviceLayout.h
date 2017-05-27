@@ -7,11 +7,9 @@
 //
 
 #import "TPBaseLayout.h"
-//#import "TuyaSmartActivator.h"
 
 @interface TYSearchOneDeviceLayout : TPBaseLayout
 
 - (void)setProgress:(CGFloat)progress;
-- (void)setState:(TYActivatorState)state;
 
 @end

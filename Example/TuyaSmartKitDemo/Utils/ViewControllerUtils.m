@@ -55,14 +55,14 @@
 
 + (void)gotoActivatorSuccessViewController:(UIViewController *)fromController device:(TuyaSmartDeviceModel *)deviceModel {
     TYActivatorFinishViewController *vc = [TYActivatorFinishViewController new];
-    vc.state = TYActivatorStateOK;
+    vc.isSuccess = YES;
     vc.deviceModel = deviceModel;
     [self pushViewController:vc from:fromController];
 }
 
-+ (void)gotoActivatorErrorViewController:(UIViewController *)fromController state:(TYActivatorState)state {
++ (void)gotoActivatorErrorViewController:(UIViewController *)fromController {
     TYActivatorFinishViewController *vc = [TYActivatorFinishViewController new];
-    vc.state = state;
+    vc.isSuccess = NO;
     [self pushViewController:vc from:fromController];
 }
 

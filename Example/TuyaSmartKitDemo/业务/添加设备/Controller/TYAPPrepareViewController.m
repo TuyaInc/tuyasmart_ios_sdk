@@ -46,19 +46,16 @@
 }
 
 - (void)CancelButtonTap {
-    [MobClick event:@"event_ez_addDevice_cel"];
     [super CancelButtonTap];
 }
 
 #pragma mark - TYEZPrepareViewDelegate
 
 - (void)helpAction:(TYEZPrepareView *)prepareView {
-    [MobClick event:@"event_add_device_ap_other_btn"];
     [ViewControllerUtils gotoWebViewController:NSLocalizedString(@"ty_ez_help", @"") url:@"http://smart.tuya.com/reset" from:self];
 }
 
 - (void)nextAction:(TYEZPrepareView *)prepareView {
-    [MobClick event:@"event_add_device_ap_btn"];
     if (self.isAPReset) {
         WEAKSELF_AT
         [TPProgressUtils showMessag:NSLocalizedString(@"loading", @"") toView:nil];

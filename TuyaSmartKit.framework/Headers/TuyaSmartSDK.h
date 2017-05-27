@@ -33,15 +33,5 @@
 
 @end
 
-@interface TuyaSmartSDK (Deprecated)
-
-@property (nonatomic, strong, readonly) NSString *appKey __deprecated;
-@property (nonatomic, strong, readonly) NSString *secretKey __deprecated;
-@property (nonatomic, strong, readonly) NSString *currentWifiSSID __deprecated_msg("Replaced by [TuyaSmartActivator currentWifiSSID]");
-@property (nonatomic, strong, readonly) NSString *currentWifiBSSID __deprecated_msg("Replaced by [TuyaSmartActivator currentWifiBSSID]");
-
-- (void)updateLocationWithLatitude:(double)latitude longitude:(double)longitude __deprecated;
-
-@end
 
 #endif

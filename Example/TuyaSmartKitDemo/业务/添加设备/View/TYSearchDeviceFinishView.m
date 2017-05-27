@@ -27,7 +27,7 @@
 
 @implementation TYSearchDeviceFinishView
 
-- (instancetype)initWithFrame:(CGRect)frame state:(TYActivatorState)state device:(TuyaSmartDeviceModel *)deviceModel {
+- (instancetype)initWithFrame:(CGRect)frame isSuccess:(BOOL)isSuccess device:(TuyaSmartDeviceModel *)deviceModel {
     self = [super initWithFrame:frame];
     if (self) {
         self.backgroundColor = MAIN_BACKGROUND_COLOR;
@@ -36,7 +36,7 @@
         [self addSubview:self.tipsLabel];
         _deviceModel = deviceModel;
         
-        if (state == TYActivatorStateOK) {
+        if (isSuccess) {
             self.iconImageView.image = [UIImage imageNamed:@"ty_adddevice_ok"];
             
             NSString *name = deviceModel.name ? deviceModel.name : @"";
@@ -59,12 +59,9 @@
             self.iconImageView.layer.cornerRadius = 50;
             self.iconImageView.layer.masksToBounds = YES;
             
-            if (state == TYActivatorStateNetworkError) {
-                [self.helpButton setTitle:NSLocalizedString(@"network_time_out", @"") forState:UIControlStateNormal];
-            } else {
-                [self.helpButton setTitle:NSLocalizedString(@"ty_ap_error_description", @"") forState:UIControlStateNormal];
-                [self addSubview:self.callButton];
-            }
+
+            [self.helpButton setTitle:NSLocalizedString(@"ty_ap_error_description", @"") forState:UIControlStateNormal];
+            [self addSubview:self.callButton];
         
             [self addSubview:self.helpButton];
             [self addSubview:self.retryButton];

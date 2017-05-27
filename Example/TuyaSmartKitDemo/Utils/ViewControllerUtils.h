@@ -18,7 +18,7 @@
 + (void)gotoContectToAPViewController:(UIViewController *)fromController ssid:(NSString *)ssid password:(NSString *)password token:(NSString *)token;
 
 + (void)gotoActivatorSuccessViewController:(UIViewController *)fromController device:(TuyaSmartDeviceModel *)deviceModel;
-+ (void)gotoActivatorErrorViewController:(UIViewController *)fromController state:(TYActivatorState)state;
++ (void)gotoActivatorErrorViewController:(UIViewController *)fromController;
 
 + (void)gotoWebViewController:(NSString *)title url:(NSString *)url from:(UIViewController *)from;
 + (void)presentViewController:(UIViewController *)toController from:(UIViewController *)fromController;

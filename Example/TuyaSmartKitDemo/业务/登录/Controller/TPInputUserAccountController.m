@@ -66,13 +66,6 @@
 }
 
 - (void)gotoNextViewController {
-    if (_type == TPVerifyTypeSignUp) {
-        [MobClick event:@"event_reg_account_next"];
-    } else if (_type == TPVerifyTypeReset) {
-        [MobClick event:@"event_findkey_account_next"];
-    } else if (_type == TPVerifyTypeModify) {
-        [MobClick event:@"event_change_key_next"];
-    }
     
     [self.view endEditing:YES];
     

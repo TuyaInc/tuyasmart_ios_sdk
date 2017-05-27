@@ -65,32 +65,39 @@
 
 //设备的schema定义
 @property (nonatomic, strong) NSString     *schema;
+@property (nonatomic, strong) NSString     *schemaExt;
 @property (nonatomic, strong) NSArray<TuyaSmartSchemaModel *> *schemaArray;
 
 @property (nonatomic, strong) NSString     *runtimeEnv;
 
+//标位
+@property (nonatomic, assign) NSUInteger    attribute;
+
+@property (nonatomic, strong) NSString     *localKey;
+
+@property (nonatomic, strong) NSString     *uuid;
+
 #pragma mark - 涂鸦智能 控制面板相关
 
 @property (nonatomic, assign) BOOL         rnFind;
-@property (nonatomic, assign) long         i18nTime;
+@property (nonatomic, assign) long long    i18nTime;
 @property (nonatomic, strong) NSString     *ui;
 @property (nonatomic, strong) NSString     *uiId;
 @property (nonatomic, strong) NSString     *uiVersion;
 @property (nonatomic, strong) NSString     *uiPhase;
 @property (nonatomic, strong) NSString     *uiType;
+@property (nonatomic, strong) NSString     *uiName;
 @property (nonatomic, strong) NSDictionary *uiConfig;
 @property (nonatomic, strong) NSDictionary *panelConfig;
 
 @property (nonatomic, strong) NSArray      *quickOpDps;
 @property (nonatomic, strong) NSArray      *displayDps;
+@property (nonatomic, strong) NSArray      *faultDps;
 @property (nonatomic, strong) NSDictionary *displayMsgs;
 @property (nonatomic, strong) NSString     *switchDp;
 
-@property (nonatomic, strong) NSString     *uuid;
 
-@property (nonatomic, strong) NSString     *localKey;
-
-@property (nonatomic, assign) NSUInteger    attribute;
+- (BOOL)attributeIsSupport:(int)i;
 
 @end
 

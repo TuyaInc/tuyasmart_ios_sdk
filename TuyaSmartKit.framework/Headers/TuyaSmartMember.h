@@ -118,10 +118,5 @@ typedef enum : NSUInteger {
 
 @end
 
-@interface TuyaSmartMember (Deprecated)
-
-- (void)addNewMember:(TuyaSmartMemberModel *)member success:(TYSuccessHandler)success failure:(TYFailureError)failure __deprecated_msg("Replaced by -addNewMember:phoneCode:userAccount:relationship:success:failure");
-
-@end
 
 #endif

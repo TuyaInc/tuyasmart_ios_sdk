@@ -78,6 +78,8 @@
 //添加一个特定的虚拟演示设备
 - (void)getTestDevice {
 
+#warning 绑定演示设备到账号下面，生产环境勿使用
+    
     [self showProgressView:NSLocalizedString(@"loading", @"")];
     WEAKSELF_AT
     [self.request requestWithApiName:@"s.m.dev.sdk.demo.list" postData:nil version:@"1.0" success:^(id result) {
