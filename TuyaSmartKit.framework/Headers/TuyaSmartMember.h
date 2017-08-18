@@ -23,7 +23,7 @@ typedef enum : NSUInteger {
     TYRelationshipOther
 } TYRelationship;
 
-/// 共享设备相关功能
+/// 共享设备相关功能 （基于用户维度的共享）
 @interface TuyaSmartMember : NSObject
 
 /**

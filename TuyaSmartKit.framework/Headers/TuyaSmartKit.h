@@ -11,7 +11,7 @@
 /**
  *  当前SDK的版本号
  */
-#define TUYA_SDK_VERSION @"1.9.0"
+#define TUYA_SDK_VERSION @"1.11.0"
 
 /**
  *  当前客户端支持的最高的外网通信协议
@@ -36,4 +36,4 @@
 #import "TuyaSmartTimer.h"
 #import "TuyaSmartRequest.h"
 #import "TuyaSmartGroupDevListModel.h"
-
+#import "TuyaSmartDeviceShare.h"
