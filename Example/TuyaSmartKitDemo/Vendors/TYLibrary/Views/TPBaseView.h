@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIColor+TPCategory.h"
 #import "UIView+TPAdditions.h"
 #import "UIImage+TPAlpha.h"
 

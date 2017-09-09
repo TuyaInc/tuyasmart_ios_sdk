@@ -28,6 +28,7 @@
     self.topBarView.leftItem = self.leftBackItem;
     self.rightTitleItem.title = NSLocalizedString(@"action_more", @"");
     self.topBarView.rightItem = self.rightTitleItem;
+  
     [self.view addSubview:self.topBarView];
 }
 

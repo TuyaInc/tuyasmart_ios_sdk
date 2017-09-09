@@ -12,6 +12,9 @@
 #define IOS7 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0)
 #define IOS6 ([[[UIDevice currentDevice] systemVersion] floatValue] < 7.0)
 #define IOS8 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
+#define IOS9  ([[[UIDevice currentDevice] systemVersion] floatValue] >= 9.0)
+#define IOS10 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 10.0)
+
 
 
 // Color
@@ -36,43 +39,45 @@
 #define APP_CONTENT_HEIGHT    (APP_SCREEN_HEIGHT - APP_TOP_BAR_HEIGHT - APP_TAB_BAR_HEIGHT)
 #define APP_VISIBLE_HEIGHT    (APP_SCREEN_HEIGHT - APP_TOP_BAR_HEIGHT)
 
-//----------------- 配色 -----------------//
-
-//导航栏、TabBar相关
-#define TOP_BAR_TEXT_COLOR          HEXCOLOR(0x303030)
-#define TOP_BAR_BACKGROUND_COLOR    HEXCOLOR(0xFAFAFA)
-#define TAB_BAR_TEXT_COLOR          HEXCOLOR(0xFF5800)
-#define TAB_BAR_BACKGROUND_COLOR    HEXCOLOR(0xFAFAFA)
-
-
-//背景颜色
-#define MAIN_BACKGROUND_COLOR       HEXCOLOR(0xF2F2F2)
-
-//列表相关
-#define LIST_MAIN_TEXT_COLOR        HEXCOLOR(0x303030)
-#define LIST_SUB_TEXT_COLOR         HEXCOLOR(0x626262)
-#define LIST_LIGHT_TEXT_COLOR       HEXCOLOR(0x9B9B9B)
-#define LIST_LINE_COLOR             HEXCOLOR(0xDBDBDB)
-#define LIST_BACKGROUND_COLOR       HEXCOLOR(0xFFFFFF)
-
-//提示
-#define NOTICE_TEXT_COLOR           HEXCOLOR(0xFF5800)
-#define NOTICE_BACKGROUND_COLOR     HEXCOLOR(0xFFF8D8)
-
-//按钮
-#define BUTTON_TEXT_COLOR           HEXCOLOR(0xFFFFFF)
-#define BUTTON_BACKGROUND_COLOR     HEXCOLOR(0xFF5800)
-#define SUB_BUTTON_TEXT_COLOR       HEXCOLOR(0xFF5800)
-#define SUB_BUTTON_BACKGROUND_COLOR HEXCOLOR(0xFFFFFF)
-
-//----------------- 配色 -----------------//
-
-//old
-#define MAIN_COLOR                  BUTTON_BACKGROUND_COLOR
-#define MAIN_FONT_COLOR             LIST_MAIN_TEXT_COLOR
-#define SUB_FONT_COLOR              LIST_SUB_TEXT_COLOR
-#define LIGHT_FONT_COLOR            LIST_LIGHT_TEXT_COLOR
-#define SEPARATOR_LINE_COLOR        LIST_LINE_COLOR
+////----------------- 配色 -----------------//
+//
+////导航栏、TabBar相关
+//#define TOP_BAR_TEXT_COLOR          HEXCOLOR(0x303030)
+//#define TOP_BAR_BACKGROUND_COLOR    HEXCOLOR(0xFAFAFA)
+//#define TAB_BAR_TEXT_COLOR          HEXCOLOR(0xFF5800)
+//#define TAB_BAR_BACKGROUND_COLOR    HEXCOLOR(0xFAFAFA)
+//
+//
+////背景颜色
+//#define MAIN_BACKGROUND_COLOR       HEXCOLOR(0xF2F2F2)
+//
+//#define DISABLE_BUTTON_BACKGROUND_COLOR HEXCOLOR(0xC5C7CB)
+//
+////列表相关
+//#define LIST_MAIN_TEXT_COLOR        HEXCOLOR(0x303030)
+//#define LIST_SUB_TEXT_COLOR         HEXCOLOR(0x626262)
+//#define LIST_LIGHT_TEXT_COLOR       HEXCOLOR(0x9B9B9B)
+//#define LIST_LINE_COLOR             HEXCOLOR(0xDBDBDB)
+//#define LIST_BACKGROUND_COLOR       HEXCOLOR(0xFFFFFF)
+//
+////提示
+//#define NOTICE_TEXT_COLOR           HEXCOLOR(0xFF5800)
+//#define NOTICE_BACKGROUND_COLOR     HEXCOLOR(0xFFF8D8)
+//
+////按钮
+//#define BUTTON_TEXT_COLOR           HEXCOLOR(0xFFFFFF)
+//#define BUTTON_BACKGROUND_COLOR     HEXCOLOR(0xFF5800)
+//#define SUB_BUTTON_TEXT_COLOR       HEXCOLOR(0xFF5800)
+//#define SUB_BUTTON_BACKGROUND_COLOR HEXCOLOR(0xFFFFFF)
+//
+////----------------- 配色 -----------------//
+//
+////old
+//#define MAIN_COLOR                  BUTTON_BACKGROUND_COLOR
+//#define MAIN_FONT_COLOR             LIST_MAIN_TEXT_COLOR
+//#define SUB_FONT_COLOR              LIST_SUB_TEXT_COLOR
+//#define LIGHT_FONT_COLOR            LIST_LIGHT_TEXT_COLOR
+//#define SEPARATOR_LINE_COLOR        LIST_LINE_COLOR
 
 
 //#define TPLocalizedString(key,comment) NSLocalizedStringFromTableInBundle(key, @"TPViewsLocalizable", [NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:@"TPViews" ofType:@"bundle"]] , comment)

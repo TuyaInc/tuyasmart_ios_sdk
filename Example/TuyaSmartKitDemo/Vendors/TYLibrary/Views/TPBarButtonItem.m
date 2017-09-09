@@ -7,129 +7,62 @@
 //
 
 #import "TPBarButtonItem.h"
-#import "TPViewConstants.h"
 #import "TPBaseView.h"
 
 @implementation TPBarButtonItem
 
+// < 返回
++ (UIBarButtonItem *)backItem:(id)target action:(SEL)action {
+    UIBarButtonItem *leftBackItem = [[UIBarButtonItem alloc] initWithTitle:UIKitLocalizedString(@"Back") style:UIBarButtonItemStylePlain target:target action:action];
+    leftBackItem.image = [UIImage imageNamed:@"tp_top_bar_back"];
+    return leftBackItem;
+}
+
+// 取消
++ (UIBarButtonItem *)cancelItem:(id)target action:(SEL)action {
+    return [[UIBarButtonItem alloc] initWithTitle:UIKitLocalizedString(@"Cancel") style:UIBarButtonItemStylePlain target:target action:action];
+}
+
+// 完成
++ (UIBarButtonItem *)doneItem:(id)target action:(SEL)action {
+    return [[UIBarButtonItem alloc] initWithTitle:UIKitLocalizedString(@"Done") style:UIBarButtonItemStyleDone target:target action:action];
+}
+
+// 文字
++ (UIBarButtonItem *)titleItem:(NSString *)title target:(id)target action:(SEL)action {
+    return [[UIBarButtonItem alloc] initWithTitle:title style:UIBarButtonItemStylePlain target:target action:action];
+}
+
+// 图片
++ (UIBarButtonItem *)logoItem:(UIImage *)image terget:(id)target action:(SEL)action {
+    return [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:target action:action];
+}
+
+// deprecated
+// --------------------------------
+
 + (TPBarButtonItem *)rightTitleItem:(id)target action:(SEL)action {
-    return [[TPBarButtonItem alloc] initWithBarButtonSystemItem:TPBarButtonSystemItemRight title:UIKitLocalizedString(@"Done") target:target action:action];
+    return [TPBarButtonItem titleItem:UIKitLocalizedString(@"Done") target:target action:action];
 }
 
 + (TPBarButtonItem *)leftBackItem:(id)target action:(SEL)action {
-    return [[TPBarButtonItem alloc ] initWithBarButtonSystemItem:TPBarButtonSystemItemLeftWithIcon title:UIKitLocalizedString(@"Back") target:target action:action];
+    return [TPBarButtonItem backItem:target action:action];
 }
 
 + (TPBarButtonItem *)leftCancelItem:(id)target action:(SEL)action {
-    return [[TPBarButtonItem alloc ] initWithBarButtonSystemItem:TPBarButtonSystemItemLeftWithoutIcon title:UIKitLocalizedString(@"Cancel") target:target action:action];
+    return [TPBarButtonItem cancelItem:target action:action];
 }
 
 + (TPBarButtonItem *)rightCancelItem:(id)target action:(SEL)action {
-    return [[TPBarButtonItem alloc] initWithBarButtonSystemItem:TPBarButtonSystemItemRight title:TPLocalizedString(@"close", nil) target:target action:action];
+    return [TPBarButtonItem cancelItem:target action:action];
 }
 
 + (TPBarButtonItem *)centerTitleItem:(id)target action:(SEL)action {
-    return [[TPBarButtonItem alloc] initWithBarButtonSystemItem:TPBarButtonSystemItemCenter title:@"Title"];
+    return [TPBarButtonItem titleItem:@"Title" target:target action:action];
 }
 
 + (TPBarButtonItem *)centerLogoItem:(id)target action:(SEL)action {
-    return [[TPBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"logo"] highlightedImage:[UIImage imageNamed:@"logo"] selectedImage:[UIImage imageNamed:@"logo"] disabledImage:[UIImage imageNamed:@"logo"] backgroundImage:nil target:target action:action];
+    return [TPBarButtonItem logoItem:[UIImage imageNamed:@"logo"] terget:target action:action];
 }
-
-- (id)initWithImage:(UIImage *)image
-   highlightedImage:(UIImage *)highlightedImage
-      selectedImage:(UIImage *)selectedImage
-    backgroundImage:(UIImage *)backgroundImage
-             target:(id)target
-             action:(SEL)action {
-    
-    if (self = [super init]) {
-        
-        self.image = image;
-        self.highlightImage = highlightedImage;
-        self.selectedImage = selectedImage;
-        self.backgroundImage = backgroundImage;
-        self.target = target;
-        self.action = action;
-        
-        _contentInsets = NAN;
-    }
-    return self;
-}
-
-
-- (id)initWithImage:(UIImage *)image
-   highlightedImage:(UIImage *)highlightedImage
-      selectedImage:(UIImage *)selectedImage
-      disabledImage:(UIImage *)disabledImage
-    backgroundImage:(UIImage *)backgroundImage
-             target:(id)target
-             action:(SEL)action {
-    if (self = [super init]) {
-
-        self.image = image;
-        self.highlightImage = highlightedImage;
-        self.selectedImage = selectedImage;
-        self.disabledImage = disabledImage;
-        self.backgroundImage = backgroundImage;
-        self.target = target;
-        self.action = action;
-        _contentInsets = NAN;
-    }
-    return self;
-
-    
-}
-
-
-- (id)initWithBarButtonSystemItem:(TPBarButtonSystemItem)systemItem
-                            title:(NSString *)title {
-    if (self = [super init]) {
-        self.systemItem = systemItem;
-        self.title = title;
-        _contentInsets = NAN;
-    }
-    return self;
-}
-
-- (id)initWithBarButtonSystemItem:(TPBarButtonSystemItem)systemItem
-                            title:(NSString *)title
-                           target:(id)target
-                           action:(SEL)action {
-    if (self = [super init]) {
-        self.systemItem = systemItem;
-        self.title = title;
-        self.target = target;
-        self.action = action;
-        _contentInsets = NAN;
-    }
-    return self;
-
-}
-
-- (id)initWithBarButtonSystemItem:(TPBarButtonSystemItem)systemItem
-                           target:(id)target
-                           action:(SEL)action {
-    if (self = [super init]) {
-        self.systemItem = systemItem;
-        self.target = target;
-        self.action = action;
-        _contentInsets = NAN;
-    }
-    return self;
-
-}
-
-
-
-- (id)initWithCustomView:(UIView *)customView {
-    if (self = [super init]) {
-        self.customView = customView;
-    }
-    return self;
-}
-
-
-
 
 @end

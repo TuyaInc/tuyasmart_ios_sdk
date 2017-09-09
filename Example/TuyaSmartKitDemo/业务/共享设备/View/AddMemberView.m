@@ -15,6 +15,7 @@
     self.backgroundColor = MAIN_BACKGROUND_COLOR;
     
     [self addPromptLabel];
+    [self addCountryCode];
     [self addPhoneNumberView];
     [self addSubview:self.submitButton];
     
@@ -34,21 +35,34 @@
 }
 
 -(void)addPhoneNumberView {
-    UIView *phoneNumberView = [TPViewUtil viewWithFrame:CGRectMake(15, 54, APP_SCREEN_WIDTH - 30, 44) color:[UIColor whiteColor]];
+    UIView *phoneNumberView = [TPViewUtil viewWithFrame:CGRectMake(15, 108, APP_SCREEN_WIDTH - 30, 44) color:[UIColor whiteColor]];
     phoneNumberView.layer.cornerRadius = 4;
     
-    [phoneNumberView addSubview:self.countryCodeLabel];
     [phoneNumberView addSubview:self.phoneNumberTextField];
     [phoneNumberView addSubview:self.contactBookButton];
-    [phoneNumberView addSubview:[TPViewUtil viewWithFrame:CGRectMake(self.countryCodeLabel.right, 8, 0.5, phoneNumberView.height - 16) color:SEPARATOR_LINE_COLOR]];
     
     [self addSubview:phoneNumberView];
 }
 
+-(void)addCountryCode {
+    UIView *countryCodeView = [TPViewUtil viewWithFrame:CGRectMake(15, 54, APP_SCREEN_WIDTH - 30, 44) color:[UIColor whiteColor]];
+    countryCodeView.layer.cornerRadius = 4;
+    
+    UILabel *titleLabel = [TPViewUtil labelWithFrame:CGRectMake(15, 0, 150, 44) fontSize:16 color:LIGHT_FONT_COLOR];
+    titleLabel.text = NSLocalizedString(@"login_choose_country", @"");
+    [countryCodeView addSubview:titleLabel];
+    
+    [countryCodeView addSubview:self.countryCodeLabel];
+    
+    [countryCodeView addSubview:[TPViewUtil rightArrowImageView:CGRectMake(countryCodeView.width - 22,(countryCodeView.height-12)/2, 7, 12)]];
+    
+    [self addSubview:countryCodeView];
+}
+
 -(UILabel *)countryCodeLabel {
     if (!_countryCodeLabel) {
-        _countryCodeLabel = [TPViewUtil labelWithFrame:CGRectMake(0, 0, 94, 44) fontSize:14 color:MAIN_COLOR];
-        _countryCodeLabel.textAlignment = NSTextAlignmentCenter;
+        _countryCodeLabel = [TPViewUtil labelWithFrame:CGRectMake(-37, 0, APP_SCREEN_WIDTH - 30, 44) fontSize:16 color:HEXCOLOR(0x303030)];
+        _countryCodeLabel.textAlignment = NSTextAlignmentRight;
         _countryCodeLabel.userInteractionEnabled = YES;
     }
     return _countryCodeLabel;
@@ -56,8 +70,8 @@
 
 -(UITextField *)phoneNumberTextField {
     if (!_phoneNumberTextField) {
-        _phoneNumberTextField = [TPViewUtil textFieldWithFrame:CGRectMake(94 + 15, 0, APP_SCREEN_WIDTH - 30 - 94 - 15, 44) fontSize:16 color:[UIColor blackColor]];
-        _phoneNumberTextField.placeholder = NSLocalizedString(@"phone_number", @"");
+        _phoneNumberTextField = [TPViewUtil textFieldWithFrame:CGRectMake(15, 0, APP_SCREEN_WIDTH - 30 - 15, 44) fontSize:16 color:HEXCOLOR(0x303030)];
+        _phoneNumberTextField.placeholder = NSLocalizedString(@"ty_share_default_info", @"");
 //        _phoneNumberTextField.keyboardType = UIKeyboardTypePhonePad;
     }
     return _phoneNumberTextField;
@@ -74,8 +88,8 @@
 
 -(UIButton *)submitButton {
     if (!_submitButton) {
-        _submitButton = [TPViewUtil buttonWithFrame:CGRectMake(15, 108, APP_SCREEN_WIDTH - 30, 44) fontSize:16 bgColor:MAIN_COLOR textColor:[UIColor whiteColor]];
-        [_submitButton setTitle:NSLocalizedString(@"confirm", @"") forState:UIControlStateNormal];
+        _submitButton = [TPViewUtil buttonWithFrame:CGRectMake(15, 162, APP_SCREEN_WIDTH - 30, 44) fontSize:16 bgColor:MAIN_COLOR textColor:[UIColor whiteColor]];
+        [_submitButton setTitle:NSLocalizedString(@"Confirm", @"") forState:UIControlStateNormal];
     }
     return _submitButton;
 }

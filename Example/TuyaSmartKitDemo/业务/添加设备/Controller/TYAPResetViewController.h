@@ -6,9 +6,7 @@
 //  Copyright © 2016年 Tuya. All rights reserved.
 //
 
-#import "ATBaseViewController.h"
-
-@interface TYAPResetViewController : ATBaseViewController
+@interface TYAPResetViewController : TPBaseViewController
 
 @property (nonatomic, strong) NSString          *ssid;
 @property (nonatomic, strong) NSString          *password;

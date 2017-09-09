@@ -7,7 +7,7 @@
 //
 
 #import "MobileBindingViewController.h"
-#import "ATSelectCountryViewController.h"
+#import "TPSelectCountryViewController.h"
 #import "MobileBindingView.h"
 #import "TPCountryCodeUtils.h"
 
@@ -15,7 +15,7 @@
 
 @property (nonatomic, strong) MobileBindingView  *bindingView;
 @property (nonatomic, strong) NSTimer            *identifyTimer;
-@property (nonatomic, strong) ATCountryCodeModel *countryCodeModel;
+@property (nonatomic, strong) TPCountryModel *countryCodeModel;
 @property (nonatomic, assign) int                identifyTimes;
 
 @end
@@ -62,17 +62,19 @@
 }
 
 - (void)initCountryCode {
-    ATCountryCodeModel *model = [ATCountryCodeModel getCountryCodeModel:[TPCountryCodeUtils getDefaultPhoneCodeJson] countryCode:[TPCountryCodeUtils getCountryCode]];
+    TPCountryModel *model = [TPCountryService getCurrentCountryModel];
+    
     [self setCountryCode:model];
 }
 
+
 - (void)selectCountryCode {
-    ATSelectCountryViewController *selectCountryViewController = [[ATSelectCountryViewController alloc] init];
+    TPSelectCountryViewController *selectCountryViewController = [[TPSelectCountryViewController alloc] init];
     selectCountryViewController.delegate = self;
-    [self.navigationController presentViewController:selectCountryViewController animated:YES completion:nil];
+    [self presentViewController:selectCountryViewController animated:YES completion:nil];
 }
 
-- (void)setCountryCode:(ATCountryCodeModel *)model {
+- (void)setCountryCode:(TPCountryModel *)model {
     _countryCodeModel = model;
     [_bindingView setCountryCode:model];
 }
@@ -159,7 +161,7 @@
 }
 
 #pragma mark - ATSelectCountryDelegate
-- (void)didSelectCountry:(ATSelectCountryViewController *)controller model:(ATCountryCodeModel *)model {
+- (void)didSelectCountry:(TPSelectCountryViewController *)controller model:(TPCountryModel *)model {
     [self setCountryCode:model];
     [controller tp_dismissModalViewController];
 }

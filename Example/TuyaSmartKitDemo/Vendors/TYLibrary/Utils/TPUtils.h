@@ -25,11 +25,20 @@ return __singleton__; \
 }
 
 
+
+
 #define WEAKSELF_AT __weak __typeof(&*self)weakSelf_AT = self;
+
+void at_dispatch_async_on_default_global_thread(dispatch_block_t block);
+void at_dispatch_async_on_main_thread(dispatch_block_t block);
+void at_dispatch_sync_on_main_thread(dispatch_block_t block);
+
 
 UIViewController *tp_topMostViewController();
 
 @interface TPUtils : NSObject
+
++ (NSString *)getAppleLanguages;
 
 + (BOOL)isChinese;
 
@@ -37,4 +46,27 @@ UIViewController *tp_topMostViewController();
 
 + (BOOL)IsEnableInternet;
 
+
++ (NSString *)getISOcountryCode;
+
+
 @end
+
+
+#pragma mark NSJSONSerialization Category
+
+@interface NSString (TPJSONKit)
+- (id)tp_objectFromJSONString;
+- (id)tp_objectFromJSONString:(NSJSONReadingOptions)serializeOptions error:(NSError **)error;
+@end
+
+@interface NSArray (TPJSONKit)
+- (NSString *)tp_JSONString;
+- (NSString *)tp_JSONStringWithOptions:(NSJSONWritingOptions)serializeOptions error:(NSError **)error;
+@end
+
+@interface NSDictionary (TPJSONKit)
+- (NSString *)tp_JSONString;
+- (NSString *)tp_JSONStringWithOptions:(NSJSONWritingOptions)serializeOptions error:(NSError **)error;
+@end
+

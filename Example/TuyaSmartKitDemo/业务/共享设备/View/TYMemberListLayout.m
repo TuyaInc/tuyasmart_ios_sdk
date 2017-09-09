@@ -22,9 +22,8 @@
         _memberListView = [[TYMemberListView alloc] initWithFrame:CGRectMake(0, APP_TOP_BAR_HEIGHT, APP_CONTENT_WIDTH, APP_VISIBLE_HEIGHT)];
         [self addSubview:_memberListView];
         
-        self.topBarView.leftItem.image = [UIImage imageNamed:@"back_white.png"];
         self.topBarView.centerItem.title = NSLocalizedString(@"shared_title", @"");
-        
+        self.topBarView.bottomLineHidden = YES;
         
         [self addSubview:self.topBarView];
     }

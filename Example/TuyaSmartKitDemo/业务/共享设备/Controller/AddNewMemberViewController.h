@@ -6,8 +6,15 @@
 //  Copyright (c) 2015年 Tuya. All rights reserved.
 //
 
-#import "ATBaseViewController.h"
+#import "TPBaseViewController.h"
 
-@interface AddNewMemberViewController : ATBaseViewController
+@interface AddNewMemberViewController : TPBaseViewController
+
+
+// 0 设备共享  1 所有
+@property (nonatomic, assign) NSInteger type;
+
+@property (nonatomic, strong) NSArray *shareDeviceIds;
+@property (nonatomic, assign) BOOL isAutoShare;
 
 @end

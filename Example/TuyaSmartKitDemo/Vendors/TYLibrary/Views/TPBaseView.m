@@ -47,7 +47,7 @@ NSString *UIKitLocalizedString(NSString *string) {
         if (_topLineColor != nil) {
             lineColor = _topLineColor;
         } else {
-            lineColor = LIST_LINE_COLOR;
+            lineColor = HEXCOLOR(0xDBDBDB);
         }
         
         [self addSubview:[TPViewUtil viewWithFrame:CGRectMake(lineIndent, 0, lineWidth, 0.5) color:lineColor]];
@@ -72,7 +72,7 @@ NSString *UIKitLocalizedString(NSString *string) {
         if (_bottomLineColor != nil) {
             lineColor = _bottomLineColor;
         } else {
-            lineColor = LIST_LINE_COLOR;
+            lineColor = HEXCOLOR(0xDDDFE7);
         }
         
         [self addSubview:[TPViewUtil viewWithFrame:CGRectMake(lineIndent, self.height - 0.5, lineWidth, 0.5) color:lineColor]];

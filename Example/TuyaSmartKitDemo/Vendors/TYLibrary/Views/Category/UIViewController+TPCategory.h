@@ -12,4 +12,11 @@
 
 - (void)tp_dismissModalViewController;
 
+- (BOOL)tp_isModal;
+
+- (void)tp_dismissCurrentPresentedControllerAnimated:(BOOL)animated completion:(void (^)(void))completion;
+
+- (UIViewController *)tp_currentPresentedController;
+
+- (UIViewController *)tp_currentPresentingController;
 @end

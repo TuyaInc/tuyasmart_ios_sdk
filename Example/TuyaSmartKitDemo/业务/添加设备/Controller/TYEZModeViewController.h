@@ -6,9 +6,7 @@
 //  Copyright (c) 2015年 Tuya. All rights reserved.
 //
 
-#import "ATBaseViewController.h"
-
-@interface TYEZModeViewController : ATBaseViewController
+@interface TYEZModeViewController : TPBaseViewController
 
 @property (nonatomic, assign) TYActivatorMode   mode;
 

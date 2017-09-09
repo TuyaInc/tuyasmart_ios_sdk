@@ -7,10 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TYReceiveMemberDeviceListCell.h"
 
 @interface TYReceiveMemberDeviceListView : UIView
 
-- (instancetype)initWithFrame:(CGRect)frame deviceList:(NSArray *)deviceList;
-    
+@property (nonatomic, weak) id <TYReceiveMemberDeviceListDelegate> delegate;
+@property (nonatomic, strong) UITableView *tableView;
+
+- (instancetype)initWithFrame:(CGRect)frame deviceList:(NSArray *)deviceList type:(NSInteger)type;
 
 @end

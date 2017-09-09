@@ -69,12 +69,12 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-- (TPBarButtonItem *)centerTitleItem {
-    if (!_centerTitleItem) {
-        _centerTitleItem = [[TPBarButtonItem alloc] initWithBarButtonSystemItem:TPBarButtonSystemItemCenter title:@"Title"];
-    }
-    return _centerTitleItem;
-}
+//- (TPBarButtonItem *)centerTitleItem {
+//    if (!_centerTitleItem) {
+//        _centerTitleItem = [[TPBarButtonItem alloc] initWithBarButtonSystemItem:TPBarButtonSystemItemCenter title:@"Title"];
+//    }
+//    return _centerTitleItem;
+//}
 
 - (void)initWebView {
     _webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, APP_TOP_BAR_HEIGHT, APP_SCREEN_WIDTH, APP_SCREEN_HEIGHT - APP_TOP_BAR_HEIGHT)];

@@ -8,15 +8,14 @@
 
 #import "TPInputUserAccountController.h"
 #import "TPInputUserAccountView.h"
-#import "ATSelectCountryViewController.h"
+#import "TPSelectCountryViewController.h"
 #import "TPSignUpViewController.h"
 #import "TPCountryCodeUtils.h"
-#import "ATCountryCodeModel.h"
 
 @interface TPInputUserAccountController() <TPInputPhoneViewDelegate, TPTopBarViewDelegate, ATSelectCountryDelegate>
 
 @property (nonatomic, strong) TPInputUserAccountView *inputUserAccountView;
-@property (nonatomic, strong) ATCountryCodeModel *countryCodeModel;
+@property (nonatomic, strong) TPCountryModel *countryCodeModel;
 
 @end
 
@@ -50,17 +49,18 @@
 
 
 - (void)initCountryCode {
-    ATCountryCodeModel *model = [ATCountryCodeModel getCountryCodeModel:[TPCountryCodeUtils getDefaultPhoneCodeJson] countryCode:[TPCountryCodeUtils getCountryCode]];
+    TPCountryModel *model = [TPCountryService getCurrentCountryModel];
+    
     [self setCountryCode:model];
 }
 
 - (void)selectCountryCode {
-    ATSelectCountryViewController *vc = [[ATSelectCountryViewController alloc] init];
+    TPSelectCountryViewController *vc = [[TPSelectCountryViewController alloc] init];
     vc.delegate = self;
-    [self.navigationController presentViewController:vc animated:YES completion:nil];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
-- (void)setCountryCode:(ATCountryCodeModel *)model {
+- (void)setCountryCode:(TPCountryModel *)model {
     _countryCodeModel = model;
     [_inputUserAccountView setCountryCode:model];
 }
@@ -95,7 +95,7 @@
 
 #pragma mark ATSelectCountryDelegate
 
-- (void)didSelectCountry:(ATSelectCountryViewController *)controller model:(ATCountryCodeModel *)model {
+- (void)didSelectCountry:(TPSelectCountryViewController *)controller model:(TPCountryModel *)model {
     [self setCountryCode:model];
     [controller tp_dismissModalViewController];
 }

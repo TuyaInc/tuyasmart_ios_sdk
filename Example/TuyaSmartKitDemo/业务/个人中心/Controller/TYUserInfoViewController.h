@@ -6,10 +6,8 @@
 //  Copyright © 2016年 Tuya. All rights reserved.
 //
 
-#import "ATBaseViewController.h"
-
 #define TPNotificationUpdateUserInfo       @"TPNotificationUpdateUserInfo"
 
-@interface TYUserInfoViewController : ATBaseViewController
+@interface TYUserInfoViewController : TPBaseViewController
 
 @end

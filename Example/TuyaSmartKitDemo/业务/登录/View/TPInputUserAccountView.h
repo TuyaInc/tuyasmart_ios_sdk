@@ -7,7 +7,6 @@
 //
 
 #import "TPBaseLayout.h"
-#import "ATCountryCodeModel.h"
 
 @class TPInputUserAccountView;
 
@@ -24,6 +23,6 @@
 
 @property (nonatomic, strong) NSString *userAccount;
 
-- (void)setCountryCode:(ATCountryCodeModel *)countryCodeModel;
+- (void)setCountryCode:(TPCountryModel *)countryCodeModel;
 
 @end

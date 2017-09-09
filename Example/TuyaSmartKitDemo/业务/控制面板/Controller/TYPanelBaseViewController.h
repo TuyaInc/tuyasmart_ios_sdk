@@ -6,9 +6,7 @@
 //  Copyright © 2016年 Tuya. All rights reserved.
 //
 
-#import "ATBaseViewController.h"
-
-@interface TYPanelBaseViewController : ATBaseViewController <TuyaSmartDeviceDelegate>
+@interface TYPanelBaseViewController : TPBaseViewController <TuyaSmartDeviceDelegate>
 
 
 @property (nonatomic, strong) NSString *devId;

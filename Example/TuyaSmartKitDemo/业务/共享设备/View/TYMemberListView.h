@@ -6,7 +6,7 @@
 //  Copyright © 2016年 Tuya. All rights reserved.
 //
 
-//#import "TuyaSmartMemberModel.h"
+#import "TYMemberListCell.h"
 
 typedef enum : NSUInteger {
     TYMemberSend = 1,
@@ -17,24 +17,20 @@ typedef enum : NSUInteger {
 
 @protocol TYMemberListViewDataSource <NSObject>
 
-@property (nonatomic, strong) NSArray   *memberList;
-@property (nonatomic, strong) NSArray   *receiveMemberList;
+@property (nonatomic, strong) NSArray *memberList;
+@property (nonatomic, strong) NSArray *receiveMemberList;
 
 @end
-
 
 @protocol TYMemberListViewDelegate <NSObject>
 
 @required
 
-- (void)memberListView:(TYMemberListView *)memberListView didSelectRowAtModel:(TuyaSmartMemberModel *)member currentType:(TYMemberCurrentType)currentType;
+- (void)memberListView:(TYMemberListView *)memberListView didSelectRowAtModel:(TuyaSmartShareMemberModel *)member currentType:(TYMemberCurrentType)currentType indexPath:(NSIndexPath *)indexPath;
 
-- (void)memberListView:(TYMemberListView *)memberListView deleteRowWithMember:(TuyaSmartMemberModel *)member currentType:(TYMemberCurrentType)currentType success:(TYSuccessHandler)success failure:(TYFailureError)failure;
+- (void)memberListView:(TYMemberListView *)memberListView deleteRowWithMember:(TuyaSmartShareMemberModel *)member currentType:(TYMemberCurrentType)currentType success:(TYSuccessHandler)success failure:(TYFailureError)failure;
 
-- (void)addNewMember:(TYMemberListView *)memberListView ;
-
-
-
+- (void)addNewMember:(TYMemberListView *)memberListView;
 
 @end
 
@@ -42,12 +38,10 @@ typedef enum : NSUInteger {
 
 @property (nonatomic, weak) id <TYMemberListViewDelegate> delegate;
 @property (nonatomic, weak) id <TYMemberListViewDataSource> dataSource;
-
-@property (nonatomic, strong) UITableView         *tableView;
-@property (nonatomic, assign) NSInteger           currentIndex;
-
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, assign) NSInteger currentIndex;
 
 - (void)reloadData;
-
 - (void)setCurrentSelectIndex:(NSInteger)index;
+
 @end

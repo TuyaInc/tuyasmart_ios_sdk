@@ -9,7 +9,6 @@
 #import "MobileChangeViewController.h"
 #import "MobileBindingViewController.h"
 #import "MobileChangeView.h"
-#import "ATCountryCodeModel.h"
 #import "TPCountryCodeUtils.h"
 
 @interface MobileChangeViewController () <TPTopBarViewDelegate>

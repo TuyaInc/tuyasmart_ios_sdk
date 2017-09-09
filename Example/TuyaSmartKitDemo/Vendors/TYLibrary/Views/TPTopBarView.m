@@ -7,6 +7,7 @@
 //
 
 #import "TPTopBarView.h"
+#import "UIColor+TPCategory.h"
 
 @interface TPTopBarView()
 
@@ -16,15 +17,6 @@
 
 @implementation TPTopBarView
 
-- (id)init {
-    self = [super init];
-    if (self) {
-        self.backgroundColor = TOP_BAR_BACKGROUND_COLOR;
-        self.textColor = TOP_BAR_TEXT_COLOR;
-    }
-    return self;
-}
-
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -33,8 +25,6 @@
         
         self.frame = CGRectMake(0, 0, APP_SCREEN_WIDTH, APP_TOP_BAR_HEIGHT);
         self.tag = TPTopBarViewTag;
-        self.topLineHidden = YES;
-        self.bottomLineHidden = YES;
     }
     return self;
 }
@@ -99,16 +89,14 @@
         [self setNeedsLayout];
     } else {
         //just update title
-        if (_centerItem.systemItem == TPBarButtonSystemItemCenter) {
-            UIButton *btn = (UIButton *)[self viewWithTag:TP_CENTER_VIEW_TAG];
-            if ([btn isKindOfClass:[UIButton class]]) {
-                [btn setTitle:centerItem.title ? : @"" forState:UIControlStateNormal];
-             
-                CGFloat width =  [_centerItem.title sizeWithAttributes:@{NSFontAttributeName : btn.titleLabel.font}].width;
-                
-                
-                btn.frame = CGRectMake((APP_SCREEN_WIDTH - width)/2, APP_STATUS_BAR_HEIGHT, width, _topBarHeight);
-            }
+        UIButton *btn = (UIButton *)[self viewWithTag:TP_CENTER_VIEW_TAG];
+        if ([btn isKindOfClass:[UIButton class]]) {
+            [btn setTitle:centerItem.title ? : @"" forState:UIControlStateNormal];
+            
+            CGFloat width =  [_centerItem.title sizeWithAttributes:@{NSFontAttributeName : btn.titleLabel.font}].width;
+            
+            
+            btn.frame = CGRectMake((APP_SCREEN_WIDTH - width)/2, APP_STATUS_BAR_HEIGHT, width, _topBarHeight);
         }
     }
 }
@@ -120,23 +108,13 @@
     
     UIColor *normalTextColor = _textColor;
     
-    float leftContentInsets;
-    if (isnan(_leftItem.contentInsets)) {
-        leftContentInsets = 8;
-    } else {
-        leftContentInsets = _leftItem.contentInsets;
-    }
+    float leftContentInsets = 8;
     
     
-    float rightContentInsets;
-    if (isnan(_rightItem.contentInsets)) {
-        rightContentInsets = 8;
-    } else {
-        rightContentInsets = _rightItem.contentInsets;
-    }
+    float rightContentInsets = 8;
     
-//    float leftContentInsets = _leftItem.contentInsets ? : 8;
-//    float rightContentInsets = _rightItem.contentInsets ? : 12;
+    //    float leftContentInsets = _leftItem.contentInsets ? : 8;
+    //    float rightContentInsets = _rightItem.contentInsets ? : 12;
     
     NSArray *array = @[
                        [NSNumber numberWithInteger:TP_LEFT_VIEW_TAG],
@@ -164,65 +142,28 @@
             UIButton *leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
             leftBtn.tag = TP_LEFT_VIEW_TAG;
             
+            [leftBtn setTitle:_leftItem.title ? : @"" forState:UIControlStateNormal];
+            leftBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+            leftBtn.titleLabel.font = [UIFont systemFontOfSize:17];
+            [leftBtn setTitleColor:self.textColor forState:UIControlStateNormal];
+            [leftBtn setTitleColor:[self.textColor colorWithAlphaComponent:0.5] forState:UIControlStateHighlighted];
+            
             //默认的没有返回按钮 只有文字
-            if (_leftItem.systemItem == TPBarButtonSystemItemLeftWithoutIcon) {
+            if (_leftItem.image == nil) {
                 
-                [leftBtn setTitle:_leftItem.title ? : @"" forState:UIControlStateNormal];
-                leftBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
-                leftBtn.titleLabel.font = [UIFont systemFontOfSize:17];
-                [leftBtn setTitleColor:self.textColor forState:UIControlStateNormal];
-                [leftBtn setTitleColor:[self.textColor colorWithAlphaComponent:0.5] forState:UIControlStateHighlighted];
                 CGFloat width =  [_leftItem.title sizeWithAttributes:@{NSFontAttributeName : leftBtn.titleLabel.font}].width;
-
-                
-                
                 
                 leftBtn.frame = CGRectMake(leftContentInsets, APP_STATUS_BAR_HEIGHT, width, _topBarHeight);
-            } else if (_leftItem.systemItem == TPBarButtonSystemItemLeftWithIcon) {
+            } else {
                 //默认的有返回按钮 并有文字
-                UIImage *image = [UIImage imageNamed:@"tp_top_bar_back"];
-                image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+                UIImage *image = [_leftItem.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+                UIImage *highlightImage = [[image imageByApplyingAlpha:0.5] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
                 
-                [leftBtn setTitle:_leftItem.title ? : @"" forState:UIControlStateNormal];
                 [leftBtn setImage:image forState:UIControlStateNormal];
-                [leftBtn setImage:[image imageByApplyingAlpha:0.5] forState:UIControlStateHighlighted];
-                leftBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+                [leftBtn setImage:highlightImage forState:UIControlStateHighlighted];
                 leftBtn.imageEdgeInsets = UIEdgeInsetsMake(0,0,0,0);
                 leftBtn.titleEdgeInsets = UIEdgeInsetsMake(1.5,4,0,0);
-                //btn.contentEdgeInsets = UIEdgeInsetsMake(0,10, 0, 0);
-                leftBtn.titleLabel.font = [UIFont systemFontOfSize:17];
-                //_backTitleButton.backgroundColor = [UIColor redColor];
-                [leftBtn setTitleColor:self.textColor forState:UIControlStateNormal];
-                [leftBtn setTitleColor:[self.textColor colorWithAlphaComponent:0.5] forState:UIControlStateHighlighted];
                 leftBtn.frame = CGRectMake(leftContentInsets,APP_STATUS_BAR_HEIGHT,160,_topBarHeight);
-
-            } else {
-                //根据参数设置
-                
-                if (_leftItem.image) {
-                    [leftBtn setImage:_leftItem.image forState:UIControlStateNormal]; //不会拉伸
-                }
-                
-                if (_leftItem.highlightImage) {
-                    [leftBtn setImage:_leftItem.highlightImage forState:UIControlStateHighlighted];
-                }
-                
-                if (_leftItem.selectedImage) {
-                    [leftBtn setImage:_leftItem.selectedImage forState:UIControlStateSelected];
-                }
-                
-                if (_leftItem.disabledImage) {
-                    [leftBtn setImage:_leftItem.disabledImage forState:UIControlStateDisabled];
-                }
-
-                if (_leftItem.backgroundImage) {
-                    [leftBtn setBackgroundImage:_leftItem.backgroundImage forState:UIControlStateNormal]; //会拉伸
-                }
-                
-                
-                CGSize size = _leftItem.image.size;
-                leftBtn.frame = CGRectMake(leftContentInsets,(_topBarHeight - size.height)/2 + APP_STATUS_BAR_HEIGHT, size.width, size.height);
-            
             }
             
             [leftBtn setTintColor:self.textColor];
@@ -256,11 +197,11 @@
             UIButton *centerBtn = [UIButton buttonWithType:UIButtonTypeCustom];
             centerBtn.tag = TP_CENTER_VIEW_TAG;
             //默认的样式 只有文字
-            if (_centerItem.systemItem == TPBarButtonSystemItemCenter) {
+            if (_centerItem.image == nil) {
                 
                 [centerBtn setTitle:_centerItem.title ? : @"" forState:UIControlStateNormal];
                 centerBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
-                centerBtn.titleLabel.font = [UIFont boldSystemFontOfSize:17];
+                centerBtn.titleLabel.font = [UIFont systemFontOfSize:17];
                 [centerBtn setTitleColor:normalTextColor ? : HEXCOLOR(0x1f1f1f) forState:UIControlStateNormal];
                 
                 CGFloat width =  [_centerItem.title sizeWithAttributes:@{NSFontAttributeName : centerBtn.titleLabel.font}].width;
@@ -272,27 +213,7 @@
                 centerBtn.frame = CGRectMake((self.width - width)/2, APP_STATUS_BAR_HEIGHT, width, _topBarHeight);
                 
             } else {
-                //根据参数设置
-                if (_centerItem.image) {
-                    [centerBtn setImage:_centerItem.image forState:UIControlStateNormal]; //不会拉伸
-                }
-                
-                if (_centerItem.highlightImage) {
-                    [centerBtn setImage:_centerItem.highlightImage forState:UIControlStateHighlighted];
-                }
-                
-                if (_centerItem.selectedImage) {
-                    [centerBtn setImage:_centerItem.selectedImage forState:UIControlStateSelected];
-                }
-                
-                if (_centerItem.disabledImage) {
-                    [centerBtn setImage:_centerItem.disabledImage forState:UIControlStateDisabled];
-                }
-                
-                if (_centerItem.backgroundImage) {
-                    [centerBtn setBackgroundImage:_centerItem.backgroundImage forState:UIControlStateNormal]; //会拉伸
-                }
-                
+                [centerBtn setImage:_centerItem.image forState:UIControlStateNormal]; //不会拉伸
                 
                 CGSize size = _centerItem.image.size;
                 centerBtn.frame = CGRectMake((self.width - size.width)/2,(_topBarHeight - size.height)/2 + APP_STATUS_BAR_HEIGHT, size.width, size.height);
@@ -314,7 +235,7 @@
         if (view) {
             [view removeFromSuperview];
         }
-
+        
     }
     
     //right btn
@@ -329,41 +250,24 @@
             
             UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
             rightBtn.tag = TP_RIGHT_VIEW_TAG;
-
-            if (_rightItem.systemItem == TPBarButtonSystemItemRight) {
             
+            if (_rightItem.image == nil) {
+                
                 [rightBtn setTitle:_rightItem.title ? : @"" forState:UIControlStateNormal];
                 rightBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
                 rightBtn.titleLabel.font = [UIFont systemFontOfSize:17];
                 [rightBtn setTitleColor:self.textColor forState:UIControlStateNormal];
                 [rightBtn setTitleColor:[self.textColor colorWithAlphaComponent:0.5] forState:UIControlStateHighlighted];
                 
-//                CGFloat width =  [_rightItem.title sizeWithFont:rightBtn.titleLabel.font].width;
-                CGFloat width = 80;
+                //                CGFloat width =  [_rightItem.title sizeWithFont:rightBtn.titleLabel.font].width;
+                CGFloat width = 100;
                 rightBtn.frame = CGRectMake(self.width - width - rightContentInsets, APP_STATUS_BAR_HEIGHT, width, _topBarHeight);
             } else {
+                UIImage *image = [_rightItem.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+                UIImage *highlightImage = [[image imageByApplyingAlpha:0.5] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
                 
-                //根据参数设置
-                if (_rightItem.image) {
-                    [rightBtn setImage:_rightItem.image forState:UIControlStateNormal]; //不会拉伸
-                }
-                
-                if (_rightItem.highlightImage) {
-                    [rightBtn setImage:_rightItem.highlightImage forState:UIControlStateHighlighted];
-                }
-                
-                if (_rightItem.selectedImage) {
-                    [rightBtn setImage:_rightItem.selectedImage forState:UIControlStateSelected];
-                }
-                
-                if (_rightItem.disabledImage) {
-                    [rightBtn setImage:_rightItem.disabledImage forState:UIControlStateDisabled];
-                }
-                
-                if (_rightItem.backgroundImage) {
-                    [rightBtn setBackgroundImage:_rightItem.backgroundImage forState:UIControlStateNormal]; //会拉伸
-                }
-                
+                [rightBtn setImage:image forState:UIControlStateNormal];
+                [rightBtn setImage:highlightImage forState:UIControlStateHighlighted];
                 
                 CGSize size = _rightItem.image.size;
                 rightBtn.frame = CGRectMake(self.width - size.width - rightContentInsets,(_topBarHeight - size.height)/2 + APP_STATUS_BAR_HEIGHT, size.width, size.height);
@@ -378,10 +282,10 @@
             }
             
             [self addSubview:rightBtn];
-
+            
             
         }
-
+        
         
     } else {
         //remove

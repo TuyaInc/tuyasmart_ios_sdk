@@ -10,14 +10,14 @@
 #import "TYMemberListDataSource.h"
 #import "TYMemberListDelegate.h"
 #import "TYMemberListLayout.h"
-#import "TYMemberListDS.h"
+#import "MJRefresh.h"
 
 @interface TYMemberListViewController ()
 
 @property (nonatomic, strong) TYMemberListDataSource *dataSource;
 @property (nonatomic, strong) TYMemberListDelegate   *delegate;
 @property (nonatomic, strong) TYMemberListLayout     *layout;
-@property (nonatomic, strong) TYMemberListDS         *ds;
+@property (nonatomic, strong) TuyaSmartDeviceShare   *shareService;
 
 @end
 
@@ -34,62 +34,68 @@
     }
     
     [self reloadData];
+    [self loadNotification];
     
-    WEAKSELF_AT
-    [self.layout.memberListView.tableView addPullToRefreshWithActionHandler:^{
-        __strong TYMemberListViewController *strongSelf = weakSelf_AT;
-        
-        [NSString bk_performBlock:^{
-            
-            if (strongSelf) {
-                if (strongSelf.layout.memberListView.currentIndex == 0) {
-                    [strongSelf getMemberList];
-                } else {
-                    [strongSelf getReceiveMemberList];
-                }
-            }
-            
-        } afterDelay:0.3];
-    }];
+    [self.layout.memberListView.tableView tp_addPullToRefresh:self refreshingAction:@selector(pullRefreshAction)];
+
+}
+
+
+- (void)pullRefreshAction {
+    
+    if (self.layout.memberListView.currentIndex == 0) {
+        [self getMemberList];
+    } else {
+        [self getReceiveMemberList];
+    }
+    
 }
 
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
+- (void)loadNotification {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadData) name:kNotificationMemberUpdate object:nil];
+}
+
 - (void)reloadData {
-    
     [self getMemberList];
-    
     [self getReceiveMemberList];
 }
 
 - (void)getMemberList {
     WEAKSELF_AT
-    [self.ds getMemberList:^(NSArray *List) {
-        weakSelf_AT.dataSource.memberList = List;
+    [self.shareService getShareMemberList:^(NSArray *list) {
+        weakSelf_AT.dataSource.memberList = list;
         [weakSelf_AT.layout reloadData];
-        [weakSelf_AT.layout.memberListView.tableView.pullToRefreshView stopAnimating];
+        
+        
+        [weakSelf_AT.layout.memberListView.tableView.mj_header endRefreshing];
+        
+    } failure:^(NSError *error) {
+        [weakSelf_AT.layout.memberListView.tableView.mj_header endRefreshing];
     }];
 }
-
 
 - (void)getReceiveMemberList {
     WEAKSELF_AT
-    [self.ds getReceiveMemberList:^(NSArray *List) {
-        weakSelf_AT.dataSource.receiveMemberList = List;
+    [self.shareService getReceiveMemberList:^(NSArray *list) {
+        weakSelf_AT.dataSource.receiveMemberList = list;
         [weakSelf_AT.layout reloadData];
-        [weakSelf_AT.layout.memberListView.tableView.pullToRefreshView stopAnimating];
+        [weakSelf_AT.layout.memberListView.tableView.mj_header endRefreshing];
+    } failure:^(NSError *error) {
+        [weakSelf_AT.layout.memberListView.tableView.mj_header endRefreshing];
     }];
 }
 
-
 #pragma mark - lazy load
-- (TYMemberListDS *)ds {
-    if (!_ds) {
-        _ds = [TYMemberListDS new];
+
+- (TuyaSmartDeviceShare *)shareService {
+    if (!_shareService) {
+        _shareService = [[TuyaSmartDeviceShare alloc] init];
     }
-    return _ds;
+    return _shareService;
 }
 
 - (TYMemberListLayout *)layout {
@@ -103,7 +109,7 @@
 
 - (TYMemberListDelegate *)delegate {
     if (!_delegate) {
-        _delegate = [TYMemberListDelegate new];
+        _delegate = [[TYMemberListDelegate alloc] init];
     }
     return _delegate;
 }
