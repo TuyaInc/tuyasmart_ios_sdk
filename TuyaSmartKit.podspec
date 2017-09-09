@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TuyaSmartKit'
-  s.version          = '1.11.1'
+  s.version          = '1.14.0'
   s.summary          = '涂鸦智能iOS SDK'
 
 # This description is used to generate tags and improve search results.
@@ -45,7 +45,7 @@ Pod::Spec.new do |s|
   s.dependency 'Mantle'
   s.dependency 'UICKeyChainStore'
   s.dependency 'Reachability'
-  s.dependency 'CocoaLumberjack'
+  # s.dependency 'CocoaLumberjack'
 
   s.user_target_xcconfig = { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES' }
 

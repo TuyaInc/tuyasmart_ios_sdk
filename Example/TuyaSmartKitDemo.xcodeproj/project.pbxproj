@@ -458,6 +458,7 @@
 		AD53CD151F63E1EF002FF245 /* TYTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYTheme.h; sourceTree = "<group>"; };
 		AD53CD161F63E1EF002FF245 /* TYTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYTheme.m; sourceTree = "<group>"; };
 		AD53CD181F63E20A002FF245 /* customColor.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = customColor.plist; sourceTree = "<group>"; };
+		AD53CD1A1F63EC66002FF245 /* TPError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPError.h; sourceTree = "<group>"; };
 		AD95D4C91C9D25E000E6AD20 /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
 		AD95D4CA1C9D25E000E6AD20 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
 		AD95D4CF1C9D25E000E6AD20 /* TYAppService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYAppService.h; sourceTree = "<group>"; };
@@ -790,6 +791,7 @@
 		6D6C1EF71D34C94200F652D6 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				AD53CD1A1F63EC66002FF245 /* TPError.h */,
 				AD53CD131F63D7DD002FF245 /* TYUserDefault.h */,
 				AD53CD101F63D79E002FF245 /* TPPinyin.c */,
 				AD53CD111F63D79E002FF245 /* TPPinyin.h */,
