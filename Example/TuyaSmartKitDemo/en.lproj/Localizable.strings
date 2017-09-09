@@ -618,3 +618,28 @@
 "send_report" = "Send and report";
 "only_report" = "Only report";
 "only_send" = "Only send";
+
+
+"ty_share_add" = "Share with new member";
+"ty_share_add_device" = "Device Sharing";
+"ty_share_add_device_nodevice" = "No device to be shared";
+"ty_share_add_device_setting" = "Sharing Settings";
+"ty_share_add_newdevice" = "Share New Devices";
+"ty_share_add_no" = "Please add a member to share the device with";
+"ty_share_add_remove" = "The device is removed, please add one again";
+"ty_share_add_select" = "Set Up Sharing Devices";
+"ty_share_add_shared" = "Enable the feature and new device will be shared with the member";
+"ty_share_add_succeed" = "Your device is already shared with %@";
+"ty_share_beshared" = "Device is from";
+"ty_share_default_info" = "Enter mobile number/E-mail";
+"ty_share_delete" = "Remove sharing";
+"ty_share_details" = "View details";
+"ty_share_edit_account" = "User";
+"ty_share_edit_alias" = "Nickname";
+"ty_share_empty_device" = "No any shared device is received";
+"ty_share_empty_device_content" = "Easily share devices with family\nEnjoy smart life together";
+"ty_share_fail" = "Sharing failed";
+"ty_share_succeed" = "Sharing success";
+
+"no_share_content" = "Easily share devices with family\nEnjoy smart life together";
+

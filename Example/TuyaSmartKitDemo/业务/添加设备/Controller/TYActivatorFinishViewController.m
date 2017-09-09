@@ -35,21 +35,17 @@
 }
 
 - (void)initView {
-    [self initTopBarView];
     
     _finishView = [[TYSearchDeviceFinishView alloc] initWithFrame:CGRectMake(0, APP_TOP_BAR_HEIGHT, APP_CONTENT_WIDTH, APP_VISIBLE_HEIGHT) isSuccess:_isSuccess device:_deviceModel];
     _finishView.delegate = self.delegate;
     [self.view addSubview:_finishView];
 }
 
-- (void)initTopBarView {
-    self.topBarView.leftItem = self.leftCancelItem;
-    self.centerTitleItem.title = _isSuccess ? NSLocalizedString(@"ty_ez_connecting_device_title", @"") : NSLocalizedString(@"ty_ap_error_title", @"");
-    self.topBarView.centerItem = self.centerTitleItem;
-    self.topBarView.rightItem = nil;
-    
-    [self.view addSubview:self.topBarView];
+- (NSString *)titleForCenterItem {
+    return _isSuccess ? NSLocalizedString(@"ty_ez_connecting_device_title", @"") : NSLocalizedString(@"ty_ap_error_title", @"");
 }
+
+
 
 - (TYSearchDeviceFinishDelegate *)delegate {
     if (!_delegate) {

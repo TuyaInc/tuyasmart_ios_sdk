@@ -6,8 +6,6 @@
 //  Copyright © 2016年 Tuya. All rights reserved.
 //
 
-#import "ATTableViewController.h"
-
-@interface TYDeviceListController : ATTableViewController
+@interface TYDeviceListController : TPBaseTableViewController
 
 @end

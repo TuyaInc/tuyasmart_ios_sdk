@@ -32,6 +32,17 @@
     #import "TYAppService.h"
     #import "ViewControllerUtils.h"
     #import "GlobalConfig.h"
+    #import "TPBaseViewController.h"
+    #import "TPBaseTableViewController.h"
+    #import "TPCountryService.h"
+    #import "TPNotification.h"
+    #import "UIImageView+WebCache.h"
+    #import "UITableView+TPCategory.h"
+    #import "TYUserDefault.h"
+    #import "TYTheme.h"
+
 
 #endif
 
+
+#define kNotificationMemberUpdate           @"kNotificationMemberUpdate"

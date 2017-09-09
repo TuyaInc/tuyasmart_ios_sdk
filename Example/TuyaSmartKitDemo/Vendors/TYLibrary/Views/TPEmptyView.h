@@ -13,10 +13,16 @@
 
 @property (nonatomic, strong) UILabel *titleLabel;
 
-- (id)initWithFrame:(CGRect)frame title:(NSString *)title;
+#pragma mark - Style1
 
 - (id)initWithFrame:(CGRect)frame title:(NSString *)title imageName:(NSString *)imageName;
 
 - (void)setTitle:(NSString *)title;
+
+#pragma mark - Style2
+
+- (id)initWithFrame:(CGRect)frame title:(NSString *)title subTitle:(NSString *)subTitle;
+
+- (void)setTitle:(NSString *)title subTitle:(NSString *)subTitle;
 
 @end

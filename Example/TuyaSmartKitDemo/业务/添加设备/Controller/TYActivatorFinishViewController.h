@@ -6,9 +6,8 @@
 //  Copyright © 2016年 Tuya. All rights reserved.
 //
 
-#import "ATBaseViewController.h"
 
-@interface TYActivatorFinishViewController : ATBaseViewController
+@interface TYActivatorFinishViewController : TPBaseViewController
 
 @property (nonatomic, assign) BOOL  isSuccess;
 @property (nonatomic, strong) TuyaSmartDeviceModel *deviceModel;

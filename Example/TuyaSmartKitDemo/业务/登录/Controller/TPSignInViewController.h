@@ -6,9 +6,7 @@
 //  Copyright (c) 2015年 Tuya. All rights reserved.
 //
 
-#import "ATBaseViewController.h"
-
-@interface TPSignInViewController : ATBaseViewController
+@interface TPSignInViewController : TPBaseViewController
 
 @property (nonatomic, assign) BOOL phoneCodeLogin;//短信验证码登录
 

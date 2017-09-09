@@ -16,7 +16,6 @@
 @interface TYDeviceListController()
 
 @property (nonatomic, strong) UIRefreshControl *refreshControl;
-@property (nonatomic, strong) TPEmptyView      *emptyView;
 
 @property (nonatomic, strong) TuyaSmartRequest *request;
 
@@ -50,6 +49,8 @@
     [self.tableView addSubview:self.refreshControl];
     
     self.emptyView = [[TPEmptyView alloc] initWithFrame:self.tableView.bounds title:NSLocalizedString(@"no_device", @"") imageName:@"ty_list_empty"];
+  
+    
     UIButton *button = [TPViewUtil buttonWithFrame:CGRectMake(APP_SCREEN_WIDTH / 2 - 100, self.emptyView.titleLabel.bottom + 20, 200, 44) fontSize:16 bgColor:[UIColor whiteColor] textColor:LIST_MAIN_TEXT_COLOR borderColor:LIST_LINE_COLOR];
     [button setTitle:NSLocalizedString(@"Add Test Device", @"") forState:UIControlStateNormal];
     [button addTarget:self action:@selector(getTestDevice) forControlEvents:UIControlEventTouchUpInside];

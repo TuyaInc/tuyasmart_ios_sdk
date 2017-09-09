@@ -7,54 +7,29 @@
 //
 
 #import "TYReceiveMemberDeviceListView.h"
-#import "TYReceiveMemberDeviceListCell.h"
 
 @interface TYReceiveMemberDeviceListView() <UITableViewDelegate,UITableViewDataSource>
 
-@property (nonatomic, strong) NSArray     *deviceList;
-@property (nonatomic, strong) UITableView *tableView;
-@property (nonatomic, strong) UILabel     *titleLabel;
-@property (nonatomic, strong) UIView *tableHeaderView;
-
+@property (nonatomic, strong) NSArray *deviceList;
+@property (nonatomic, assign) NSInteger type;
 
 @end
 
 @implementation TYReceiveMemberDeviceListView
 
-- (instancetype)initWithFrame:(CGRect)frame deviceList:(NSArray *)deviceList {
+- (instancetype)initWithFrame:(CGRect)frame deviceList:(NSArray *)deviceList type:(NSInteger)type {
     if (self = [super initWithFrame:frame]) {
         self.backgroundColor = [UIColor clearColor];
         _deviceList = deviceList;
-     
-        [self addSubview:self.tableHeaderView];
+        _type = type;
         [self addSubview:self.tableView];
     }
     return self;
 }
 
-- (UIView *)tableHeaderView {
-    if (!_tableHeaderView) {
-        _tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, APP_CONTENT_WIDTH, 14 + 16)];
-        _tableHeaderView.backgroundColor = [UIColor clearColor];
-     
-        
-        _titleLabel = [TPViewUtil simpleLabel:CGRectMake(15, 0, APP_CONTENT_WIDTH - 30, 14 + 16) f:14 tc:HEXCOLOR(0xB0B0B0) t:NSLocalizedString(@"ty_add_share_receive_device", nil)];
-        
-        [_tableHeaderView addSubview:_titleLabel];
-        
-        UIView *line = [[UIView alloc] initWithFrame:CGRectMake(0, _tableHeaderView.height - 0.5, _tableHeaderView.width, 0.5)];
-        line.backgroundColor = SEPARATOR_LINE_COLOR;
-        [_tableHeaderView addSubview:line];
-        
-    }
-    return _tableHeaderView;
-}
-
-
 - (UITableView *)tableView {
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, self.tableHeaderView.bottom , APP_SCREEN_WIDTH, self.height - self.tableHeaderView.bottom)
-                                                  style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, APP_SCREEN_WIDTH, self.height) style:UITableViewStylePlain];
         _tableView.backgroundColor = [UIColor clearColor];
         _tableView.dataSource = self;
         _tableView.delegate = self;
@@ -64,8 +39,8 @@
     return _tableView;
 }
 
-
 #pragma mark UITableViewDataSource
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
@@ -75,24 +50,24 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    TYReceiveMemberDeviceListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MemberTableViewCell"];
+    TYReceiveMemberDeviceListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MemberTableViewCell" forIndexPath:indexPath];
     
-    id model = [self.deviceList objectAtIndex:indexPath.row];
+    cell.delegate = self.delegate;
     
-    [cell setModel:model];
+    TuyaSmartShareDeviceModel *model = [self.deviceList objectAtIndex:indexPath.row];
+    
+    [cell setModel:model type:_type];
     return cell;
 }
 
 #pragma mark UITableViewDelegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 44;
+    return 60;
 }
-
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
-
 
 @end

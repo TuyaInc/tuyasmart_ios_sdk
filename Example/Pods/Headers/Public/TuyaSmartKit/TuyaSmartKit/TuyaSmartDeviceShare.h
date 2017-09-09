@@ -1,0 +1,1 @@
+../../../../../../TuyaSmartKit.framework/Headers/TuyaSmartDeviceShare.h

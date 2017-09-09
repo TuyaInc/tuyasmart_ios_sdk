@@ -136,7 +136,7 @@
     }
 }
 
-- (void)setCountryCode:(ATCountryCodeModel *)model {
+- (void)setCountryCode:(TPCountryModel *)model {
     _countrySelectView.leftItem.title = model.countryName;
     _countrySelectView.rightItem.title = [NSString stringWithFormat:@"+%@",model.countryCode];
     [_countrySelectView setNeedsLayout];

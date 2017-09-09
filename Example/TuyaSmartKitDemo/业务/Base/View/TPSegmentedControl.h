@@ -8,17 +8,23 @@
 
 #import <UIKit/UIKit.h>
 
+@class TPSegmentedControl;
+
 @protocol TPSegmentedControlDelegate <NSObject>
 
-- (void)didSelectCurrentIndex:(NSInteger)index;
+@required
+- (BOOL)segmentControl:(TPSegmentedControl *)segmentControl canSelectIndex:(NSInteger)index;
+- (void)segmentControl:(TPSegmentedControl *)segmentControl didSelectCurrentIndex:(NSInteger)index;
 
 @end
 
 @interface TPSegmentedControl : UIView
 
+@property (nonatomic, strong) UIColor *color;
+@property (nonatomic, strong) UIColor *hightLightColor;
 @property (nonatomic, weak) id <TPSegmentedControlDelegate> delegate;
+@property (nonatomic, assign) NSInteger index;
 
 - (instancetype)initWithFrame:(CGRect)frame items:(NSArray <NSString *> *)items;
 
-- (void)changeToIndex:(NSInteger)index;
 @end

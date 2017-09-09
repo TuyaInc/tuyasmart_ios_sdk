@@ -10,8 +10,6 @@
 
 @interface TYMemberListCell : UITableViewCell
 
-
-
-@property (nonatomic,strong) TuyaSmartMemberModel *member;
+@property (nonatomic,strong) TuyaSmartShareMemberModel *member;
 
 @end

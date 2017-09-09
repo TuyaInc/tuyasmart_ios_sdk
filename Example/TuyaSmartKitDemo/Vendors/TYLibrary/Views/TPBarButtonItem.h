@@ -9,32 +9,27 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-typedef enum {
-    TPBarButtonSystemItemLeftWithIcon = 1,
-    TPBarButtonSystemItemLeftWithoutIcon,
-    TPBarButtonSystemItemCenter,
-    TPBarButtonSystemItemRight,
-}TPBarButtonSystemItem;
 
-@interface TPBarButtonItem : NSObject
+@interface TPBarButtonItem : UIBarButtonItem
 
-@property (nonatomic, assign) TPBarButtonSystemItem systemItem;
-@property (nonatomic, strong) UIImage*              image;
-@property (nonatomic, strong) UIImage*              highlightImage;
-@property (nonatomic, strong) UIImage*              selectedImage;
-@property (nonatomic, strong) UIImage*              backgroundImage;
-@property (nonatomic, strong) UIImage*              disabledImage;
-@property (nonatomic, strong) NSString*             title;
-@property (nonatomic, assign) CGFloat               width;
-@property (nonatomic, strong) UIView*               customView;
-@property (nonatomic, assign) id                    target;
-@property (nonatomic, assign) SEL                   action;
-//@property (nonatomic, strong) UIView*               itemView;
-@property (nonatomic, assign) BOOL                  selected;
-@property (nonatomic, assign) BOOL                  enabled;
+// < 返回
++ (TPBarButtonItem *)backItem:(id)target action:(SEL)action;
 
-@property (nonatomic,assign) float                  contentInsets;
+// 取消
++ (TPBarButtonItem *)cancelItem:(id)target action:(SEL)action;
 
+// 完成
++ (TPBarButtonItem *)doneItem:(id)target action:(SEL)action;
+
+// 文字
++ (TPBarButtonItem *)titleItem:(NSString *)title target:(id)target action:(SEL)action;
+
+// 图片
++ (TPBarButtonItem *)logoItem:(UIImage *)image terget:(id)target action:(SEL)action;
+
+
+// deprecated
+// --------------------------------
 
 + (TPBarButtonItem *)rightTitleItem:(id)target action:(SEL)action;
 + (TPBarButtonItem *)leftBackItem:(id)target action:(SEL)action;
@@ -43,38 +38,6 @@ typedef enum {
 + (TPBarButtonItem *)centerTitleItem:(id)target action:(SEL)action;
 + (TPBarButtonItem *)centerLogoItem:(id)target action:(SEL)action;
 
-- (id)initWithImage:(UIImage *)image
-   highlightedImage:(UIImage *)highlightedImage
-      selectedImage:(UIImage *)selectedImage
-    backgroundImage:(UIImage *)backgroundImage
-             target:(id)target
-             action:(SEL)action;
-
-
-- (id)initWithImage:(UIImage *)image
-   highlightedImage:(UIImage *)highlightedImage
-      selectedImage:(UIImage *)selectedImage
-      disabledImage:(UIImage *)disabledImage
-    backgroundImage:(UIImage *)backgroundImage
-             target:(id)target
-             action:(SEL)action;
-
-
-
-- (id)initWithBarButtonSystemItem:(TPBarButtonSystemItem)systemItem
-                            title:(NSString *)title;
-
-
-
-- (id)initWithBarButtonSystemItem:(TPBarButtonSystemItem)systemItem
-                            title:(NSString *)title
-                           target:(id)target
-                           action:(SEL)action;
-
-
-
-
-- (id)initWithCustomView:(UIView *)customView;
 
 
 

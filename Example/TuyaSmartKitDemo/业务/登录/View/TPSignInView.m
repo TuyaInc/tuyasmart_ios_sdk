@@ -49,8 +49,9 @@
         [self.centerView addSubview:self.countrySelectView];
         [self.centerView addSubview:self.phoneTextFieldView];
         
+        
         if (phoneCodeLogin == YES) { //手机验证码登录
-            self.topBarView.leftItem = [[TPBarButtonItem alloc] initWithBarButtonSystemItem:TPBarButtonSystemItemLeftWithoutIcon title:NSLocalizedString(@"action_cancel", @"") target:self action:@selector(topBarLeftItemTap)];
+            self.topBarView.leftItem = [TPBarButtonItem cancelItem:self action:@selector(topBarLeftItemTap)];
             self.topBarView.centerItem.title = NSLocalizedString(@"ty_login_sms", @"");
             self.topBarView.rightItem = nil;
             
@@ -212,9 +213,12 @@
     }
 }
 
-- (void)setCountryCode:(ATCountryCodeModel *)model {
-//    _countrySelectView.leftItem.title = model.countryName;
-    _countrySelectView.rightItem.title = [NSString stringWithFormat:@"%@ +%@", model.countryName, model.countryCode];
+- (void)setCountryCode:(TPCountryModel *)model {
+    if (!model) {
+        _countrySelectView.rightItem.title = NSLocalizedString(@"ty_login_register_noselect", nil);
+    } else {
+        _countrySelectView.rightItem.title = [NSString stringWithFormat:@"%@ +%@", model.countryName, model.countryCode];
+    }
     [_countrySelectView setNeedsLayout];
 }
 

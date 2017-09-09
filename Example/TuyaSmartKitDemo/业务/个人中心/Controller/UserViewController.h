@@ -6,8 +6,7 @@
 //  Copyright (c) 2015年 Tuya. All rights reserved.
 //
 
-#import "ATBaseViewController.h"
 
-@interface UserViewController : ATBaseViewController
+@interface UserViewController : TPBaseViewController
 
 @end

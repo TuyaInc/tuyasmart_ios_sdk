@@ -16,17 +16,12 @@
 		2B5F566CCF91FDB8B714A309 /* libPods-TuyaSmartKitDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D748D33C6E59CD9F0CDF79B9 /* libPods-TuyaSmartKitDemo.a */; };
 		65F4A6AF1CE32C3F00977B3F /* ty_list_empty@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65F4A6AD1CE32C3F00977B3F /* ty_list_empty@2x.png */; };
 		65F4A6B01CE32C3F00977B3F /* ty_list_empty@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65F4A6AE1CE32C3F00977B3F /* ty_list_empty@3x.png */; };
-		6D1766C81CB68B84006277AC /* ATCountryCodeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1766C51CB68B84006277AC /* ATCountryCodeModel.m */; };
 		6D1766D41CB74AEE006277AC /* MenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1766D31CB74AEE006277AC /* MenuItem.m */; };
 		6D1A22BF1E4AFE3B003960BE /* TuyaSmartKit.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 6D1A22BE1E4AFE3B003960BE /* TuyaSmartKit.podspec */; };
 		6D304A0B1CE96B1A0008A00E /* TYUserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D304A0A1CE96B1A0008A00E /* TYUserInfoViewController.m */; };
 		6D304A151CE9B1420008A00E /* TYUserInfoHeadViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D304A141CE9B1420008A00E /* TYUserInfoHeadViewCell.m */; };
 		6D304A181CE9BC2D0008A00E /* TYUserInfoNickViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D304A171CE9BC2D0008A00E /* TYUserInfoNickViewCell.m */; };
 		6D304A1B1CE9BEFB0008A00E /* TYUserInfoPhoneViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D304A1A1CE9BEFB0008A00E /* TYUserInfoPhoneViewCell.m */; };
-		6D3ED93F1CCB645700266AEF /* tysmart_addshare_contact@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D3ED93B1CCB645700266AEF /* tysmart_addshare_contact@2x.png */; };
-		6D3ED9401CCB645700266AEF /* tysmart_addshare_contact@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D3ED93C1CCB645700266AEF /* tysmart_addshare_contact@3x.png */; };
-		6D3ED9411CCB645700266AEF /* tysmart_addshare_down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D3ED93D1CCB645700266AEF /* tysmart_addshare_down@2x.png */; };
-		6D3ED9421CCB645700266AEF /* tysmart_addshare_down@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D3ED93E1CCB645700266AEF /* tysmart_addshare_down@3x.png */; };
 		6D5962F01D4A03FC009F52D9 /* power_off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D5962EE1D4A03FC009F52D9 /* power_off@2x.png */; };
 		6D5962F11D4A03FC009F52D9 /* power_off@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D5962EF1D4A03FC009F52D9 /* power_off@3x.png */; };
 		6D5962F41D4A0537009F52D9 /* power_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D5962F21D4A0537009F52D9 /* power_on@2x.png */; };
@@ -37,9 +32,6 @@
 		6D6C1F511D34C94200F652D6 /* NSObject+TPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6C1ED71D34C94200F652D6 /* NSObject+TPCategory.m */; };
 		6D6C1F521D34C94200F652D6 /* NSString+TPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6C1ED91D34C94200F652D6 /* NSString+TPCategory.m */; };
 		6D6C1F561D34C94200F652D6 /* TPScheduledLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6C1EE31D34C94200F652D6 /* TPScheduledLocationManager.m */; };
-		6D6C1F581D34C94200F652D6 /* TPBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6C1EEA1D34C94200F652D6 /* TPBaseViewController.m */; };
-		6D6C1F591D34C94200F652D6 /* TPBaseDS.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6C1EED1D34C94200F652D6 /* TPBaseDS.m */; };
-		6D6C1F5A1D34C94200F652D6 /* TPBaseLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6C1EF01D34C94200F652D6 /* TPBaseLayout.m */; };
 		6D6C1F651D34C94200F652D6 /* UIAlertView+TPBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6C1F0B1D34C94200F652D6 /* UIAlertView+TPBlock.m */; };
 		6D6C1F661D34C94200F652D6 /* UIButton+TPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6C1F0D1D34C94200F652D6 /* UIButton+TPCategory.m */; };
 		6D6C1F681D34C94200F652D6 /* UIImage+TPAlpha.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6C1F111D34C94200F652D6 /* UIImage+TPAlpha.m */; };
@@ -60,7 +52,6 @@
 		6D6C1F771D34C94200F652D6 /* TPBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6C1F2C1D34C94200F652D6 /* TPBaseView.m */; };
 		6D6C1F781D34C94200F652D6 /* TPCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6C1F2E1D34C94200F652D6 /* TPCellView.m */; };
 		6D6C1F791D34C94200F652D6 /* TPCellViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6C1F301D34C94200F652D6 /* TPCellViewItem.m */; };
-		6D6C1F7A1D34C94200F652D6 /* TPEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6C1F321D34C94200F652D6 /* TPEmptyView.m */; };
 		6D6C1F7B1D34C94200F652D6 /* TPItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6C1F341D34C94200F652D6 /* TPItemView.m */; };
 		6D6C1F7C1D34C94200F652D6 /* TPLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6C1F361D34C94200F652D6 /* TPLoadingView.m */; };
 		6D6C1F7D1D34C94200F652D6 /* TPNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6C1F381D34C94200F652D6 /* TPNavigationController.m */; };
@@ -95,26 +86,55 @@
 		AD4353A11D7137E400EEE84C /* TYPanelStringViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4353A01D7137E400EEE84C /* TYPanelStringViewCell.m */; };
 		AD4353A71D71393400EEE84C /* TYPanelDpTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4353A61D71393400EEE84C /* TYPanelDpTitleView.m */; };
 		AD4353AA1D7144F700EEE84C /* TYPanelBaseViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4353A91D7144F700EEE84C /* TYPanelBaseViewCell.m */; };
-		AD6C41771CC0CCEC00A3F3E9 /* TPSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6C41761CC0CCEC00A3F3E9 /* TPSegmentedControl.m */; };
-		AD6C41811CC0CE1100A3F3E9 /* MemberEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6C41801CC0CE1100A3F3E9 /* MemberEditViewController.m */; };
-		AD6C41841CC0CE2000A3F3E9 /* AddNewMemberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6C41831CC0CE2000A3F3E9 /* AddNewMemberViewController.m */; };
-		AD6C41871CC0CE3C00A3F3E9 /* AddMemberView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6C41861CC0CE3C00A3F3E9 /* AddMemberView.m */; };
-		AD6C418A1CC0CE4300A3F3E9 /* MemberEditView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6C41891CC0CE4300A3F3E9 /* MemberEditView.m */; };
-		AD6C418F1CC0CE5B00A3F3E9 /* TYReceiveMemberDeviceListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6C418C1CC0CE5B00A3F3E9 /* TYReceiveMemberDeviceListCell.m */; };
-		AD6C41901CC0CE5B00A3F3E9 /* TYReceiveMemberDeviceListView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6C418E1CC0CE5B00A3F3E9 /* TYReceiveMemberDeviceListView.m */; };
-		AD95D5851C9D25E000E6AD20 /* ATBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD95D4C41C9D25E000E6AD20 /* ATBaseViewController.m */; };
-		AD95D5861C9D25E000E6AD20 /* ATSelectCountryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD95D4C61C9D25E000E6AD20 /* ATSelectCountryViewController.m */; };
-		AD95D5871C9D25E000E6AD20 /* ATTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD95D4C81C9D25E000E6AD20 /* ATTableViewController.m */; };
+		AD53CCC81F63CC98002FF245 /* AddDeviceListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD53CC901F63CC98002FF245 /* AddDeviceListViewController.m */; };
+		AD53CCC91F63CC98002FF245 /* AddNewMemberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD53CC921F63CC98002FF245 /* AddNewMemberViewController.m */; };
+		AD53CCCA1F63CC98002FF245 /* AppendDeviceSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD53CC941F63CC98002FF245 /* AppendDeviceSettingViewController.m */; };
+		AD53CCCB1F63CC98002FF245 /* MemberEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD53CC961F63CC98002FF245 /* MemberEditViewController.m */; };
+		AD53CCCC1F63CC98002FF245 /* TYDeviceSharedResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD53CC981F63CC98002FF245 /* TYDeviceSharedResultViewController.m */; };
+		AD53CCCD1F63CC98002FF245 /* TYDeviceShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD53CC9A1F63CC98002FF245 /* TYDeviceShareViewController.m */; };
+		AD53CCCE1F63CC98002FF245 /* TYMemberListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD53CC9C1F63CC98002FF245 /* TYMemberListViewController.m */; };
+		AD53CCCF1F63CC98002FF245 /* TYMemberListDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = AD53CC9F1F63CC98002FF245 /* TYMemberListDataSource.m */; };
+		AD53CCD01F63CC98002FF245 /* TYMemberListDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD53CCA21F63CC98002FF245 /* TYMemberListDelegate.m */; };
+		AD53CCD11F63CC98002FF245 /* ty_list_no_share@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD53CCA41F63CC98002FF245 /* ty_list_no_share@2x.png */; };
+		AD53CCD21F63CC98002FF245 /* ty_list_no_share@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD53CCA51F63CC98002FF245 /* ty_list_no_share@3x.png */; };
+		AD53CCD31F63CC98002FF245 /* ty_member_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD53CCA61F63CC98002FF245 /* ty_member_arrow@2x.png */; };
+		AD53CCD41F63CC98002FF245 /* ty_member_arrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD53CCA71F63CC98002FF245 /* ty_member_arrow@3x.png */; };
+		AD53CCD51F63CC98002FF245 /* ty_member_share_failure@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD53CCA81F63CC98002FF245 /* ty_member_share_failure@2x.png */; };
+		AD53CCD61F63CC98002FF245 /* ty_member_share_failure@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD53CCA91F63CC98002FF245 /* ty_member_share_failure@3x.png */; };
+		AD53CCD71F63CC98002FF245 /* ty_member_share_success@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD53CCAA1F63CC98002FF245 /* ty_member_share_success@2x.png */; };
+		AD53CCD81F63CC98002FF245 /* ty_member_share_success@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD53CCAB1F63CC98002FF245 /* ty_member_share_success@3x.png */; };
+		AD53CCD91F63CC98002FF245 /* tysmart_addshare_contact@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD53CCAC1F63CC98002FF245 /* tysmart_addshare_contact@2x.png */; };
+		AD53CCDA1F63CC98002FF245 /* tysmart_addshare_contact@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD53CCAD1F63CC98002FF245 /* tysmart_addshare_contact@3x.png */; };
+		AD53CCDB1F63CC98002FF245 /* tysmart_addshare_down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD53CCAE1F63CC98002FF245 /* tysmart_addshare_down@2x.png */; };
+		AD53CCDC1F63CC98002FF245 /* tysmart_addshare_down@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD53CCAF1F63CC98002FF245 /* tysmart_addshare_down@3x.png */; };
+		AD53CCDD1F63CC98002FF245 /* tysmart_append_device@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD53CCB01F63CC98002FF245 /* tysmart_append_device@2x.png */; };
+		AD53CCDE1F63CC98002FF245 /* tysmart_append_device@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD53CCB11F63CC98002FF245 /* tysmart_append_device@3x.png */; };
+		AD53CCE01F63CC98002FF245 /* AddMemberView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD53CCB71F63CC98002FF245 /* AddMemberView.m */; };
+		AD53CCE11F63CC98002FF245 /* MemberEditView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD53CCB91F63CC98002FF245 /* MemberEditView.m */; };
+		AD53CCE21F63CC98002FF245 /* TYDeviceShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD53CCBB1F63CC98002FF245 /* TYDeviceShareView.m */; };
+		AD53CCE31F63CC98002FF245 /* TYDeviceShareViewListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD53CCBD1F63CC98002FF245 /* TYDeviceShareViewListCell.m */; };
+		AD53CCE41F63CC98002FF245 /* TYMemberListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD53CCBF1F63CC98002FF245 /* TYMemberListCell.m */; };
+		AD53CCE51F63CC98002FF245 /* TYMemberListLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = AD53CCC11F63CC98002FF245 /* TYMemberListLayout.m */; };
+		AD53CCE61F63CC98002FF245 /* TYMemberListView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD53CCC31F63CC98002FF245 /* TYMemberListView.m */; };
+		AD53CCE71F63CC98002FF245 /* TYReceiveMemberDeviceListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD53CCC51F63CC98002FF245 /* TYReceiveMemberDeviceListCell.m */; };
+		AD53CCE81F63CC98002FF245 /* TYReceiveMemberDeviceListView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD53CCC71F63CC98002FF245 /* TYReceiveMemberDeviceListView.m */; };
+		AD53CCEB1F63CD93002FF245 /* TPSelectCountryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD53CCEA1F63CD93002FF245 /* TPSelectCountryViewController.m */; };
+		AD53CCF01F63CE10002FF245 /* TPBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD53CCED1F63CE10002FF245 /* TPBaseTableViewController.m */; };
+		AD53CCF11F63CE10002FF245 /* TPBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD53CCEF1F63CE10002FF245 /* TPBaseViewController.m */; };
+		AD53CCF41F63CE1E002FF245 /* TPBaseLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = AD53CCF31F63CE1E002FF245 /* TPBaseLayout.m */; };
+		AD53CCF71F63CE28002FF245 /* TPBaseDS.m in Sources */ = {isa = PBXBuildFile; fileRef = AD53CCF61F63CE28002FF245 /* TPBaseDS.m */; };
+		AD53CCFA1F63CF82002FF245 /* UIColor+TPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = AD53CCF91F63CF82002FF245 /* UIColor+TPCategory.m */; };
+		AD53CCFD1F63CFD8002FF245 /* TPSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = AD53CCFC1F63CFD8002FF245 /* TPSegmentedControl.m */; };
+		AD53CD001F63D00B002FF245 /* TYPeoplePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD53CCFF1F63D00B002FF245 /* TYPeoplePickerController.m */; };
+		AD53CD031F63D021002FF245 /* TPCountryService.m in Sources */ = {isa = PBXBuildFile; fileRef = AD53CD021F63D021002FF245 /* TPCountryService.m */; };
+		AD53CD061F63D085002FF245 /* TPEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD53CD051F63D085002FF245 /* TPEmptyView.m */; };
+		AD53CD0F1F63D769002FF245 /* UITableView+TPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = AD53CD0E1F63D769002FF245 /* UITableView+TPCategory.m */; };
+		AD53CD121F63D79E002FF245 /* TPPinyin.c in Sources */ = {isa = PBXBuildFile; fileRef = AD53CD101F63D79E002FF245 /* TPPinyin.c */; };
+		AD53CD171F63E1EF002FF245 /* TYTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = AD53CD161F63E1EF002FF245 /* TYTheme.m */; };
+		AD53CD191F63E20A002FF245 /* customColor.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD53CD181F63E20A002FF245 /* customColor.plist */; };
 		AD95D5881C9D25E000E6AD20 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD95D4CA1C9D25E000E6AD20 /* TabBarViewController.m */; };
 		AD95D5891C9D25E000E6AD20 /* TYAppService.m in Sources */ = {isa = PBXBuildFile; fileRef = AD95D4D01C9D25E000E6AD20 /* TYAppService.m */; };
 		AD95D5981C9D25E000E6AD20 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD95D4FE1C9D25E000E6AD20 /* UserViewController.m */; };
-		AD95D5991C9D25E000E6AD20 /* TYMemberListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD95D5071C9D25E000E6AD20 /* TYMemberListViewController.m */; };
-		AD95D59A1C9D25E000E6AD20 /* TYMemberListDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = AD95D50A1C9D25E000E6AD20 /* TYMemberListDataSource.m */; };
-		AD95D59B1C9D25E000E6AD20 /* TYMemberListDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD95D50D1C9D25E000E6AD20 /* TYMemberListDelegate.m */; };
-		AD95D59C1C9D25E000E6AD20 /* TYMemberListDS.m in Sources */ = {isa = PBXBuildFile; fileRef = AD95D5101C9D25E000E6AD20 /* TYMemberListDS.m */; };
-		AD95D59D1C9D25E000E6AD20 /* TYMemberListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD95D5131C9D25E000E6AD20 /* TYMemberListCell.m */; };
-		AD95D59E1C9D25E000E6AD20 /* TYMemberListLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = AD95D5151C9D25E000E6AD20 /* TYMemberListLayout.m */; };
-		AD95D59F1C9D25E000E6AD20 /* TYMemberListView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD95D5171C9D25E000E6AD20 /* TYMemberListView.m */; };
 		AD95D5AC1C9D25E000E6AD20 /* TYContectToAPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD95D5481C9D25E000E6AD20 /* TYContectToAPViewController.m */; };
 		AD95D5AD1C9D25E000E6AD20 /* TYEZModeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD95D54A1C9D25E000E6AD20 /* TYEZModeViewController.m */; };
 		AD95D5AE1C9D25E000E6AD20 /* TYSearchOneDeviceController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD95D54C1C9D25E000E6AD20 /* TYSearchOneDeviceController.m */; };
@@ -234,8 +254,6 @@
 		1BFE2B7F1AD76A0B000EBA2C /* ViewControllerUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerUtils.m; sourceTree = "<group>"; };
 		65F4A6AD1CE32C3F00977B3F /* ty_list_empty@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ty_list_empty@2x.png"; sourceTree = "<group>"; };
 		65F4A6AE1CE32C3F00977B3F /* ty_list_empty@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ty_list_empty@3x.png"; sourceTree = "<group>"; };
-		6D1766C41CB68B84006277AC /* ATCountryCodeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATCountryCodeModel.h; sourceTree = "<group>"; };
-		6D1766C51CB68B84006277AC /* ATCountryCodeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATCountryCodeModel.m; sourceTree = "<group>"; };
 		6D1766D21CB74AEE006277AC /* MenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuItem.h; sourceTree = "<group>"; };
 		6D1766D31CB74AEE006277AC /* MenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuItem.m; sourceTree = "<group>"; };
 		6D1A22BE1E4AFE3B003960BE /* TuyaSmartKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; name = TuyaSmartKit.podspec; path = ../../TuyaSmartKit.podspec; sourceTree = "<group>"; tabWidth = 2; };
@@ -247,10 +265,6 @@
 		6D304A171CE9BC2D0008A00E /* TYUserInfoNickViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYUserInfoNickViewCell.m; sourceTree = "<group>"; };
 		6D304A191CE9BEFB0008A00E /* TYUserInfoPhoneViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYUserInfoPhoneViewCell.h; sourceTree = "<group>"; };
 		6D304A1A1CE9BEFB0008A00E /* TYUserInfoPhoneViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYUserInfoPhoneViewCell.m; sourceTree = "<group>"; };
-		6D3ED93B1CCB645700266AEF /* tysmart_addshare_contact@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tysmart_addshare_contact@2x.png"; sourceTree = "<group>"; };
-		6D3ED93C1CCB645700266AEF /* tysmart_addshare_contact@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tysmart_addshare_contact@3x.png"; sourceTree = "<group>"; };
-		6D3ED93D1CCB645700266AEF /* tysmart_addshare_down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tysmart_addshare_down@2x.png"; sourceTree = "<group>"; };
-		6D3ED93E1CCB645700266AEF /* tysmart_addshare_down@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tysmart_addshare_down@3x.png"; sourceTree = "<group>"; };
 		6D5962EE1D4A03FC009F52D9 /* power_off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "power_off@2x.png"; sourceTree = "<group>"; };
 		6D5962EF1D4A03FC009F52D9 /* power_off@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "power_off@3x.png"; sourceTree = "<group>"; };
 		6D5962F21D4A0537009F52D9 /* power_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "power_on@2x.png"; sourceTree = "<group>"; };
@@ -268,14 +282,7 @@
 		6D6C1EDA1D34C94200F652D6 /* TPCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPCategory.h; sourceTree = "<group>"; };
 		6D6C1EE21D34C94200F652D6 /* TPScheduledLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPScheduledLocationManager.h; sourceTree = "<group>"; };
 		6D6C1EE31D34C94200F652D6 /* TPScheduledLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPScheduledLocationManager.m; sourceTree = "<group>"; };
-		6D6C1EE91D34C94200F652D6 /* TPBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPBaseViewController.h; sourceTree = "<group>"; };
-		6D6C1EEA1D34C94200F652D6 /* TPBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPBaseViewController.m; sourceTree = "<group>"; };
-		6D6C1EEC1D34C94200F652D6 /* TPBaseDS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPBaseDS.h; sourceTree = "<group>"; };
-		6D6C1EED1D34C94200F652D6 /* TPBaseDS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPBaseDS.m; sourceTree = "<group>"; };
-		6D6C1EEF1D34C94200F652D6 /* TPBaseLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPBaseLayout.h; sourceTree = "<group>"; };
-		6D6C1EF01D34C94200F652D6 /* TPBaseLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPBaseLayout.m; sourceTree = "<group>"; };
 		6D6C1EFA1D34C94200F652D6 /* TPDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPDate.h; sourceTree = "<group>"; };
-		6D6C1F061D34C94200F652D6 /* TPUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPUtils.h; sourceTree = "<group>"; };
 		6D6C1F0A1D34C94200F652D6 /* UIAlertView+TPBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+TPBlock.h"; sourceTree = "<group>"; };
 		6D6C1F0B1D34C94200F652D6 /* UIAlertView+TPBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+TPBlock.m"; sourceTree = "<group>"; };
 		6D6C1F0C1D34C94200F652D6 /* UIButton+TPCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+TPCategory.h"; sourceTree = "<group>"; };
@@ -310,8 +317,6 @@
 		6D6C1F2E1D34C94200F652D6 /* TPCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPCellView.m; sourceTree = "<group>"; };
 		6D6C1F2F1D34C94200F652D6 /* TPCellViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPCellViewItem.h; sourceTree = "<group>"; };
 		6D6C1F301D34C94200F652D6 /* TPCellViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPCellViewItem.m; sourceTree = "<group>"; };
-		6D6C1F311D34C94200F652D6 /* TPEmptyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPEmptyView.h; sourceTree = "<group>"; };
-		6D6C1F321D34C94200F652D6 /* TPEmptyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPEmptyView.m; sourceTree = "<group>"; };
 		6D6C1F331D34C94200F652D6 /* TPItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPItemView.h; sourceTree = "<group>"; };
 		6D6C1F341D34C94200F652D6 /* TPItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPItemView.m; sourceTree = "<group>"; };
 		6D6C1F351D34C94200F652D6 /* TPLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPLoadingView.h; sourceTree = "<group>"; };
@@ -373,46 +378,93 @@
 		AD4353A61D71393400EEE84C /* TYPanelDpTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYPanelDpTitleView.m; sourceTree = "<group>"; };
 		AD4353A81D7144F700EEE84C /* TYPanelBaseViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYPanelBaseViewCell.h; sourceTree = "<group>"; };
 		AD4353A91D7144F700EEE84C /* TYPanelBaseViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYPanelBaseViewCell.m; sourceTree = "<group>"; };
-		AD6C41751CC0CCEC00A3F3E9 /* TPSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPSegmentedControl.h; sourceTree = "<group>"; };
-		AD6C41761CC0CCEC00A3F3E9 /* TPSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPSegmentedControl.m; sourceTree = "<group>"; };
-		AD6C417F1CC0CE1100A3F3E9 /* MemberEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemberEditViewController.h; sourceTree = "<group>"; };
-		AD6C41801CC0CE1100A3F3E9 /* MemberEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemberEditViewController.m; sourceTree = "<group>"; };
-		AD6C41821CC0CE2000A3F3E9 /* AddNewMemberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNewMemberViewController.h; sourceTree = "<group>"; };
-		AD6C41831CC0CE2000A3F3E9 /* AddNewMemberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNewMemberViewController.m; sourceTree = "<group>"; };
-		AD6C41851CC0CE3C00A3F3E9 /* AddMemberView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddMemberView.h; sourceTree = "<group>"; };
-		AD6C41861CC0CE3C00A3F3E9 /* AddMemberView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddMemberView.m; sourceTree = "<group>"; };
-		AD6C41881CC0CE4300A3F3E9 /* MemberEditView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemberEditView.h; sourceTree = "<group>"; };
-		AD6C41891CC0CE4300A3F3E9 /* MemberEditView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemberEditView.m; sourceTree = "<group>"; };
-		AD6C418B1CC0CE5B00A3F3E9 /* TYReceiveMemberDeviceListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYReceiveMemberDeviceListCell.h; sourceTree = "<group>"; };
-		AD6C418C1CC0CE5B00A3F3E9 /* TYReceiveMemberDeviceListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYReceiveMemberDeviceListCell.m; sourceTree = "<group>"; };
-		AD6C418D1CC0CE5B00A3F3E9 /* TYReceiveMemberDeviceListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYReceiveMemberDeviceListView.h; sourceTree = "<group>"; };
-		AD6C418E1CC0CE5B00A3F3E9 /* TYReceiveMemberDeviceListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYReceiveMemberDeviceListView.m; sourceTree = "<group>"; };
-		AD95D4C31C9D25E000E6AD20 /* ATBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATBaseViewController.h; sourceTree = "<group>"; };
-		AD95D4C41C9D25E000E6AD20 /* ATBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATBaseViewController.m; sourceTree = "<group>"; };
-		AD95D4C51C9D25E000E6AD20 /* ATSelectCountryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATSelectCountryViewController.h; sourceTree = "<group>"; };
-		AD95D4C61C9D25E000E6AD20 /* ATSelectCountryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATSelectCountryViewController.m; sourceTree = "<group>"; };
-		AD95D4C71C9D25E000E6AD20 /* ATTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATTableViewController.h; sourceTree = "<group>"; };
-		AD95D4C81C9D25E000E6AD20 /* ATTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATTableViewController.m; sourceTree = "<group>"; };
+		AD53CC8F1F63CC98002FF245 /* AddDeviceListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddDeviceListViewController.h; sourceTree = "<group>"; };
+		AD53CC901F63CC98002FF245 /* AddDeviceListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddDeviceListViewController.m; sourceTree = "<group>"; };
+		AD53CC911F63CC98002FF245 /* AddNewMemberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNewMemberViewController.h; sourceTree = "<group>"; };
+		AD53CC921F63CC98002FF245 /* AddNewMemberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNewMemberViewController.m; sourceTree = "<group>"; };
+		AD53CC931F63CC98002FF245 /* AppendDeviceSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppendDeviceSettingViewController.h; sourceTree = "<group>"; };
+		AD53CC941F63CC98002FF245 /* AppendDeviceSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppendDeviceSettingViewController.m; sourceTree = "<group>"; };
+		AD53CC951F63CC98002FF245 /* MemberEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemberEditViewController.h; sourceTree = "<group>"; };
+		AD53CC961F63CC98002FF245 /* MemberEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemberEditViewController.m; sourceTree = "<group>"; };
+		AD53CC971F63CC98002FF245 /* TYDeviceSharedResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYDeviceSharedResultViewController.h; sourceTree = "<group>"; };
+		AD53CC981F63CC98002FF245 /* TYDeviceSharedResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYDeviceSharedResultViewController.m; sourceTree = "<group>"; };
+		AD53CC991F63CC98002FF245 /* TYDeviceShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYDeviceShareViewController.h; sourceTree = "<group>"; };
+		AD53CC9A1F63CC98002FF245 /* TYDeviceShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYDeviceShareViewController.m; sourceTree = "<group>"; };
+		AD53CC9B1F63CC98002FF245 /* TYMemberListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYMemberListViewController.h; sourceTree = "<group>"; };
+		AD53CC9C1F63CC98002FF245 /* TYMemberListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYMemberListViewController.m; sourceTree = "<group>"; };
+		AD53CC9E1F63CC98002FF245 /* TYMemberListDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYMemberListDataSource.h; sourceTree = "<group>"; };
+		AD53CC9F1F63CC98002FF245 /* TYMemberListDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYMemberListDataSource.m; sourceTree = "<group>"; };
+		AD53CCA11F63CC98002FF245 /* TYMemberListDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYMemberListDelegate.h; sourceTree = "<group>"; };
+		AD53CCA21F63CC98002FF245 /* TYMemberListDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYMemberListDelegate.m; sourceTree = "<group>"; };
+		AD53CCA41F63CC98002FF245 /* ty_list_no_share@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ty_list_no_share@2x.png"; sourceTree = "<group>"; };
+		AD53CCA51F63CC98002FF245 /* ty_list_no_share@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ty_list_no_share@3x.png"; sourceTree = "<group>"; };
+		AD53CCA61F63CC98002FF245 /* ty_member_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ty_member_arrow@2x.png"; sourceTree = "<group>"; };
+		AD53CCA71F63CC98002FF245 /* ty_member_arrow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ty_member_arrow@3x.png"; sourceTree = "<group>"; };
+		AD53CCA81F63CC98002FF245 /* ty_member_share_failure@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ty_member_share_failure@2x.png"; sourceTree = "<group>"; };
+		AD53CCA91F63CC98002FF245 /* ty_member_share_failure@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ty_member_share_failure@3x.png"; sourceTree = "<group>"; };
+		AD53CCAA1F63CC98002FF245 /* ty_member_share_success@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ty_member_share_success@2x.png"; sourceTree = "<group>"; };
+		AD53CCAB1F63CC98002FF245 /* ty_member_share_success@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ty_member_share_success@3x.png"; sourceTree = "<group>"; };
+		AD53CCAC1F63CC98002FF245 /* tysmart_addshare_contact@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tysmart_addshare_contact@2x.png"; sourceTree = "<group>"; };
+		AD53CCAD1F63CC98002FF245 /* tysmart_addshare_contact@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tysmart_addshare_contact@3x.png"; sourceTree = "<group>"; };
+		AD53CCAE1F63CC98002FF245 /* tysmart_addshare_down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tysmart_addshare_down@2x.png"; sourceTree = "<group>"; };
+		AD53CCAF1F63CC98002FF245 /* tysmart_addshare_down@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tysmart_addshare_down@3x.png"; sourceTree = "<group>"; };
+		AD53CCB01F63CC98002FF245 /* tysmart_append_device@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tysmart_append_device@2x.png"; sourceTree = "<group>"; };
+		AD53CCB11F63CC98002FF245 /* tysmart_append_device@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tysmart_append_device@3x.png"; sourceTree = "<group>"; };
+		AD53CCB61F63CC98002FF245 /* AddMemberView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddMemberView.h; sourceTree = "<group>"; };
+		AD53CCB71F63CC98002FF245 /* AddMemberView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddMemberView.m; sourceTree = "<group>"; };
+		AD53CCB81F63CC98002FF245 /* MemberEditView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemberEditView.h; sourceTree = "<group>"; };
+		AD53CCB91F63CC98002FF245 /* MemberEditView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemberEditView.m; sourceTree = "<group>"; };
+		AD53CCBA1F63CC98002FF245 /* TYDeviceShareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYDeviceShareView.h; sourceTree = "<group>"; };
+		AD53CCBB1F63CC98002FF245 /* TYDeviceShareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYDeviceShareView.m; sourceTree = "<group>"; };
+		AD53CCBC1F63CC98002FF245 /* TYDeviceShareViewListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYDeviceShareViewListCell.h; sourceTree = "<group>"; };
+		AD53CCBD1F63CC98002FF245 /* TYDeviceShareViewListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYDeviceShareViewListCell.m; sourceTree = "<group>"; };
+		AD53CCBE1F63CC98002FF245 /* TYMemberListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYMemberListCell.h; sourceTree = "<group>"; };
+		AD53CCBF1F63CC98002FF245 /* TYMemberListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYMemberListCell.m; sourceTree = "<group>"; };
+		AD53CCC01F63CC98002FF245 /* TYMemberListLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYMemberListLayout.h; sourceTree = "<group>"; };
+		AD53CCC11F63CC98002FF245 /* TYMemberListLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYMemberListLayout.m; sourceTree = "<group>"; };
+		AD53CCC21F63CC98002FF245 /* TYMemberListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYMemberListView.h; sourceTree = "<group>"; };
+		AD53CCC31F63CC98002FF245 /* TYMemberListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYMemberListView.m; sourceTree = "<group>"; };
+		AD53CCC41F63CC98002FF245 /* TYReceiveMemberDeviceListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYReceiveMemberDeviceListCell.h; sourceTree = "<group>"; };
+		AD53CCC51F63CC98002FF245 /* TYReceiveMemberDeviceListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYReceiveMemberDeviceListCell.m; sourceTree = "<group>"; };
+		AD53CCC61F63CC98002FF245 /* TYReceiveMemberDeviceListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYReceiveMemberDeviceListView.h; sourceTree = "<group>"; };
+		AD53CCC71F63CC98002FF245 /* TYReceiveMemberDeviceListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYReceiveMemberDeviceListView.m; sourceTree = "<group>"; };
+		AD53CCE91F63CD93002FF245 /* TPSelectCountryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPSelectCountryViewController.h; sourceTree = "<group>"; };
+		AD53CCEA1F63CD93002FF245 /* TPSelectCountryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPSelectCountryViewController.m; sourceTree = "<group>"; };
+		AD53CCEC1F63CE10002FF245 /* TPBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPBaseTableViewController.h; sourceTree = "<group>"; };
+		AD53CCED1F63CE10002FF245 /* TPBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPBaseTableViewController.m; sourceTree = "<group>"; };
+		AD53CCEE1F63CE10002FF245 /* TPBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPBaseViewController.h; sourceTree = "<group>"; };
+		AD53CCEF1F63CE10002FF245 /* TPBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPBaseViewController.m; sourceTree = "<group>"; };
+		AD53CCF21F63CE1E002FF245 /* TPBaseLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPBaseLayout.h; sourceTree = "<group>"; };
+		AD53CCF31F63CE1E002FF245 /* TPBaseLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPBaseLayout.m; sourceTree = "<group>"; };
+		AD53CCF51F63CE28002FF245 /* TPBaseDS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPBaseDS.h; sourceTree = "<group>"; };
+		AD53CCF61F63CE28002FF245 /* TPBaseDS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPBaseDS.m; sourceTree = "<group>"; };
+		AD53CCF81F63CF82002FF245 /* UIColor+TPCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+TPCategory.h"; sourceTree = "<group>"; };
+		AD53CCF91F63CF82002FF245 /* UIColor+TPCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+TPCategory.m"; sourceTree = "<group>"; };
+		AD53CCFB1F63CFD8002FF245 /* TPSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPSegmentedControl.h; sourceTree = "<group>"; };
+		AD53CCFC1F63CFD8002FF245 /* TPSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPSegmentedControl.m; sourceTree = "<group>"; };
+		AD53CCFE1F63D00B002FF245 /* TYPeoplePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYPeoplePickerController.h; sourceTree = "<group>"; };
+		AD53CCFF1F63D00B002FF245 /* TYPeoplePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYPeoplePickerController.m; sourceTree = "<group>"; };
+		AD53CD011F63D021002FF245 /* TPCountryService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPCountryService.h; sourceTree = "<group>"; };
+		AD53CD021F63D021002FF245 /* TPCountryService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPCountryService.m; sourceTree = "<group>"; };
+		AD53CD041F63D085002FF245 /* TPEmptyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPEmptyView.h; sourceTree = "<group>"; };
+		AD53CD051F63D085002FF245 /* TPEmptyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPEmptyView.m; sourceTree = "<group>"; };
+		AD53CD071F63D0AD002FF245 /* TPNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPNotification.h; sourceTree = "<group>"; };
+		AD53CD0A1F63D5EE002FF245 /* TPUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPUtils.h; sourceTree = "<group>"; };
+		AD53CD0D1F63D769002FF245 /* UITableView+TPCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+TPCategory.h"; sourceTree = "<group>"; };
+		AD53CD0E1F63D769002FF245 /* UITableView+TPCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+TPCategory.m"; sourceTree = "<group>"; };
+		AD53CD101F63D79E002FF245 /* TPPinyin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TPPinyin.c; sourceTree = "<group>"; };
+		AD53CD111F63D79E002FF245 /* TPPinyin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPPinyin.h; sourceTree = "<group>"; };
+		AD53CD131F63D7DD002FF245 /* TYUserDefault.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYUserDefault.h; sourceTree = "<group>"; };
+		AD53CD151F63E1EF002FF245 /* TYTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYTheme.h; sourceTree = "<group>"; };
+		AD53CD161F63E1EF002FF245 /* TYTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYTheme.m; sourceTree = "<group>"; };
+		AD53CD181F63E20A002FF245 /* customColor.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = customColor.plist; sourceTree = "<group>"; };
+		AD53CD1A1F63EC66002FF245 /* TPError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPError.h; sourceTree = "<group>"; };
 		AD95D4C91C9D25E000E6AD20 /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
 		AD95D4CA1C9D25E000E6AD20 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
 		AD95D4CF1C9D25E000E6AD20 /* TYAppService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYAppService.h; sourceTree = "<group>"; };
 		AD95D4D01C9D25E000E6AD20 /* TYAppService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYAppService.m; sourceTree = "<group>"; };
 		AD95D4FD1C9D25E000E6AD20 /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
 		AD95D4FE1C9D25E000E6AD20 /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
-		AD95D5061C9D25E000E6AD20 /* TYMemberListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYMemberListViewController.h; sourceTree = "<group>"; };
-		AD95D5071C9D25E000E6AD20 /* TYMemberListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYMemberListViewController.m; sourceTree = "<group>"; };
-		AD95D5091C9D25E000E6AD20 /* TYMemberListDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYMemberListDataSource.h; sourceTree = "<group>"; };
-		AD95D50A1C9D25E000E6AD20 /* TYMemberListDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYMemberListDataSource.m; sourceTree = "<group>"; };
-		AD95D50C1C9D25E000E6AD20 /* TYMemberListDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYMemberListDelegate.h; sourceTree = "<group>"; };
-		AD95D50D1C9D25E000E6AD20 /* TYMemberListDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYMemberListDelegate.m; sourceTree = "<group>"; };
-		AD95D50F1C9D25E000E6AD20 /* TYMemberListDS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYMemberListDS.h; sourceTree = "<group>"; };
-		AD95D5101C9D25E000E6AD20 /* TYMemberListDS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYMemberListDS.m; sourceTree = "<group>"; };
-		AD95D5121C9D25E000E6AD20 /* TYMemberListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYMemberListCell.h; sourceTree = "<group>"; };
-		AD95D5131C9D25E000E6AD20 /* TYMemberListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYMemberListCell.m; sourceTree = "<group>"; };
-		AD95D5141C9D25E000E6AD20 /* TYMemberListLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYMemberListLayout.h; sourceTree = "<group>"; };
-		AD95D5151C9D25E000E6AD20 /* TYMemberListLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYMemberListLayout.m; sourceTree = "<group>"; };
-		AD95D5161C9D25E000E6AD20 /* TYMemberListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYMemberListView.h; sourceTree = "<group>"; };
-		AD95D5171C9D25E000E6AD20 /* TYMemberListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYMemberListView.m; sourceTree = "<group>"; };
 		AD95D5471C9D25E000E6AD20 /* TYContectToAPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYContectToAPViewController.h; sourceTree = "<group>"; };
 		AD95D5481C9D25E000E6AD20 /* TYContectToAPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYContectToAPViewController.m; sourceTree = "<group>"; };
 		AD95D5491C9D25E000E6AD20 /* TYEZModeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYEZModeViewController.h; sourceTree = "<group>"; };
@@ -632,6 +684,7 @@
 		1B4CDC481A85F6AF00EF696E /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				AD53CD141F63E1EF002FF245 /* Theme */,
 				1BFE2B7E1AD76A0B000EBA2C /* ViewControllerUtils.h */,
 				1BFE2B7F1AD76A0B000EBA2C /* ViewControllerUtils.m */,
 				1B38D6C01BCFDB2F004C6BA6 /* GlobalConfig.h */,
@@ -653,17 +706,6 @@
 				D748D33C6E59CD9F0CDF79B9 /* libPods-TuyaSmartKitDemo.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		6D3ED93A1CCB645700266AEF /* Resource */ = {
-			isa = PBXGroup;
-			children = (
-				6D3ED93B1CCB645700266AEF /* tysmart_addshare_contact@2x.png */,
-				6D3ED93C1CCB645700266AEF /* tysmart_addshare_contact@3x.png */,
-				6D3ED93D1CCB645700266AEF /* tysmart_addshare_down@2x.png */,
-				6D3ED93E1CCB645700266AEF /* tysmart_addshare_down@3x.png */,
-			);
-			path = Resource;
 			sourceTree = "<group>";
 		};
 		6D5962ED1D4A03FC009F52D9 /* Resource */ = {
@@ -713,7 +755,6 @@
 			children = (
 				6D6C1ECB1D34C94200F652D6 /* Category */,
 				6D6C1EDD1D34C94200F652D6 /* Location */,
-				6D6C1EE71D34C94200F652D6 /* TPMVC */,
 				6D6C1EF71D34C94200F652D6 /* Utils */,
 				6D6C1F081D34C94200F652D6 /* Views */,
 			);
@@ -747,48 +788,15 @@
 			path = Location;
 			sourceTree = "<group>";
 		};
-		6D6C1EE71D34C94200F652D6 /* TPMVC */ = {
-			isa = PBXGroup;
-			children = (
-				6D6C1EE81D34C94200F652D6 /* Controller */,
-				6D6C1EEB1D34C94200F652D6 /* DS */,
-				6D6C1EEE1D34C94200F652D6 /* Layout */,
-			);
-			path = TPMVC;
-			sourceTree = "<group>";
-		};
-		6D6C1EE81D34C94200F652D6 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				6D6C1EE91D34C94200F652D6 /* TPBaseViewController.h */,
-				6D6C1EEA1D34C94200F652D6 /* TPBaseViewController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		6D6C1EEB1D34C94200F652D6 /* DS */ = {
-			isa = PBXGroup;
-			children = (
-				6D6C1EEC1D34C94200F652D6 /* TPBaseDS.h */,
-				6D6C1EED1D34C94200F652D6 /* TPBaseDS.m */,
-			);
-			path = DS;
-			sourceTree = "<group>";
-		};
-		6D6C1EEE1D34C94200F652D6 /* Layout */ = {
-			isa = PBXGroup;
-			children = (
-				6D6C1EEF1D34C94200F652D6 /* TPBaseLayout.h */,
-				6D6C1EF01D34C94200F652D6 /* TPBaseLayout.m */,
-			);
-			path = Layout;
-			sourceTree = "<group>";
-		};
 		6D6C1EF71D34C94200F652D6 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				AD53CD1A1F63EC66002FF245 /* TPError.h */,
+				AD53CD131F63D7DD002FF245 /* TYUserDefault.h */,
+				AD53CD101F63D79E002FF245 /* TPPinyin.c */,
+				AD53CD111F63D79E002FF245 /* TPPinyin.h */,
 				6D6C1EFA1D34C94200F652D6 /* TPDate.h */,
-				6D6C1F061D34C94200F652D6 /* TPUtils.h */,
+				AD53CD0A1F63D5EE002FF245 /* TPUtils.h */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -796,6 +804,8 @@
 		6D6C1F081D34C94200F652D6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AD53CD0D1F63D769002FF245 /* UITableView+TPCategory.h */,
+				AD53CD0E1F63D769002FF245 /* UITableView+TPCategory.m */,
 				6D6C1F091D34C94200F652D6 /* Category */,
 				6D6C1F161D34C94200F652D6 /* Resource */,
 				6D6C1F231D34C94200F652D6 /* SVPullToRefresh */,
@@ -807,8 +817,8 @@
 				6D6C1F2E1D34C94200F652D6 /* TPCellView.m */,
 				6D6C1F2F1D34C94200F652D6 /* TPCellViewItem.h */,
 				6D6C1F301D34C94200F652D6 /* TPCellViewItem.m */,
-				6D6C1F311D34C94200F652D6 /* TPEmptyView.h */,
-				6D6C1F321D34C94200F652D6 /* TPEmptyView.m */,
+				AD53CD041F63D085002FF245 /* TPEmptyView.h */,
+				AD53CD051F63D085002FF245 /* TPEmptyView.m */,
 				6D6C1F331D34C94200F652D6 /* TPItemView.h */,
 				6D6C1F341D34C94200F652D6 /* TPItemView.m */,
 				6D6C1F351D34C94200F652D6 /* TPLoadingView.h */,
@@ -822,6 +832,8 @@
 				6D6C1F3D1D34C94200F652D6 /* TPTopBarView.h */,
 				6D6C1F3E1D34C94200F652D6 /* TPTopBarView.m */,
 				6D6C1F3F1D34C94200F652D6 /* TPViewConstants.h */,
+				AD53CCF81F63CF82002FF245 /* UIColor+TPCategory.h */,
+				AD53CCF91F63CF82002FF245 /* UIColor+TPCategory.m */,
 				6D6C1F401D34C94200F652D6 /* TPViews.h */,
 				6D6C1F411D34C94200F652D6 /* TPWebViewController.h */,
 				6D6C1F421D34C94200F652D6 /* TPWebViewController.m */,
@@ -878,6 +890,7 @@
 		6D6C1F431D34C94200F652D6 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				AD53CD071F63D0AD002FF245 /* TPNotification.h */,
 				6D6C1F441D34C94200F652D6 /* TPAnimations.h */,
 				6D6C1F451D34C94200F652D6 /* TPAnimations.m */,
 				6D6C1F461D34C94200F652D6 /* TPCountryCodeUtils.h */,
@@ -915,12 +928,119 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		AD53CC8D1F63CC98002FF245 /* 共享设备 */ = {
+			isa = PBXGroup;
+			children = (
+				AD53CC8E1F63CC98002FF245 /* Controller */,
+				AD53CC9D1F63CC98002FF245 /* DataSource */,
+				AD53CCA01F63CC98002FF245 /* Delegate */,
+				AD53CCA31F63CC98002FF245 /* Resource */,
+				AD53CCB51F63CC98002FF245 /* View */,
+			);
+			path = "共享设备";
+			sourceTree = "<group>";
+		};
+		AD53CC8E1F63CC98002FF245 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AD53CC8F1F63CC98002FF245 /* AddDeviceListViewController.h */,
+				AD53CC901F63CC98002FF245 /* AddDeviceListViewController.m */,
+				AD53CC911F63CC98002FF245 /* AddNewMemberViewController.h */,
+				AD53CC921F63CC98002FF245 /* AddNewMemberViewController.m */,
+				AD53CC931F63CC98002FF245 /* AppendDeviceSettingViewController.h */,
+				AD53CC941F63CC98002FF245 /* AppendDeviceSettingViewController.m */,
+				AD53CC951F63CC98002FF245 /* MemberEditViewController.h */,
+				AD53CC961F63CC98002FF245 /* MemberEditViewController.m */,
+				AD53CC971F63CC98002FF245 /* TYDeviceSharedResultViewController.h */,
+				AD53CC981F63CC98002FF245 /* TYDeviceSharedResultViewController.m */,
+				AD53CC991F63CC98002FF245 /* TYDeviceShareViewController.h */,
+				AD53CC9A1F63CC98002FF245 /* TYDeviceShareViewController.m */,
+				AD53CC9B1F63CC98002FF245 /* TYMemberListViewController.h */,
+				AD53CC9C1F63CC98002FF245 /* TYMemberListViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AD53CC9D1F63CC98002FF245 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				AD53CC9E1F63CC98002FF245 /* TYMemberListDataSource.h */,
+				AD53CC9F1F63CC98002FF245 /* TYMemberListDataSource.m */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		AD53CCA01F63CC98002FF245 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				AD53CCA11F63CC98002FF245 /* TYMemberListDelegate.h */,
+				AD53CCA21F63CC98002FF245 /* TYMemberListDelegate.m */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		AD53CCA31F63CC98002FF245 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				AD53CCA41F63CC98002FF245 /* ty_list_no_share@2x.png */,
+				AD53CCA51F63CC98002FF245 /* ty_list_no_share@3x.png */,
+				AD53CCA61F63CC98002FF245 /* ty_member_arrow@2x.png */,
+				AD53CCA71F63CC98002FF245 /* ty_member_arrow@3x.png */,
+				AD53CCA81F63CC98002FF245 /* ty_member_share_failure@2x.png */,
+				AD53CCA91F63CC98002FF245 /* ty_member_share_failure@3x.png */,
+				AD53CCAA1F63CC98002FF245 /* ty_member_share_success@2x.png */,
+				AD53CCAB1F63CC98002FF245 /* ty_member_share_success@3x.png */,
+				AD53CCAC1F63CC98002FF245 /* tysmart_addshare_contact@2x.png */,
+				AD53CCAD1F63CC98002FF245 /* tysmart_addshare_contact@3x.png */,
+				AD53CCAE1F63CC98002FF245 /* tysmart_addshare_down@2x.png */,
+				AD53CCAF1F63CC98002FF245 /* tysmart_addshare_down@3x.png */,
+				AD53CCB01F63CC98002FF245 /* tysmart_append_device@2x.png */,
+				AD53CCB11F63CC98002FF245 /* tysmart_append_device@3x.png */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		AD53CCB51F63CC98002FF245 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AD53CCB61F63CC98002FF245 /* AddMemberView.h */,
+				AD53CCB71F63CC98002FF245 /* AddMemberView.m */,
+				AD53CCB81F63CC98002FF245 /* MemberEditView.h */,
+				AD53CCB91F63CC98002FF245 /* MemberEditView.m */,
+				AD53CCBA1F63CC98002FF245 /* TYDeviceShareView.h */,
+				AD53CCBB1F63CC98002FF245 /* TYDeviceShareView.m */,
+				AD53CCBC1F63CC98002FF245 /* TYDeviceShareViewListCell.h */,
+				AD53CCBD1F63CC98002FF245 /* TYDeviceShareViewListCell.m */,
+				AD53CCBE1F63CC98002FF245 /* TYMemberListCell.h */,
+				AD53CCBF1F63CC98002FF245 /* TYMemberListCell.m */,
+				AD53CCC01F63CC98002FF245 /* TYMemberListLayout.h */,
+				AD53CCC11F63CC98002FF245 /* TYMemberListLayout.m */,
+				AD53CCC21F63CC98002FF245 /* TYMemberListView.h */,
+				AD53CCC31F63CC98002FF245 /* TYMemberListView.m */,
+				AD53CCC41F63CC98002FF245 /* TYReceiveMemberDeviceListCell.h */,
+				AD53CCC51F63CC98002FF245 /* TYReceiveMemberDeviceListCell.m */,
+				AD53CCC61F63CC98002FF245 /* TYReceiveMemberDeviceListView.h */,
+				AD53CCC71F63CC98002FF245 /* TYReceiveMemberDeviceListView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AD53CD141F63E1EF002FF245 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				AD53CD181F63E20A002FF245 /* customColor.plist */,
+				AD53CD151F63E1EF002FF245 /* TYTheme.h */,
+				AD53CD161F63E1EF002FF245 /* TYTheme.m */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
 		AD95D4C01C9D25E000E6AD20 /* 业务 */ = {
 			isa = PBXGroup;
 			children = (
+				AD53CC8D1F63CC98002FF245 /* 共享设备 */,
 				AD95D4C11C9D25E000E6AD20 /* Base */,
 				AD95D4E51C9D25E000E6AD20 /* 个人中心 */,
-				AD95D5041C9D25E000E6AD20 /* 共享设备 */,
 				AD95D53D1C9D25E000E6AD20 /* 添加设备 */,
 				AD95D55A1C9D25E000E6AD20 /* 登录 */,
 				AD95D56A1C9D25E000E6AD20 /* 设备列表 */,
@@ -944,12 +1064,14 @@
 		AD95D4C21C9D25E000E6AD20 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				AD95D4C31C9D25E000E6AD20 /* ATBaseViewController.h */,
-				AD95D4C41C9D25E000E6AD20 /* ATBaseViewController.m */,
-				AD95D4C71C9D25E000E6AD20 /* ATTableViewController.h */,
-				AD95D4C81C9D25E000E6AD20 /* ATTableViewController.m */,
-				AD95D4C51C9D25E000E6AD20 /* ATSelectCountryViewController.h */,
-				AD95D4C61C9D25E000E6AD20 /* ATSelectCountryViewController.m */,
+				AD53CCFE1F63D00B002FF245 /* TYPeoplePickerController.h */,
+				AD53CCFF1F63D00B002FF245 /* TYPeoplePickerController.m */,
+				AD53CCEC1F63CE10002FF245 /* TPBaseTableViewController.h */,
+				AD53CCED1F63CE10002FF245 /* TPBaseTableViewController.m */,
+				AD53CCEE1F63CE10002FF245 /* TPBaseViewController.h */,
+				AD53CCEF1F63CE10002FF245 /* TPBaseViewController.m */,
+				AD53CCE91F63CD93002FF245 /* TPSelectCountryViewController.h */,
+				AD53CCEA1F63CD93002FF245 /* TPSelectCountryViewController.m */,
 				AD95D4C91C9D25E000E6AD20 /* TabBarViewController.h */,
 				AD95D4CA1C9D25E000E6AD20 /* TabBarViewController.m */,
 			);
@@ -959,8 +1081,6 @@
 		AD95D4CC1C9D25E000E6AD20 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				6D1766C41CB68B84006277AC /* ATCountryCodeModel.h */,
-				6D1766C51CB68B84006277AC /* ATCountryCodeModel.m */,
 				6D1766D21CB74AEE006277AC /* MenuItem.h */,
 				6D1766D31CB74AEE006277AC /* MenuItem.m */,
 			);
@@ -993,6 +1113,10 @@
 		AD95D4CE1C9D25E000E6AD20 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				AD53CD011F63D021002FF245 /* TPCountryService.h */,
+				AD53CD021F63D021002FF245 /* TPCountryService.m */,
+				AD53CCF51F63CE28002FF245 /* TPBaseDS.h */,
+				AD53CCF61F63CE28002FF245 /* TPBaseDS.m */,
 				AD95D4CF1C9D25E000E6AD20 /* TYAppService.h */,
 				AD95D4D01C9D25E000E6AD20 /* TYAppService.m */,
 			);
@@ -1002,12 +1126,14 @@
 		AD95D4D71C9D25E000E6AD20 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AD53CCFB1F63CFD8002FF245 /* TPSegmentedControl.h */,
+				AD53CCFC1F63CFD8002FF245 /* TPSegmentedControl.m */,
+				AD53CCF21F63CE1E002FF245 /* TPBaseLayout.h */,
+				AD53CCF31F63CE1E002FF245 /* TPBaseLayout.m */,
 				AD95D6641C9D291400E6AD20 /* SeparatorTableViewCell.h */,
 				AD95D6651C9D291400E6AD20 /* SeparatorTableViewCell.m */,
 				AD95D6091C9D286700E6AD20 /* TYBaseTableViewCell.h */,
 				AD95D60A1C9D286700E6AD20 /* TYBaseTableViewCell.m */,
-				AD6C41751CC0CCEC00A3F3E9 /* TPSegmentedControl.h */,
-				AD6C41761CC0CCEC00A3F3E9 /* TPSegmentedControl.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1081,80 +1207,6 @@
 				6D304A1A1CE9BEFB0008A00E /* TYUserInfoPhoneViewCell.m */,
 				AD3AE6B51D011B1B0057CAAD /* TYUserInfoPassCell.h */,
 				AD3AE6B61D011B1B0057CAAD /* TYUserInfoPassCell.m */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		AD95D5041C9D25E000E6AD20 /* 共享设备 */ = {
-			isa = PBXGroup;
-			children = (
-				AD95D5051C9D25E000E6AD20 /* Controller */,
-				AD95D5081C9D25E000E6AD20 /* DataSource */,
-				AD95D50B1C9D25E000E6AD20 /* Delegate */,
-				AD95D50E1C9D25E000E6AD20 /* DS */,
-				AD95D5111C9D25E000E6AD20 /* View */,
-				6D3ED93A1CCB645700266AEF /* Resource */,
-			);
-			path = "共享设备";
-			sourceTree = "<group>";
-		};
-		AD95D5051C9D25E000E6AD20 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				AD6C417F1CC0CE1100A3F3E9 /* MemberEditViewController.h */,
-				AD6C41801CC0CE1100A3F3E9 /* MemberEditViewController.m */,
-				AD95D5061C9D25E000E6AD20 /* TYMemberListViewController.h */,
-				AD95D5071C9D25E000E6AD20 /* TYMemberListViewController.m */,
-				AD6C41821CC0CE2000A3F3E9 /* AddNewMemberViewController.h */,
-				AD6C41831CC0CE2000A3F3E9 /* AddNewMemberViewController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		AD95D5081C9D25E000E6AD20 /* DataSource */ = {
-			isa = PBXGroup;
-			children = (
-				AD95D5091C9D25E000E6AD20 /* TYMemberListDataSource.h */,
-				AD95D50A1C9D25E000E6AD20 /* TYMemberListDataSource.m */,
-			);
-			path = DataSource;
-			sourceTree = "<group>";
-		};
-		AD95D50B1C9D25E000E6AD20 /* Delegate */ = {
-			isa = PBXGroup;
-			children = (
-				AD95D50C1C9D25E000E6AD20 /* TYMemberListDelegate.h */,
-				AD95D50D1C9D25E000E6AD20 /* TYMemberListDelegate.m */,
-			);
-			path = Delegate;
-			sourceTree = "<group>";
-		};
-		AD95D50E1C9D25E000E6AD20 /* DS */ = {
-			isa = PBXGroup;
-			children = (
-				AD95D50F1C9D25E000E6AD20 /* TYMemberListDS.h */,
-				AD95D5101C9D25E000E6AD20 /* TYMemberListDS.m */,
-			);
-			path = DS;
-			sourceTree = "<group>";
-		};
-		AD95D5111C9D25E000E6AD20 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				AD6C418B1CC0CE5B00A3F3E9 /* TYReceiveMemberDeviceListCell.h */,
-				AD6C418C1CC0CE5B00A3F3E9 /* TYReceiveMemberDeviceListCell.m */,
-				AD6C418D1CC0CE5B00A3F3E9 /* TYReceiveMemberDeviceListView.h */,
-				AD6C418E1CC0CE5B00A3F3E9 /* TYReceiveMemberDeviceListView.m */,
-				AD6C41881CC0CE4300A3F3E9 /* MemberEditView.h */,
-				AD6C41891CC0CE4300A3F3E9 /* MemberEditView.m */,
-				AD6C41851CC0CE3C00A3F3E9 /* AddMemberView.h */,
-				AD6C41861CC0CE3C00A3F3E9 /* AddMemberView.m */,
-				AD95D5121C9D25E000E6AD20 /* TYMemberListCell.h */,
-				AD95D5131C9D25E000E6AD20 /* TYMemberListCell.m */,
-				AD95D5141C9D25E000E6AD20 /* TYMemberListLayout.h */,
-				AD95D5151C9D25E000E6AD20 /* TYMemberListLayout.m */,
-				AD95D5161C9D25E000E6AD20 /* TYMemberListView.h */,
-				AD95D5171C9D25E000E6AD20 /* TYMemberListView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1416,6 +1468,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADCCCFCC1C9F8CFB00FCAF5C /* ty_mainbt_about@2x.png in Resources */,
+				AD53CCD71F63CC98002FF245 /* ty_member_share_success@2x.png in Resources */,
 				ADCCCFAD1C9F8CD300FCAF5C /* ty_devicelist_dot_green@3x.png in Resources */,
 				ADCCCFCB1C9F8CFB00FCAF5C /* ty_mainbt_about_active@3x.png in Resources */,
 				ADD4503A1CAA2C6A0037CADF /* ty_user_icon_default@2x.png in Resources */,
@@ -1430,32 +1483,35 @@
 				ADCCCFCD1C9F8CFB00FCAF5C /* ty_mainbt_about@3x.png in Resources */,
 				ADCCCF931C9F8CAC00FCAF5C /* cell_view_arrow@3x.png in Resources */,
 				ADD450341CAA2C6A0037CADF /* ty_me_mobile_phone@2x.png in Resources */,
-				6D3ED93F1CCB645700266AEF /* tysmart_addshare_contact@2x.png in Resources */,
 				ADCCCF651C9F8C9200FCAF5C /* ty_adddevice_ap_screen_cn@2x.png in Resources */,
 				ADCCCFD31C9F8CFB00FCAF5C /* ty_mainbt_devicelist_active@3x.png in Resources */,
+				AD53CCD81F63CC98002FF245 /* ty_member_share_success@3x.png in Resources */,
 				6D1A22BF1E4AFE3B003960BE /* TuyaSmartKit.podspec in Resources */,
 				ADCCCF921C9F8CAC00FCAF5C /* cell_view_arrow@2x.png in Resources */,
 				ADCCCFAF1C9F8CD300FCAF5C /* ty_devicelist_share_gray@3x.png in Resources */,
-				6D3ED9401CCB645700266AEF /* tysmart_addshare_contact@3x.png in Resources */,
 				ADCCCFAE1C9F8CD300FCAF5C /* ty_devicelist_share_gray@2x.png in Resources */,
 				AD0C2AC31D1BC64C00576414 /* ty_adddevice_light@2x.png in Resources */,
 				ADCCCFCE1C9F8CFB00FCAF5C /* ty_mainbt_add_active@2x.png in Resources */,
 				ADCCD1211C9F8D9B00FCAF5C /* tysmart_wifi@2x.png in Resources */,
 				1B4CDBF91A85A75D00EF696E /* Images.xcassets in Resources */,
 				6D6C1FF31CE573F50073911A /* ty_adddevice_icon_ok@3x.png in Resources */,
+				AD53CCDE1F63CC98002FF245 /* tysmart_append_device@3x.png in Resources */,
 				ADCCCFB11C9F8CD300FCAF5C /* ty_devicelist_share_green@3x.png in Resources */,
 				ADD4503B1CAA2C6A0037CADF /* ty_user_icon_default@3x.png in Resources */,
 				6D6C1F6F1D34C94200F652D6 /* tp_nolist_logo@2x.png in Resources */,
 				6D5962F51D4A0537009F52D9 /* power_on@3x.png in Resources */,
 				ADCCCFD11C9F8CFB00FCAF5C /* ty_mainbt_add@3x.png in Resources */,
+				AD53CCDC1F63CC98002FF245 /* tysmart_addshare_down@3x.png in Resources */,
 				6D6C1FF01CE573F50073911A /* ty_adddevice_icon_none@2x.png in Resources */,
 				6D6C1F711D34C94200F652D6 /* tp_progress_success@2x.png in Resources */,
+				AD53CCD31F63CC98002FF245 /* ty_member_arrow@2x.png in Resources */,
 				6D6C1FF11CE573F50073911A /* ty_adddevice_icon_none@3x.png in Resources */,
 				ADC6EC641CBB8FAB00A59570 /* ty_devicelist_empty@2x.png in Resources */,
 				ADCCCFD21C9F8CFB00FCAF5C /* ty_mainbt_devicelist_active@2x.png in Resources */,
 				6D6C1F6E1D34C94200F652D6 /* tp_list_arrow_goto@3x.png in Resources */,
 				6D6C1F6D1D34C94200F652D6 /* tp_list_arrow_goto@2x.png in Resources */,
 				ADCCCFD01C9F8CFB00FCAF5C /* ty_mainbt_add@2x.png in Resources */,
+				AD53CCD21F63CC98002FF245 /* ty_list_no_share@3x.png in Resources */,
 				6D5962F41D4A0537009F52D9 /* power_on@2x.png in Resources */,
 				ADCCCFCA1C9F8CFB00FCAF5C /* ty_mainbt_about_active@2x.png in Resources */,
 				ADCCCFB01C9F8CD300FCAF5C /* ty_devicelist_share_green@2x.png in Resources */,
@@ -1473,14 +1529,19 @@
 				ADD450351CAA2C6A0037CADF /* ty_me_mobile_phone@3x.png in Resources */,
 				ADBFDFEE1D7427900001F26A /* ty_panel_minus@2x.png in Resources */,
 				1BF05B341B41151600B3B8FC /* Localizable.strings in Resources */,
+				AD53CCD41F63CC98002FF245 /* ty_member_arrow@3x.png in Resources */,
 				ADCCCF771C9F8C9200FCAF5C /* ty_adddevice_wifi@2x.png in Resources */,
+				AD53CCD61F63CC98002FF245 /* ty_member_share_failure@3x.png in Resources */,
 				6D6C1F731D34C94200F652D6 /* tp_top_bar_back@3x.png in Resources */,
 				65F4A6B01CE32C3F00977B3F /* ty_list_empty@3x.png in Resources */,
 				6D6C1F721D34C94200F652D6 /* tp_top_bar_back@2x.png in Resources */,
 				ADCCCF681C9F8C9200FCAF5C /* ty_adddevice_ap_screen_en@3x.png in Resources */,
+				AD53CD191F63E20A002FF245 /* customColor.plist in Resources */,
 				6D6C1F6B1D34C94200F652D6 /* TPViewsLocalizable.strings in Resources */,
 				ADCCCFAC1C9F8CD300FCAF5C /* ty_devicelist_dot_green@2x.png in Resources */,
 				ADCCD0091C9F8D1000FCAF5C /* ty_login_password_no@2x.png in Resources */,
+				AD53CCD11F63CC98002FF245 /* ty_list_no_share@2x.png in Resources */,
+				AD53CCD51F63CC98002FF245 /* ty_member_share_failure@2x.png in Resources */,
 				AD95D5B01C9D25E000E6AD20 /* ty_adddevice_failed@2x.png in Resources */,
 				ADD4502C1CAA2C6A0037CADF /* ty_me_about@2x.png in Resources */,
 				ADCCD11B1C9F8D9B00FCAF5C /* tysmart_selected@2x.png in Resources */,
@@ -1493,25 +1554,27 @@
 				ADBFDFF01D7427900001F26A /* ty_panel_plus@2x.png in Resources */,
 				ADBFDFF11D7427900001F26A /* ty_panel_plus@3x.png in Resources */,
 				ADD450361CAA2C6A0037CADF /* ty_me_share@2x.png in Resources */,
+				AD53CCDD1F63CC98002FF245 /* tysmart_append_device@2x.png in Resources */,
+				AD53CCD91F63CC98002FF245 /* tysmart_addshare_contact@2x.png in Resources */,
 				AD95D5BD1C9D25E000E6AD20 /* ty_addsd_error_moreinfo@3x.png in Resources */,
 				ADCCCF671C9F8C9200FCAF5C /* ty_adddevice_ap_screen_en@2x.png in Resources */,
 				ADBFDFF31D7427900001F26A /* ty_panel_select@3x.png in Resources */,
 				ADBFDFEC1D7427900001F26A /* ty_panel_arrows@2x.png in Resources */,
 				6D6C1F701D34C94200F652D6 /* tp_nolist_logo@3x.png in Resources */,
+				AD53CCDA1F63CC98002FF245 /* tysmart_addshare_contact@3x.png in Resources */,
 				AD95D5BC1C9D25E000E6AD20 /* ty_addsd_error_moreinfo@2x.png in Resources */,
-				6D3ED9411CCB645700266AEF /* tysmart_addshare_down@2x.png in Resources */,
 				6D5962F01D4A03FC009F52D9 /* power_off@2x.png in Resources */,
 				6D6C1F6C1D34C94200F652D6 /* phoneCodeList.plist in Resources */,
 				ADBFDFF21D7427900001F26A /* ty_panel_select@2x.png in Resources */,
 				ADCCD1171C9F8D9B00FCAF5C /* tysmart_password@2x.png in Resources */,
 				AD0C2AC51D1BC64C00576414 /* ty_adddevice_lighting@2x.png in Resources */,
-				6D3ED9421CCB645700266AEF /* tysmart_addshare_down@3x.png in Resources */,
 				AD95D5B11C9D25E000E6AD20 /* ty_adddevice_failed@3x.png in Resources */,
 				ADCCD1181C9F8D9B00FCAF5C /* tysmart_password@3x.png in Resources */,
 				ADCCD1221C9F8D9B00FCAF5C /* tysmart_wifi@3x.png in Resources */,
 				ADD4502E1CAA2C6A0037CADF /* ty_me_faq@2x.png in Resources */,
 				ADCCD00B1C9F8D1000FCAF5C /* ty_login_password@2x.png in Resources */,
 				ADCCD00C1C9F8D1000FCAF5C /* ty_login_password@3x.png in Resources */,
+				AD53CCDB1F63CC98002FF245 /* tysmart_addshare_down@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1584,61 +1647,59 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D1766D41CB74AEE006277AC /* MenuItem.m in Sources */,
-				AD6C41901CC0CE5B00A3F3E9 /* TYReceiveMemberDeviceListView.m in Sources */,
 				AD95D61A1C9D28A400E6AD20 /* TPSignInView.m in Sources */,
 				AD95D64F1C9D28C800E6AD20 /* UserInfoTableViewCell.m in Sources */,
-				6D6C1F5A1D34C94200F652D6 /* TPBaseLayout.m in Sources */,
+				AD53CCE11F63CC98002FF245 /* MemberEditView.m in Sources */,
 				6D6C1F751D34C94200F652D6 /* UIScrollView+SVPullToRefresh.m in Sources */,
 				6D6C1F851D34C94200F652D6 /* TPViewUtil.m in Sources */,
 				6D6C1F841D34C94200F652D6 /* TPProgressUtils.m in Sources */,
 				6D6C1F7C1D34C94200F652D6 /* TPLoadingView.m in Sources */,
 				6D6C1F791D34C94200F652D6 /* TPCellViewItem.m in Sources */,
-				AD6C418A1CC0CE4300A3F3E9 /* MemberEditView.m in Sources */,
-				AD6C41771CC0CCEC00A3F3E9 /* TPSegmentedControl.m in Sources */,
+				AD53CCE61F63CC98002FF245 /* TYMemberListView.m in Sources */,
 				6D6C1F781D34C94200F652D6 /* TPCellView.m in Sources */,
+				AD53CCC91F63CC98002FF245 /* AddNewMemberViewController.m in Sources */,
 				6D6C1F831D34C94200F652D6 /* TPCountryCodeUtils.m in Sources */,
 				6D6C1F4F1D34C94200F652D6 /* NSMutableDictionary+TPCategory.m in Sources */,
-				6D6C1F591D34C94200F652D6 /* TPBaseDS.m in Sources */,
+				AD53CCCC1F63CC98002FF245 /* TYDeviceSharedResultViewController.m in Sources */,
 				AD3AE6B71D011B1B0057CAAD /* TYUserInfoPassCell.m in Sources */,
 				6D6C1F6A1D34C94200F652D6 /* UIViewController+TPCategory.m in Sources */,
 				ADBFE0111D755A950001F26A /* TYPanelBitmapViewCell.m in Sources */,
 				AD95D6051C9D284B00E6AD20 /* TYEZAddDeviceView.m in Sources */,
-				6D1766C81CB68B84006277AC /* ATCountryCodeModel.m in Sources */,
-				6D6C1F581D34C94200F652D6 /* TPBaseViewController.m in Sources */,
+				AD53CCC81F63CC98002FF245 /* AddDeviceListViewController.m in Sources */,
 				6D6C1F511D34C94200F652D6 /* NSObject+TPCategory.m in Sources */,
 				AD4353A11D7137E400EEE84C /* TYPanelStringViewCell.m in Sources */,
 				AD95D5EF1C9D27DC00E6AD20 /* TPInputUserAccountController.m in Sources */,
+				AD53CCE71F63CC98002FF245 /* TYReceiveMemberDeviceListCell.m in Sources */,
+				AD53CCFA1F63CF82002FF245 /* UIColor+TPCategory.m in Sources */,
 				ADD450601CAA72870037CADF /* MobileBindingView.m in Sources */,
 				AD95D5F11C9D27DC00E6AD20 /* TPSignUpViewController.m in Sources */,
 				6D6C1F741D34C94200F652D6 /* UIScrollView+SVInfiniteScrolling.m in Sources */,
 				6D93CA041CAA81C0009D2C7D /* TYAPResetViewController.m in Sources */,
+				AD53CD001F63D00B002FF245 /* TYPeoplePickerController.m in Sources */,
+				AD53CD121F63D79E002FF245 /* TPPinyin.c in Sources */,
 				6D6C1F7B1D34C94200F652D6 /* TPItemView.m in Sources */,
-				AD95D59D1C9D25E000E6AD20 /* TYMemberListCell.m in Sources */,
 				ADC6EC321CB913ED00A59570 /* TPBaseUtils.m in Sources */,
 				ADBFE0011D745EBD0001F26A /* TYPanelLogView.m in Sources */,
-				AD6C41841CC0CE2000A3F3E9 /* AddNewMemberViewController.m in Sources */,
 				6D6C1F661D34C94200F652D6 /* UIButton+TPCategory.m in Sources */,
-				AD6C41811CC0CE1100A3F3E9 /* MemberEditViewController.m in Sources */,
 				6D6C1F651D34C94200F652D6 /* UIAlertView+TPBlock.m in Sources */,
 				AD95D5AE1C9D25E000E6AD20 /* TYSearchOneDeviceController.m in Sources */,
-				AD95D5991C9D25E000E6AD20 /* TYMemberListViewController.m in Sources */,
 				6D6C1F521D34C94200F652D6 /* NSString+TPCategory.m in Sources */,
-				AD95D59B1C9D25E000E6AD20 /* TYMemberListDelegate.m in Sources */,
-				AD95D5861C9D25E000E6AD20 /* ATSelectCountryViewController.m in Sources */,
 				6D6C1F7E1D34C94200F652D6 /* TPTextFieldView.m in Sources */,
+				AD53CCCE1F63CC98002FF245 /* TYMemberListViewController.m in Sources */,
 				ADBFE00E1D753AB30001F26A /* TYPanelBaseViewController.m in Sources */,
 				6D304A0B1CE96B1A0008A00E /* TYUserInfoViewController.m in Sources */,
 				AD95D5981C9D25E000E6AD20 /* UserViewController.m in Sources */,
 				AD95D5AD1C9D25E000E6AD20 /* TYEZModeViewController.m in Sources */,
-				AD95D59C1C9D25E000E6AD20 /* TYMemberListDS.m in Sources */,
 				AD4353981D7137AF00EEE84C /* TYPanelBoolViewCell.m in Sources */,
 				6D93CA071CAA8500009D2C7D /* TYAPResetView.m in Sources */,
 				1BFE2B801AD76A0B000EBA2C /* ViewControllerUtils.m in Sources */,
 				6D6C1F501D34C94200F652D6 /* NSNumber+TPCategory.m in Sources */,
+				AD53CCCD1F63CC98002FF245 /* TYDeviceShareViewController.m in Sources */,
 				AD95D5881C9D25E000E6AD20 /* TabBarViewController.m in Sources */,
-				AD95D59E1C9D25E000E6AD20 /* TYMemberListLayout.m in Sources */,
 				6D304A181CE9BC2D0008A00E /* TYUserInfoNickViewCell.m in Sources */,
+				AD53CD031F63D021002FF245 /* TPCountryService.m in Sources */,
 				AD4353A71D71393400EEE84C /* TYPanelDpTitleView.m in Sources */,
+				AD53CCF41F63CE1E002FF245 /* TPBaseLayout.m in Sources */,
 				6D6C1F811D34C94200F652D6 /* TPWebViewController.m in Sources */,
 				ADD4505D1CAA70010037CADF /* MobileBindingViewController.m in Sources */,
 				6D93CA011CAA7368009D2C7D /* TYActivatorFinishViewController.m in Sources */,
@@ -1647,8 +1708,7 @@
 				AD43539B1D7137BF00EEE84C /* TYPanelValueViewCell.m in Sources */,
 				ADD450881CABAA6D0037CADF /* MobileChangeViewController.m in Sources */,
 				AD95D5B41C9D25E000E6AD20 /* TYSearchDeviceFinishView.m in Sources */,
-				AD95D5871C9D25E000E6AD20 /* ATTableViewController.m in Sources */,
-				AD95D59F1C9D25E000E6AD20 /* TYMemberListView.m in Sources */,
+				AD53CCCF1F63CC98002FF245 /* TYMemberListDataSource.m in Sources */,
 				AD95D6881C9D299C00E6AD20 /* AppDelegate.m in Sources */,
 				AD95D5B51C9D25E000E6AD20 /* TYSearchOneDeviceLayout.m in Sources */,
 				AD95D5AF1C9D25E000E6AD20 /* TYSearchDeviceFinishDelegate.m in Sources */,
@@ -1657,37 +1717,49 @@
 				6D6C1F771D34C94200F652D6 /* TPBaseView.m in Sources */,
 				AD95D61B1C9D28A400E6AD20 /* TPSignUpView.m in Sources */,
 				6DD945811CDDCA7C0021F557 /* TYAPPrepareViewController.m in Sources */,
+				AD53CCE21F63CC98002FF245 /* TYDeviceShareView.m in Sources */,
 				ADBFE00B1D7539360001F26A /* TYSwitchPanelViewController.m in Sources */,
+				AD53CCD01F63CC98002FF245 /* TYMemberListDelegate.m in Sources */,
 				6D6C1F691D34C94200F652D6 /* UIView+TPAdditions.m in Sources */,
-				6D6C1F7A1D34C94200F652D6 /* TPEmptyView.m in Sources */,
 				AD95D5AC1C9D25E000E6AD20 /* TYContectToAPViewController.m in Sources */,
+				AD53CCFD1F63CFD8002FF245 /* TPSegmentedControl.m in Sources */,
 				6D6C1F7D1D34C94200F652D6 /* TPNavigationController.m in Sources */,
-				AD6C41871CC0CE3C00A3F3E9 /* AddMemberView.m in Sources */,
-				AD95D5851C9D25E000E6AD20 /* ATBaseViewController.m in Sources */,
+				AD53CCCB1F63CC98002FF245 /* MemberEditViewController.m in Sources */,
+				AD53CCEB1F63CD93002FF245 /* TPSelectCountryViewController.m in Sources */,
+				AD53CCE31F63CC98002FF245 /* TYDeviceShareViewListCell.m in Sources */,
 				ADBFE0081D74628E0001F26A /* TYPanelLogViewCell.m in Sources */,
-				AD95D59A1C9D25E000E6AD20 /* TYMemberListDataSource.m in Sources */,
 				AD95D5C11C9D25E000E6AD20 /* TYDeviceListViewCell.m in Sources */,
 				6D93C9AF1CAA2123009D2C7D /* TYEZPrepareViewController.m in Sources */,
+				AD53CCF01F63CE10002FF245 /* TPBaseTableViewController.m in Sources */,
 				AD95D5891C9D25E000E6AD20 /* TYAppService.m in Sources */,
 				6D6C1F561D34C94200F652D6 /* TPScheduledLocationManager.m in Sources */,
+				AD53CD0F1F63D769002FF245 /* UITableView+TPCategory.m in Sources */,
 				AD95D5F01C9D27DC00E6AD20 /* TPSignInViewController.m in Sources */,
 				6D6C1F801D34C94200F652D6 /* TPTopBarView.m in Sources */,
 				6D304A151CE9B1420008A00E /* TYUserInfoHeadViewCell.m in Sources */,
+				AD53CCF11F63CE10002FF245 /* TPBaseViewController.m in Sources */,
 				6D6C1F821D34C94200F652D6 /* TPAnimations.m in Sources */,
 				AD43539E1D7137D100EEE84C /* TYPanelEnumViewCell.m in Sources */,
+				AD53CCE51F63CC98002FF245 /* TYMemberListLayout.m in Sources */,
 				6D6C1F681D34C94200F652D6 /* UIImage+TPAlpha.m in Sources */,
+				AD53CD171F63E1EF002FF245 /* TYTheme.m in Sources */,
 				AD4353AA1D7144F700EEE84C /* TYPanelBaseViewCell.m in Sources */,
 				6D304A1B1CE9BEFB0008A00E /* TYUserInfoPhoneViewCell.m in Sources */,
 				AD95D6661C9D291400E6AD20 /* SeparatorTableViewCell.m in Sources */,
 				AD95D6041C9D284B00E6AD20 /* TYContectToAPView.m in Sources */,
+				AD53CD061F63D085002FF245 /* TPEmptyView.m in Sources */,
 				6D6C1F7F1D34C94200F652D6 /* TPTextView.m in Sources */,
 				AD95D6511C9D28C800E6AD20 /* UserView.m in Sources */,
 				AD95D5B71C9D25E000E6AD20 /* TYDeviceListController.m in Sources */,
 				6D6C1F4E1D34C94200F652D6 /* NSMutableArray+TPCategory.m in Sources */,
+				AD53CCCA1F63CC98002FF245 /* AppendDeviceSettingViewController.m in Sources */,
+				AD53CCE81F63CC98002FF245 /* TYReceiveMemberDeviceListView.m in Sources */,
+				AD53CCF71F63CE28002FF245 /* TPBaseDS.m in Sources */,
 				ADD4508B1CABAB570037CADF /* MobileChangeView.m in Sources */,
 				1B4CDBEE1A85A75D00EF696E /* main.m in Sources */,
-				AD6C418F1CC0CE5B00A3F3E9 /* TYReceiveMemberDeviceListCell.m in Sources */,
 				AD95D6501C9D28C800E6AD20 /* UserItemTableViewCell.m in Sources */,
+				AD53CCE01F63CC98002FF245 /* AddMemberView.m in Sources */,
+				AD53CCE41F63CC98002FF245 /* TYMemberListCell.m in Sources */,
 				AD95D6191C9D28A400E6AD20 /* TPInputUserAccountView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

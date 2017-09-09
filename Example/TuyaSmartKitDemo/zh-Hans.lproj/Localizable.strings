@@ -622,3 +622,30 @@
 "only_report" = "只上报";
 "only_send" = "只下发";
 
+
+"ty_share_add" = "分享给新成员";
+"ty_share_add_device" = "设备共享";
+"ty_share_add_device_nodevice" = "暂无可共享的设备";
+"ty_share_add_device_setting" = "共享设置";
+"ty_share_add_newdevice" = "共享新增设备";
+"ty_share_add_no" = "请添加共享用户";
+"ty_share_add_remove" = "该设备已经被移除，请重新添加";
+"ty_share_add_select" = "设置需要共享的设备";
+"ty_share_add_shared" = "开启该功能后，新添加的设备会同步共享给该成员";
+"ty_share_add_succeed" = "%@已共享您的设备";
+"ty_share_beshared" = "设备来自";
+"ty_share_default_info" = "输入手机号/邮箱";
+"ty_share_delete" = "移除分享";
+"ty_share_details" = "查看详情";
+"ty_share_edit_account" = "用户";
+"ty_share_edit_alias" = "备注";
+"ty_share_empty_device" = "暂未收到任何人的设备共享";
+"ty_share_empty_device_content" = "你的家人和朋友可以将设备分享给你\n与你一起控制智能设备";
+"ty_share_fail" = "分享失败";
+"ty_share_succeed" = "分享成功";
+
+"no_share_content" = "你可以将设备共享给家人和朋友\n让他们和你一起控制智能设备";
+
+
+
+

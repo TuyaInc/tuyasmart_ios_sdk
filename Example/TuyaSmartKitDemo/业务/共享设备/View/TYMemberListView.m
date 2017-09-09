@@ -7,7 +7,6 @@
 //
 
 #import "TYMemberListView.h"
-#import "TYMemberListCell.h"
 #import "TPEmptyView.h"
 #import "TPSegmentedControl.h"
 
@@ -17,6 +16,8 @@
 @property (nonatomic, assign) TYMemberCurrentType currentType;
 @property (nonatomic, strong) UIButton            *shareButton;
 @property (nonatomic, strong) TPEmptyView         *emptyView;
+
+@property (nonatomic, strong) UIView              *segmentedControlBgView;
 @property (nonatomic, strong) TPSegmentedControl  *segmentedControl;
 
 @end
@@ -28,7 +29,10 @@
     if (self = [super initWithFrame:frame]) {
         self.backgroundColor = MAIN_BACKGROUND_COLOR;
         
-        [self addSubview:self.segmentedControl];
+        [self addSubview:self.segmentedControlBgView];
+        [self.segmentedControlBgView addSubview:self.segmentedControl];
+        
+        
         [self addSubview:self.tableView];
         [self.tableView addSubview:self.emptyView];
         [self addSubview:self.shareButton];
@@ -47,7 +51,7 @@
 - (UITableView *)tableView {
     if (!_tableView) {
     
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, self.segmentedControl.height, APP_SCREEN_WIDTH,0)
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, self.segmentedControlBgView.height, APP_SCREEN_WIDTH,0)
                                                   style:UITableViewStyleGrouped];
         _tableView.backgroundColor = [UIColor clearColor];
         _tableView.dataSource = self;
@@ -60,7 +64,13 @@
 
 
 #pragma mark - TPSegmentedControlDelegate
-- (void)didSelectCurrentIndex:(NSInteger)index {
+
+- (BOOL)segmentControl:(TPSegmentedControl *)segmentControl canSelectIndex:(NSInteger)index {
+    return YES;
+}
+
+- (void)segmentControl:(TPSegmentedControl *)segmentControl didSelectCurrentIndex:(NSInteger)index {
+    
     if (index == 0) {
         _currentType = TYMemberSend;
     } else {
@@ -69,19 +79,24 @@
     
     _currentIndex = index;
     [self reloadTableView];
-
-    
 }
 
 - (void)setCurrentSelectIndex:(NSInteger)index {
-    [_segmentedControl changeToIndex:index];
+    [_segmentedControl setIndex:index];
+}
+
+- (UIView *)segmentedControlBgView {
+    if (!_segmentedControlBgView) {
+        _segmentedControlBgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, APP_CONTENT_WIDTH, 54)];
+        _segmentedControlBgView.backgroundColor = TOP_BAR_BACKGROUND_COLOR;
+    }
+    return _segmentedControlBgView;
 }
 
 - (TPSegmentedControl *)segmentedControl {
     if (!_segmentedControl) {
         NSArray *titleArr = @[NSLocalizedString(@"ty_add_share_tab1", @""), NSLocalizedString(@"ty_add_share_tab2", @"")];
-
-        _segmentedControl = [[TPSegmentedControl alloc] initWithFrame:CGRectMake(0, 0, APP_SCREEN_WIDTH, 44) items:titleArr];
+        _segmentedControl = [[TPSegmentedControl alloc] initWithFrame:CGRectMake(0, self.segmentedControlBgView.height - 40, APP_SCREEN_WIDTH, 40) items:titleArr];
         _segmentedControl.delegate = self;
     }
     return _segmentedControl;
@@ -89,15 +104,16 @@
 
 - (TPEmptyView *)emptyView {
     if (!_emptyView) {
-        CGRect emptyViewFrame = CGRectMake(0, 44, APP_SCREEN_WIDTH, self.height - 44 - 64 - 40);
-        _emptyView = [[TPEmptyView alloc] initWithFrame:emptyViewFrame title:NSLocalizedString(@"no_share", @"") imageName:@"ty_list_empty"];
+        CGRect emptyViewFrame = CGRectMake(0, 0, APP_SCREEN_WIDTH, self.height - self.segmentedControlBgView.height  - self.shareButton.height);
+        _emptyView = [[TPEmptyView alloc] initWithFrame:emptyViewFrame title:@"" subTitle:@""];
     }
     return _emptyView;
 }
 
 - (UIButton *)shareButton {
     if (!_shareButton) {
-        _shareButton = [TPViewUtil buttonWithFrame:CGRectMake(0, self.height - APP_TOOL_BAR_HEIGHT, APP_SCREEN_WIDTH, APP_TOOL_BAR_HEIGHT) fontSize:15 bgColor:[UIColor whiteColor] textColor:HEXCOLOR(0x788088)];
+        _shareButton = [TPViewUtil buttonWithFrame:CGRectMake(0, self.height - 60, APP_SCREEN_WIDTH, 60) fontSize:15 bgColor:[UIColor whiteColor] textColor:HEXCOLOR(0x303030)];
+        _shareButton.titleLabel.font      = [UIFont boldSystemFontOfSize:15];
         
         UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, APP_SCREEN_WIDTH, 0.5)];
         lineView.backgroundColor = SEPARATOR_LINE_COLOR;
@@ -126,12 +142,12 @@
     
     if (_currentIndex == 0) {
         _shareButton.hidden = NO;
-        [_emptyView setTitle:NSLocalizedString(@"no_share", nil)];
-        _tableView.height = self.height - self.segmentedControl.height - self.shareButton.height;
+        [_emptyView setTitle:NSLocalizedString(@"no_share", nil) subTitle:NSLocalizedString(@"no_share_content", nil)];
+        _tableView.height = self.height - self.segmentedControlBgView.height - self.shareButton.height;
     } else {
         _shareButton.hidden = YES;
-        [_emptyView setTitle:NSLocalizedString(@"ty_share_empty_device", nil)];
-        _tableView.height = self.height - self.segmentedControl.height;
+        [_emptyView setTitle:NSLocalizedString(@"ty_share_empty_device", nil) subTitle:NSLocalizedString(@"ty_share_empty_device_content", nil)];
+        _tableView.height = self.height - self.segmentedControlBgView.height;
     }
     
     
@@ -142,7 +158,7 @@
 
 
 
-- (TuyaSmartMemberModel *)getMemberModel:(NSIndexPath *)indexPath {
+- (TuyaSmartShareMemberModel *)getMemberModel:(NSIndexPath *)indexPath {
     if (_currentIndex == 0) {
         return [self.dataSource.memberList objectAtIndex:indexPath.row];
     } else {
@@ -159,7 +175,7 @@
 }
 
 
-- (void)removeMember:(TuyaSmartMemberModel *)member {
+- (void)removeMember:(TuyaSmartShareMemberModel *)member {
     if (_currentIndex == 0) {
         
         NSMutableArray *memberList = [NSMutableArray arrayWithArray:self.dataSource.memberList];
@@ -181,7 +197,18 @@
 
 #pragma mark UITableViewDataSource
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    UIView *customView = [[UIView alloc] initWithFrame:CGRectMake(0, 0.0, APP_CONTENT_WIDTH, 44.0)];
+    
+    UILabel *headerLabel = [TPViewUtil simpleLabel:CGRectMake(15, 18, APP_CONTENT_WIDTH - 30, 22) f:12 tc:HEXCOLOR(0x8A8E91) t:@""];
+    headerLabel.text = [self titleForHeaderInSection:section];
+    [customView addSubview:headerLabel];
+    
+    return customView;
+}
+
+
+- (NSString *)titleForHeaderInSection:(NSInteger)section {
     if (section == 0) {
         if (_currentIndex == 0 && self.dataSource.memberList.count > 0) {
             return NSLocalizedString(@"ty_add_share_tab1_note", @"");
@@ -206,10 +233,9 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
     TYMemberListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MemberTableViewCell"];
     
-    TuyaSmartMemberModel *member = [self getMemberModel:indexPath];
+    TuyaSmartShareMemberModel *member = [self getMemberModel:indexPath];
     [cell setMember:member];
     
     return cell;
@@ -219,7 +245,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     if (section == 0) {
-        return 55;
+        return 44;
     } else {
         return 14;
     }
@@ -230,7 +256,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 44;
+    return 60;
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -238,12 +264,9 @@
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    
-    
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         
-        TuyaSmartMemberModel *member = [self getMemberModel:indexPath];
+        TuyaSmartShareMemberModel *member = [self getMemberModel:indexPath];
         
         NSString *title;
 
@@ -257,41 +280,28 @@
         [UIAlertView bk_showAlertViewWithTitle:title
                                        message:nil
                              cancelButtonTitle:NSLocalizedString(@"cancel", nil)
-                             otherButtonTitles:@[NSLocalizedString(@"confirm", nil)]
+                             otherButtonTitles:@[NSLocalizedString(@"Confirm", nil)]
                                        handler:^(UIAlertView *alertView, NSInteger buttonIndex) {
-                                           
-                                           
                                            if (buttonIndex == 1) {
-                                               
                                                [weakSelf_AT deleteMemberWithMember:member success:^{
                                                    [weakSelf_AT reloadTableView];
                                                } failure:^{
                                                    [weakSelf_AT reloadTableView];
-
                                                }];
-                                               
-                                               
-                                               
-
                                            } else {
                                                [weakSelf_AT reloadTableView];
                                            }
-                                           
                                        }];
-        
     }
-    
-    
-    
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    [self.delegate memberListView:self didSelectRowAtModel:[self getMemberModel:indexPath] currentType:[self getCurrentType]];
+    [self.delegate memberListView:self didSelectRowAtModel:[self getMemberModel:indexPath] currentType:[self getCurrentType] indexPath:indexPath];
 }
 
-- (void)deleteMemberWithMember:(TuyaSmartMemberModel *)member success:(TYSuccessHandler)success failure:(TYFailureHandler)failure {
+- (void)deleteMemberWithMember:(TuyaSmartShareMemberModel *)member success:(TYSuccessHandler)success failure:(TYFailureHandler)failure {
     
     WEAKSELF_AT
     [TPProgressUtils showMessag:NSLocalizedString(@"loading", nil) toView:nil];
@@ -307,7 +317,7 @@
         
     } failure:^(NSError *error) {
         [TPProgressUtils hideHUDForView:nil animated:YES];
-        [TPProgressUtils showError:NSLocalizedString(@"new_share_failure", @"")];
+        [TPProgressUtils showError:error];
         
         if (failure) {
             failure();
@@ -316,11 +326,5 @@
     
     
 }
-
-
-
-
-
-
 
 @end

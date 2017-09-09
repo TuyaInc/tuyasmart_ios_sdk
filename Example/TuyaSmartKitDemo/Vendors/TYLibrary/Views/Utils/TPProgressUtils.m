@@ -10,25 +10,43 @@
 #import <BlocksKit/BlocksKit+UIKit.h>
 #import "TPTopBarView.h"
 #import "TPViewConstants.h"
+#import "TPError.h"
+#import "TPUtils.h"
+
+
 
 @implementation TPProgressUtils
 
 #pragma mark - Public Method
-+ (void)showError:(NSString *)error {
-    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:error
-                                                     message:nil
-                                                    delegate:nil
-                                           cancelButtonTitle:TPLocalizedString(@"ty_alert_confirm", nil)
-                                           otherButtonTitles:nil];
-    [alert show];
++ (void)showError:(id)error {
+    if ([error isKindOfClass:[NSString class]]) {
+        
+        UIAlertView * alert = [[UIAlertView alloc] initWithTitle:error
+                                                         message:nil
+                                                        delegate:nil
+                                               cancelButtonTitle:TPLocalizedString(@"ty_alert_confirm", nil)
+                                               otherButtonTitles:nil];
+        [alert show];
+        
+    } else if ([error isKindOfClass:[NSError class]]) {
+        
+        NSError *nsError = (NSError *)error;
+        
+        [TPProgressUtils showError:nsError.localizedDescription];
+
+        
+        
+    }
+    
+    
 }
 
 + (void)showSuccess:(NSString *)success toView:(UIView *)view {
-    [TPProgressUtils show:success icon:@"tp_progress_success" view:view delay:1.5 block:nil];
+    [TPProgressUtils show:success icon:@"TPViews.bundle/tp_progress_success" view:view delay:1.5 block:nil];
 }
 
 + (void)showSuccess:(NSString *)success toView:(UIView *)view block:(MBProgressHUDCompletionBlock)block {
-    [TPProgressUtils show:success icon:@"tp_progress_success" view:view delay:1.5 block:block];
+    [TPProgressUtils show:success icon:@"TPViews.bundle/tp_progress_success" view:view delay:1.5 block:block];
 }
 
 + (MBProgressHUD *)showMessag:(NSString *)message toView:(UIView *)view {
@@ -132,5 +150,8 @@
     }
     return mainWindow;
 }
+
+
+
 
 @end

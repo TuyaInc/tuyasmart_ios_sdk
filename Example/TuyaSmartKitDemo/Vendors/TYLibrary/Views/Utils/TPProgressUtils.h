@@ -12,7 +12,11 @@
 
 @interface TPProgressUtils : NSObject
 
-+ (void)showError:(NSString *)error;
+/**
+ *
+ error 支持 NSString、NSError类型
+ */
++ (void)showError:(id)error;
 
 + (void)showSuccess:(NSString *)success toView:(UIView *)view;
 
@@ -23,5 +27,7 @@
 + (void)showSuccess:(NSString *)success toView:(UIView *)view block:(MBProgressHUDCompletionBlock)block;
 
 + (BOOL)hideHUDForView:(UIView *)view animated:(BOOL)animated;
+
++ (void)show:(NSString *)text icon:(NSString *)icon view:(UIView *)view delay:(float)delay block:(MBProgressHUDCompletionBlock)block;
 
 @end

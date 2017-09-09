@@ -11,7 +11,6 @@
 @interface MemberEditView()
 
 @property(nonatomic,strong) UITextField *usernameTextField;
-@property(nonatomic,strong) UITextField *commentsTextField;
 
 @end
 
@@ -55,13 +54,13 @@
 }
 
 -(void)addCommentsView {
-    UIView *phoneView = [TPViewUtil viewWithFrame:CGRectMake(0, 130, APP_SCREEN_WIDTH, 44) color:[UIColor whiteColor]];
-    [phoneView addSubview:[TPViewUtil viewWithFrame:CGRectMake(0, 0, APP_SCREEN_WIDTH, 0.5) color:SEPARATOR_LINE_COLOR]];
+    _commentsView = [TPViewUtil viewWithFrame:CGRectMake(0, 130, APP_SCREEN_WIDTH, 44) color:[UIColor whiteColor]];
+    [_commentsView addSubview:[TPViewUtil viewWithFrame:CGRectMake(0, 0, APP_SCREEN_WIDTH, 0.5) color:SEPARATOR_LINE_COLOR]];
     
-    [phoneView addSubview:self.commentsTextField];
+    [_commentsView addSubview:self.commentsTextField];
     
-    [phoneView addSubview:[TPViewUtil viewWithFrame:CGRectMake(0, 43.5, APP_SCREEN_WIDTH, 0.5) color:SEPARATOR_LINE_COLOR]];
-    [self addSubview:phoneView];
+    [_commentsView addSubview:[TPViewUtil viewWithFrame:CGRectMake(0, 43.5, APP_SCREEN_WIDTH, 0.5) color:SEPARATOR_LINE_COLOR]];
+    [self addSubview:_commentsView];
 }
 
 -(UITextField *)usernameTextField {
@@ -75,7 +74,7 @@
 -(UITextField *)commentsTextField {
     if (!_commentsTextField) {
         _commentsTextField = [TPViewUtil textFieldWithFrame:CGRectMake(15, 6, APP_SCREEN_WIDTH - 15, 32) fontSize:16 color:MAIN_FONT_COLOR];
-        _commentsTextField.enabled = YES;
+        _commentsTextField.enabled = NO;
         _commentsTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
     }
     return _commentsTextField;
@@ -89,7 +88,7 @@
     return _commentsTextField.text;
 }
 
-- (void)setup:(TuyaSmartMemberModel *)member {
+- (void)setup:(TuyaSmartShareMemberModel *)member {
     _usernameTextField.text = member.userName;
     _commentsTextField.text = member.nickName;
 }

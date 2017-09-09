@@ -6,10 +6,17 @@
 //  Copyright (c) 2015年 Tuya. All rights reserved.
 //
 
-#import "ATBaseViewController.h"
+#import "TPBaseViewController.h"
 
-@interface MemberEditViewController : ATBaseViewController
+typedef void (^UpdateAutoShareSwitchBlock)(BOOL isAuto);
 
-@property (nonatomic,strong) TuyaSmartMemberModel *member;
-@property (nonatomic,assign) NSInteger type;
+@interface MemberEditViewController : TPBaseViewController
+
+@property (nonatomic, strong) TuyaSmartShareMemberModel *member;
+@property (nonatomic, strong) NSArray *receiveDeviceList;
+@property (nonatomic, strong) NSArray *shareDeviceList;
+@property (nonatomic, assign) BOOL isAutoShare;
+@property (nonatomic, assign) NSInteger type;
+@property (nonatomic, copy) UpdateAutoShareSwitchBlock updateAutoShareSwitchBlock;
+
 @end

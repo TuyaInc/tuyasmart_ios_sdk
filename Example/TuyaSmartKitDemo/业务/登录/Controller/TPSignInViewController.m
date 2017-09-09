@@ -8,7 +8,7 @@
 
 #import "TPSignInViewController.h"
 #import "TabBarViewController.h"
-#import "ATSelectCountryViewController.h"
+#import "TPSelectCountryViewController.h"
 #import "AppDelegate.h"
 #import "TPSignInView.h"
 #import "TPInputUserAccountController.h"
@@ -19,7 +19,7 @@
 
 @property (nonatomic, strong) TPSignInView       *signInView;
 @property (nonatomic, strong) NSTimer            *identifyTimer;
-@property (nonatomic, strong) ATCountryCodeModel *countryCodeModel;
+@property (nonatomic, strong) TPCountryModel *countryCodeModel;
 @property (nonatomic, assign) int                identifyTimes;
 
 
@@ -42,6 +42,7 @@
     }
 }
 
+
 - (void)initView {
     _signInView = [[TPSignInView alloc] initWithFrame:self.view.bounds phoneCodeLogin:_phoneCodeLogin];
     _signInView.delegate = self;
@@ -55,17 +56,16 @@
 }
 
 - (void)initCountryCode {
-    ATCountryCodeModel *model = [ATCountryCodeModel getCountryCodeModel:[TPCountryCodeUtils getDefaultPhoneCodeJson] countryCode:[TPCountryCodeUtils getCountryCode]];
+    TPCountryModel *model = [TPCountryService getCurrentCountryModel];
     [self setCountryCode:model];
 }
 
 - (void)selectCountryCode {
-    ATSelectCountryViewController *selectCountryViewController = [[ATSelectCountryViewController alloc] init];
+    TPSelectCountryViewController *selectCountryViewController = [[TPSelectCountryViewController alloc] init];
     selectCountryViewController.delegate = self;
-    [self.navigationController presentViewController:selectCountryViewController animated:YES completion:nil];
+    [self presentViewController:selectCountryViewController animated:YES completion:nil];
 }
-
-- (void)setCountryCode:(ATCountryCodeModel *)model {
+- (void)setCountryCode:(TPCountryModel *)model {
     _countryCodeModel = model;
     [_signInView setCountryCode:model];
 }
@@ -195,7 +195,7 @@
 }
 
 #pragma mark ATSelectCountryDelegate
-- (void)didSelectCountry:(ATSelectCountryViewController *)controller model:(ATCountryCodeModel *)model {
+- (void)didSelectCountry:(TPSelectCountryViewController *)controller model:(TPCountryModel *)model {
     [self setCountryCode:model];
     [controller tp_dismissModalViewController];
 }

@@ -18,11 +18,11 @@
 @implementation TYSwitchPanelViewController
 
 - (void)viewDidLoad {
+    [super viewDidLoad];
     
     [self initView];
     [self reloadData];
     
-    [super viewDidLoad];
     
 }
 
@@ -32,8 +32,8 @@
     self.rightTitleItem.title = NSLocalizedString(@"action_more", @"");
     self.topBarView.rightItem = self.rightTitleItem;
     self.topBarView.bottomLineHidden = YES;
-    self.topBarView.textColor = [UIColor whiteColor];
-    self.topBarView.backgroundColor = [UIColor clearColor];
+//    self.topBarView.textColor = [UIColor whiteColor];
+//    self.topBarView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:self.topBarView];
     
     self.powerButton = [[UIButton alloc] initWithFrame:CGRectMake((APP_SCREEN_WIDTH - 280) / 2, (APP_SCREEN_HEIGHT - 280) / 2, 280, 280)];
@@ -42,7 +42,6 @@
     
     self.view.backgroundColor = MAIN_BACKGROUND_COLOR;
     
-
 }
 
 - (void)reloadData {
@@ -61,6 +60,7 @@
     
 }
 
+
 - (void)powerButtonClicked {
     
     WEAKSELF_AT
@@ -76,9 +76,6 @@
     }];
 }
 
-- (UIStatusBarStyle)preferredStatusBarStyle {
-    return UIStatusBarStyleLightContent;
-}
 
 #pragma mark - TuyaSmartDeviceDelegate
 

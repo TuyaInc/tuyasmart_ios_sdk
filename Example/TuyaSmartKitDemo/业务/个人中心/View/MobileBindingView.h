@@ -7,7 +7,6 @@
 //
 
 #import "TPBaseLayout.h"
-#import "ATCountryCodeModel.h"
 
 @class MobileBindingView;
 
@@ -30,7 +29,7 @@
 @property (nonatomic, strong) NSString *verifyCode;
 @property (nonatomic, strong) NSString *password;
 
-- (void)setCountryCode:(ATCountryCodeModel *)countryCodeModel;
+- (void)setCountryCode:(TPCountryModel *)countryCodeModel;
 
 - (void)enableSendVerifyCodeButton:(NSString *)title;
 - (void)disableSendVerifyCodeButton:(NSString *)title;

@@ -6,8 +6,8 @@
 //  Copyright © 2016年 Tuya. All rights reserved.
 //
 
-#import "ATBaseViewController.h"
+#import "TPBaseViewController.h"
 
-@interface MobileChangeViewController : ATBaseViewController
+@interface MobileChangeViewController : TPBaseViewController
 
 @end

@@ -10,10 +10,11 @@
 
 @interface MemberEditView : UIView
 
-
+@property(nonatomic,strong) UITextField *commentsTextField;
+@property(nonatomic,strong) UIView *commentsView;
 
 - (NSString *)username;
 - (NSString *)comments;
-- (void)setup:(TuyaSmartMemberModel *)member;
+- (void)setup:(TuyaSmartShareMemberModel *)member;
 
 @end

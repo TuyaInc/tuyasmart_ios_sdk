@@ -6,9 +6,7 @@
 //  Copyright (c) 2015年 Tuya. All rights reserved.
 //
 
-#import "ATBaseViewController.h"
-
-@interface TYContectToAPViewController : ATBaseViewController
+@interface TYContectToAPViewController : TPBaseViewController
 
 @property (nonatomic, strong) NSString          *ssid;
 @property (nonatomic, strong) NSString          *password;
