@@ -11,7 +11,7 @@
 /**
  城市id
  */
-@property (nonatomic, assign) NSInteger cityId;
+@property (nonatomic, assign) long long cityId;
 
 /**
  城市名称

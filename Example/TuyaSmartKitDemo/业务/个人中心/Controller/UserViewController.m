@@ -9,6 +9,7 @@
 #import "UserViewController.h"
 #import "TYMemberListViewController.h"
 #import "TYUserInfoViewController.h"
+#import "TYSmartSceneViewController.h"
 
 #import "TPItemView.h"
 #import "UserView.h"
@@ -42,13 +43,14 @@
     
 
     MenuItem *addUserItem   = [MenuItem normalItem:[UIImage imageNamed:@"ty_me_share"]      title:NSLocalizedString(@"menu_title_share", @"") action:@selector(gotoMemberListViewController)];
-  
+    MenuItem *smartSceneItem   = [MenuItem firstItem:[UIImage imageNamed:@"ty_me_scene"]      title:NSLocalizedString(@"ty_smart_scene", nil) action:@selector(gotoSmartSceneController)];
     MenuItem *FAQItem       = [MenuItem normalItem:[UIImage imageNamed:@"ty_me_faq"] title:NSLocalizedString(@"feedback_faq", @"") action:@selector(gotoFAQViewController)];
     
     NSMutableArray *list = [NSMutableArray new];
     [list addObject:user];
     [list addObject:[MenuItem separatorItem:16]];
     
+    [list addObject:smartSceneItem];
     [list addObject:addUserItem];
     [list addObject:FAQItem];
     
@@ -101,6 +103,11 @@
 - (void)gotoMemberListViewController {
     TYMemberListViewController *memberListViewController = [TYMemberListViewController new];
     [self.navigationController pushViewController:memberListViewController animated:YES];
+}
+
+- (void)gotoSmartSceneController {
+    TYSmartSceneViewController *vc = [[TYSmartSceneViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)gotoFAQViewController {

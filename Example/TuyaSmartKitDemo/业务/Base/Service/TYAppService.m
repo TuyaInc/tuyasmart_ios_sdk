@@ -9,6 +9,7 @@
 #import "TYAppService.h"
 #import "AppDelegate.h"
 #import "TPScheduledLocationManager.h"
+#import "TYLBSService.h"
 
 @interface TYAppService() <TPScheduledLocationManagerDelegate>
 
@@ -84,14 +85,7 @@ TP_DEF_SINGLETON(TYAppService)
 
 - (void)scheduledLocationManageDidUpdateLocations:(CLLocation *)locations {
     
-    if (locations.coordinate.latitude && locations.coordinate.longitude) {
-        
-        NSString *latitude = [NSString stringWithFormat:@"%f", locations.coordinate.latitude];
-        NSString *longitude = [NSString stringWithFormat:@"%f", locations.coordinate.longitude];
-        
-        [[TuyaSmartSDK sharedInstance] setValue:latitude forKey:@"latitude"];
-        [[TuyaSmartSDK sharedInstance] setValue:longitude forKey:@"longitude"];
-    }
+    [[TYLBSService sharedInstance] updateLocation:locations];
 }
 
 @end

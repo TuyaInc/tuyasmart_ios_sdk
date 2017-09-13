@@ -643,3 +643,53 @@
 
 "no_share_content" = "Easily share devices with family\nEnjoy smart life together";
 
+
+//智能场景
+"ty_smart_scene" = "Scenes";
+"ty_smart_scene_edit_title2" = "Create your own scene";
+"ty_smart_scene_edit_explain" = "Customize your own personal scenes to suit your needs. For example, set your home to automatically turn on the lights and close curtain when you come back home.";
+"ty_smart_scene_all_device_offline" = "Device offline. Please execute after devices are online.";
+"ty_smart_scene_add_new_scene" = "Create Scene";
+"ty_smart_scene_name_enter" = "Please enter scene name";
+"ty_smart_scene_add_condition" = "Step 1: Add condition";
+"ty_smart_scene_add_newwork" = "Step 2: Add task";
+"ty_smart_scene_add_notadded" = "No condition yet (can be added manually)";
+"ty_smart_scene_add_notaddedwork" = "No task yet";
+"ty_smart_scene_save" = "Save";
+"ty_smart_scene_select_condition" = "Select condition";
+"ty_smart_scene_condition" = "Select condition for task";
+"ty_smart_scene_device" = "device";
+"ty_smart_scene_choose_device" = "Select Device";
+"ty_smart_scene_error_no_device" = "You don’t have any devices that support scene";
+"ty_smart_positioning" = "Obtaining...";
+"ty_smart_scene_edit_lessthan" = "Below";
+"ty_smart_scene_edit_morethan" = "Above";
+"ty_smart_scene_edit_equal" = "Equal";
+"ty_smart_nopositioning" = "location obtaining failed";
+"ty_smart_scene_nocity" = "Please select current city";
+"location_permission" = "You need to open the location permission to obtain city information";
+"open_permisions" = "Open permissions";
+"ty_smart_positioning_address" = "Current Location";
+"ty_smart_positioning_city" = "Current City";
+"ty_smart_positioning_selectcity" = "Select City";
+"ty_smart_scene_edit_quit_pop_info" = "Changes won't be saved, still exit?";
+"ty_smart_scene_edit_quit_pop_title" = "Exit edit";
+"ty_smart_scene_error_add_work" = "Please add task";
+"getting_location" = "Getting location...";
+"can_not_locate" = "Can't locate the city";
+"ty_smart_scene_choose_func" = "Select Function";
+"ty_device_func_cant_emp" = "At least select one function to be executed";
+"ty_smart_scene_start" = "Perform";
+"ty_smart_scene_pop_know" = "OK";
+"ty_smart_scene_device_offline" = "Offline";
+"ty_smart_scene_feedback_no_respond" = "No response from device";
+"ty_smart_scene_all_device_offline" = "Device offline. Please execute after devices are online.";
+"ty_smart_scene_device_error" = "Some devices offline";
+"ty_smart_scene_device_null" = "Device is removed";
+"ty_smart_scene_edit_title" = "Edit Scene";
+"ty_smart_scene_del_info_title" = "Confirm delection?";
+"ty_smart_scene_del_info_cont" = "Tasks can't be normally executed after deleting the scene.";
+"ty_smart_city" = "City";
+
+
+

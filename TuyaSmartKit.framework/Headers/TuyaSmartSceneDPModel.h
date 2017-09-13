@@ -91,8 +91,8 @@
 @property (nonatomic, assign) NSInteger selectedOperationRow;
 
 /**
- 条件具体内容
- 如：("$humidity","==","comfort") 或（“$dp1”，“==”，“1”）
+ 条件具体内容 (二维数组)
+ 如：(("$humidity","==","comfort"), (“$dp1”，“==”，“1”), ...)
  */
 @property (nonatomic, strong) NSArray *expr;
 

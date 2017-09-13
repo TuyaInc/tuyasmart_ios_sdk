@@ -646,6 +646,52 @@
 
 "no_share_content" = "你可以将设备共享给家人和朋友\n让他们和你一起控制智能设备";
 
+//智能场景
+"ty_smart_scene" = "智能场景";
+"ty_smart_scene_edit_title2" = "编辑你的智能场景";
+"ty_smart_scene_edit_explain" = "添加设备后可以编辑个性化场景，你可以设置到家开启空调，拉上窗帘，也可以设置离家关闭灯光、门窗上锁";
+"ty_smart_scene_all_device_offline" = "场景下设备均已离线，请将设备上线后重新执行";
+"ty_smart_scene_add_new_scene" = "新建场景";
+"ty_smart_scene_name_enter" = "请输入场景名称";
+"ty_smart_scene_add_condition" = "第一步:添加条件";
+"ty_smart_scene_add_newwork" = "第二步:添加任务";
+"ty_smart_scene_add_notadded" = "未添加条件（可不添加，直接手动执行）";
+"ty_smart_scene_add_notaddedwork" = "未添加任务";
+"ty_smart_scene_save" = "保存";
+"ty_smart_scene_select_condition" = "选择条件";
+"ty_smart_scene_condition" = "选择执行任务的条件";
+"ty_smart_scene_device" = "设备";
+"ty_smart_scene_choose_device" = "选择设备";
+"ty_smart_scene_error_no_device" = "您还没有支持智能场景的设备";
+"ty_smart_positioning" = "定位中";
+"ty_smart_scene_edit_lessthan" = "小于";
+"ty_smart_scene_edit_morethan" = "大于";
+"ty_smart_scene_edit_equal" = "等于";
+"ty_smart_nopositioning" = "定位失败";
+"ty_smart_scene_nocity" = "请选择当前城市";
+"location_permission" = "需要开启定位权限以获取城市信息";
+"open_permisions" = "开启权限";
+"ty_smart_positioning_address" = "当前定位地址";
+"ty_smart_positioning_city" = "当前城市";
+"ty_smart_positioning_selectcity" = "选择城市";
+"ty_smart_scene_edit_quit_pop_info" = "退出后修改将丢失，是否退出?";
+"ty_smart_scene_edit_quit_pop_title" = "退出编辑";
+"ty_smart_scene_error_add_work" = "请添加任务";
+"getting_location" = "正在获取位置...";
+"can_not_locate" = "定位不到城市";
+"ty_smart_scene_choose_func" = "选择功能";
+"ty_device_func_cant_emp" = "至少选择一个设备要执行的功能";
+"ty_smart_scene_start" = "执行";
+"ty_smart_scene_pop_know" = "知道了";
+"ty_smart_scene_device_offline" = "离线";
+"ty_smart_scene_feedback_no_respond" = "设备无响应";
+"ty_smart_scene_all_device_offline" = "场景下设备均已离线，请将设备上线后重新执行";
+"ty_smart_scene_device_error" = "部分设备离线";
+"ty_smart_scene_device_null" = "设备被移除";
+"ty_smart_scene_edit_title" = "编辑场景";
+"ty_smart_scene_del_info_title" = "确定删除该场景？";
+"ty_smart_scene_del_info_cont" = "场景删除后，设备任务将无法正常执行";
+"ty_smart_city" = "城市";
 
 
 
