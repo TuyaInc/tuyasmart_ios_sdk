@@ -9,8 +9,9 @@ target 'TuyaSmartKitDemo' do
     
     pod 'TuyaSmartKit', :path => '../'
     
-    
     pod 'libPhoneNumber-iOS'
-
+    
     pod 'MJRefresh'
+    pod 'SWTableViewCell'
+    
 end

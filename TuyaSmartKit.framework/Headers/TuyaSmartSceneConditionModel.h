@@ -39,7 +39,7 @@ typedef NS_ENUM(NSInteger, TYSceneConditionStatus)
 @property (nonatomic, assign) NSInteger entityType;
 
 /**
- 条件显示内容，如: “湿度：舒适” 或 “开关 ：开启”
+ 条件显示内容，如: “湿度 : 舒适” 或 “开关 : 开启”
  */
 @property (nonatomic, strong) NSString *exprDisplay;
 

@@ -76,7 +76,7 @@
                            failure:(TYFailureError)failure;
 
 /**
- 获取城市列表
+ 获取城市列表（国外少部分国家的城市列表可能暂时不全，国外用户建议根据经纬度获取城市信息）
  
  @param countryCode 国家码
  @param success 操作成功回调，返回城市列表
