@@ -20,6 +20,9 @@
 //产品唯一标识符
 @property (nonatomic, strong) NSString  *productId;
 
+//群组创建时间
+@property (nonatomic, assign) long long    time;
+
 //群组名称
 @property (nonatomic, strong) NSString  *name;
 

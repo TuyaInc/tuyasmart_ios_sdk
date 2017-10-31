@@ -55,12 +55,14 @@
  *  @param content 反馈内容
  *  @param hdId    hdId
  *  @param hdType  hdType
+ *  @param contact contact
  *  @param success 操作成功回调
  *  @param failure 操作失败回调
  */
 - (void)addFeedback:(NSString *)content
                hdId:(NSString *)hdId
              hdType:(NSUInteger)hdType
+            contact:(NSString *)contact
             success:(TYSuccessHandler)success
             failure:(TYFailureError)failure;
 

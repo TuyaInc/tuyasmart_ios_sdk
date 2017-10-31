@@ -20,6 +20,22 @@
 - (void)getMessageList:(void (^)(NSArray<TuyaSmartMessageListModel *> *list))success
                failure:(TYFailureError)failure;
 
+
+
+/**
+ 获取分页的消息列表
+
+ @param limit limit
+ @param offset offset 从0开始
+ @param success 操作成功回调，返回消息列表
+ @param failure 操作失败回调
+ */
+- (void)getMessageList:(NSInteger)limit
+                offset:(NSInteger)offset
+               success:(void (^)(NSArray<TuyaSmartMessageListModel *> *list))success
+               failure:(TYFailureError)failure;
+
+
 /**
  批量删除消息
 

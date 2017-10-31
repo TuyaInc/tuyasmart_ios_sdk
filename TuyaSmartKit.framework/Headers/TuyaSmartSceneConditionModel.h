@@ -66,6 +66,11 @@ typedef NS_ENUM(NSInteger, TYSceneConditionStatus)
 
 
 /**
+ 温度的单位
+ */
+@property (nonatomic, strong) NSDictionary *extraInfo;
+
+/**
  根据DPModel初始化实例
 
  @param model 条件或设备DP
