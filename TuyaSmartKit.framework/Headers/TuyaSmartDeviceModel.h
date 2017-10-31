@@ -77,6 +77,8 @@
 
 @property (nonatomic, strong) NSString     *uuid;
 
+
+@property (nonatomic, assign) long long time;
 #pragma mark - 涂鸦智能 控制面板相关
 
 @property (nonatomic, assign) BOOL         rnFind;

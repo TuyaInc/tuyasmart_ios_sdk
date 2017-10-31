@@ -57,6 +57,15 @@
             failure:(TYFailureError)failure;
 
 /**
+ 删除默认场景
+ 
+ @param success 操作成功回调
+ @param failure 操作失败回调
+ */
+- (void)deleteDefaultScene:(TYSuccessHandler)success
+                   failure:(TYFailureError)failure;
+
+/**
  执行场景
 
  @param success 操作成功回调

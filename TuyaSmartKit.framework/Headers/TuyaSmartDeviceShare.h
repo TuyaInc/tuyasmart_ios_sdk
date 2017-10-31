@@ -188,7 +188,22 @@
 
 
 /**
- 添加共享用户
+ 添加单个设备到共享用户 (增量)
+
+ @param countryCode 国家码
+ @param userAccount 账号
+ @param devIds 设备数组
+ @param success 操作成功回调
+ @param failure 操作失败回调
+ */
+- (void)addDeviceShareToMember:(NSString *)countryCode
+                   userAccount:(NSString *)userAccount
+                        devIds:(NSArray *)devIds
+                       success:(void(^)(TuyaSmartShareMemberModel *model))success
+                       failure:(TYFailureError)failure;
+
+/**
+ 添加共享用户 (全量)
 
  @param countryCode 国家码
  @param userAccount 账号

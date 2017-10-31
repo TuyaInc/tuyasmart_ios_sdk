@@ -28,7 +28,8 @@
 
 - (void)initData {
     WEAKSELF_AT
-    [[TuyaSmartSceneManager sharedInstance] getConditionList:^(NSArray<TuyaSmartSceneDPModel *> *list) {
+    [[TuyaSmartSceneManager sharedInstance] getConditionListWithFahrenheit:YES success:^(NSArray<TuyaSmartSceneDPModel *> *list) {
+        
         weakSelf_AT.dataSource = [NSMutableArray arrayWithArray:list];
         [weakSelf_AT reloadTable];
     } failure:^(NSError *error) {

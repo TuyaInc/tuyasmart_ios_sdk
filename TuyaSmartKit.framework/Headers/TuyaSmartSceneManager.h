@@ -27,12 +27,21 @@
              failure:(TYFailureError)failure;
 
 /**
+ 获取场景列表，包含默认场景
+ 
+ @param success 操作成功回调, 返回场景列表
+ @param failure 操作失败回调
+ */
+- (void)getAllSceneList:(void(^)(NSArray<TuyaSmartSceneModel *> *list))success
+             failure:(TYFailureError)failure;
+
+/**
  获取场景条件列表
  
  @param success 操作成功回调，返回场景条件列表
  @param failure 操作失败回调
  */
-- (void)getConditionList:(void(^)(NSArray<TuyaSmartSceneDPModel *> *list))success
+- (void)getConditionListWithFahrenheit:(BOOL)fahrenheit success:(void(^)(NSArray<TuyaSmartSceneDPModel *> *list))success
                  failure:(TYFailureError)failure;
 
 /**
