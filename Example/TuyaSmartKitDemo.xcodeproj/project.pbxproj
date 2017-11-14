@@ -1849,7 +1849,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ ${PRODUCT_BUNDLE_IDENTIFIER} == 'com.tuya.smart' -o ${PRODUCT_BUNDLE_IDENTIFIER} == 'com.Tuya.TuyaSmart.Hoc' ]\nthen\n    \"${PODS_ROOT}/Fabric/run\" be6d871e4850e5f2a0f54c77dedbe2d8a2260eda 74387f0e7c4a0ab2777abc38e42e79cb052c577f84f75155b681d8bbed468f01\nfi\n";
+			shellScript = "";
 		};
 		B6FA3C2D43CC3452F6A4AE53 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
