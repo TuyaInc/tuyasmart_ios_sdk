@@ -229,9 +229,13 @@
 
 
 #pragma mark - TuyaSmartDeviceDelegate
-- (void)deviceDpsUpdate:(NSDictionary *)dps {
+- (void)device:(TuyaSmartDevice *)device dpsUpdate:(NSDictionary *)dps {
     [self.tableView reloadData];
 }
+
+//- (void)deviceDpsUpdate:(NSDictionary *)dps {
+//    [self.tableView reloadData];
+//}
 
 
 #pragma mark - action
