@@ -41,7 +41,7 @@ PODS:
     - SDWebImage/Core (= 4.3.3)
   - SDWebImage/Core (4.3.3)
   - SWTableViewCell (0.3.7)
-  - TuyaSmartKit (1.15.2):
+  - TuyaSmartKit (1.15.3):
     - CocoaAsyncSocket
     - Mantle
     - MQTTClient (= 0.8.8)
@@ -77,7 +77,7 @@ SPEC CHECKSUMS:
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
   SWTableViewCell: 2a94aadc9d47b2b611fa064566bf57948b95b579
-  TuyaSmartKit: c75ba010946c987d136d984b6270fe649a328cb6
+  TuyaSmartKit: 70cf1d510ceb765d39ed60beef435bd64aaa5865
   UICKeyChainStore: 239558492fa260531a0774cfc611ea83a6eaff3a
 
 PODFILE CHECKSUM: f4cc8fd842c9a83b63835c3828595055bdad1ef8
