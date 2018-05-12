@@ -1612,7 +1612,6 @@
 				1B4CDBE51A85A75D00EF696E /* Frameworks */,
 				1B4CDBE61A85A75D00EF696E /* Resources */,
 				ADC549301BC8BF6B00A78338 /* ShellScript */,
-				A7B104270F5EDA8267B9D788 /* [CP] Embed Pods Frameworks */,
 				B6FA3C2D43CC3452F6A4AE53 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -1823,21 +1822,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A7B104270F5EDA8267B9D788 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TuyaSmartKitDemo/Pods-TuyaSmartKitDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		ADC549301BC8BF6B00A78338 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1862,7 +1846,7 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
