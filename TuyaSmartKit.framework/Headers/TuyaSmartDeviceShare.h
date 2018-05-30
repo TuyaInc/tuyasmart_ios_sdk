@@ -11,7 +11,7 @@
 #import "TuyaSmartShareDeviceModel.h"
 #import "TuyaSmartShareMemberDetailModel.h"
 #import "TuyaSmartReceiveMemberDetailModel.h"
-
+#import "TuyaSmartShareDeviceOwnerModel.h"
 
 
 ///  共享设备相关功能 （基于设备维度的共享）
@@ -218,5 +218,21 @@
            autoSharing:(BOOL)autoSharing
                success:(void(^)(TuyaSmartShareMemberModel *model))success
                failure:(TYFailureError)failure;
+
+
+
+/**
+ 查询共享设备的所有者信息
+
+ @param devId 设备Id
+ @param success 操作成功回调
+ @param failure 操作失败回调
+ */
+- (void)getDeviceSharedInfo:(NSString *)devId
+                    success:(void(^)(TuyaSmartShareDeviceOwnerModel *model))success
+                    failure:(TYFailureError)failure;
+
+
+
 
 @end
