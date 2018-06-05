@@ -205,6 +205,41 @@ FOUNDATION_EXPORT NSString * const TuyaSmartUserNotificationNetworkChanged;
 #pragma mark - 邮箱登录
 
 /**
+ *  发送验证码，用于邮箱注册
+ *
+ *  @param countryCode 国家区号
+ *  @param email       邮箱
+ *  @param success     操作成功回调
+ *  @param failure     操作失败回调
+ */
+- (void)sendVerifyCodeByRegisterEmail:(NSString *)countryCode
+                                email:(NSString *)email
+                              success:(TYSuccessHandler)success
+                              failure:(TYFailureError)failure;
+
+
+
+/**
+ *  使用验证码进行邮箱注册
+ *
+ *  @param countryCode 国家区号
+ *  @param email       邮箱
+ *  @param password    密码
+ *  @param code        验证码
+ *  @param success     操作成功回调
+ *  @param failure     操作失败回调
+ */
+- (void)registerByEmail:(NSString *)countryCode
+                  email:(NSString *)email
+               password:(NSString *)password
+                   code:(NSString *)code
+                success:(TYSuccessHandler)success
+                failure:(TYFailureError)failure;
+
+
+
+
+/**
  *  邮箱注册
  *
  *  @param countryCode 国家区号
@@ -436,6 +471,20 @@ FOUNDATION_EXPORT NSString * const TuyaSmartUserNotificationNetworkChanged;
  */
 - (void)getExperienceDeviceWithCloud:(void(^)(NSArray <TuyaSmartDeviceModel *> *list))success
                              failure:(TYFailureError)failure;
+
+
+
+
+/**
+ *  停用帐号（注销用户）
+ *  一周后账号才会永久停用并删除以下你账户中的所有信息，在此之前重新登录，则你的停用请求将被取消
+ *  @param success 操作成功回调
+ *  @param failure 操作失败回调
+ */
+- (void)cancelAccount:(TYSuccessHandler)success
+              failure:(TYFailureError)failure;
+
+
 
 #pragma mark -
 
