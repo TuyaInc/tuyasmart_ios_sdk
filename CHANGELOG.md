@@ -1,6 +1,8 @@
 # 涂鸦智能iOS SDK版本更新记录
 
+## 1.15.10 (2018-06-23)
 
+- remove MQTTClient
 
 ## 1.15.9 (2018-06-15)
 - remove non-public APIs
