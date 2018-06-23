@@ -13,5 +13,5 @@ target 'TuyaSmartKitDemo' do
     
     pod 'MJRefresh'
     pod 'SWTableViewCell'
-    
+
 end
