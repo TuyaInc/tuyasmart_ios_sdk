@@ -68,6 +68,33 @@ typedef NS_ENUM(NSInteger, TPErrorCode) {
     //超时错误
     TUYA_TIMEOUT_ERROR,
     
+    //分享给一个没有注册的账号
+    TUYA_USER_NOT_REG_INVITE,
+    
+    //分享给不同区域的账号
+    TUYA_USER_DIFFIENT_COUNTRY,
+    
+    //短信验证码错误
+    TUYA_USER_REG_PHONE_CODE_ERROR,
+    
+    //短信验证码已使用
+    TUYA_SMS_CODE_ALREADY_USED,
+    
+    //短信验证码已过期
+    TUYA_SMS_CODE_EXPIRED,
+    
+    //短信发送过多
+    TUYA_USER_CODE_TRY_TOO_MUCH,
+    
+    //短信验证码不存在
+    TUYA_SMS_CODE_NOT_FOUND,
+    
+    //账号或密码错误
+    TUYA_USER_PASSWD_WRONG,
+    
+    //邮箱验证码错误
+    TUYA_EMAIL_CODE_WRONG,
+    
 };
 
 #endif /* TuyaSmartKitConstants_h */
