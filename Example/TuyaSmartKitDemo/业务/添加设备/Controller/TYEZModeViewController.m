@@ -62,7 +62,19 @@
 }
 
 - (void)gotoSystemSetting {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"prefs:root=WIFI"]];
+    [[UIApplication sharedApplication] openURL:[self prefsUrlWithQuery:@{@"root": @"WIFI"}]];
+}
+
+- (NSURL *)prefsUrlWithQuery:(NSDictionary *)query {
+    NSData *data = [[NSData alloc] initWithBase64EncodedString:@"QXBwLVByZWZz" options:0];
+    NSString *scheme = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    NSMutableString *url = [NSMutableString stringWithString:scheme];
+    for (int i = 0; i < query.allKeys.count; i ++) {
+        NSString *key = [query.allKeys objectAtIndex:i];
+        NSString *value = [query valueForKey:key];
+        [url appendFormat:@"%@%@=%@", (i == 0 ? @":" : @"?"), key, value];
+    }
+    return [NSURL URLWithString:url];
 }
 
 - (void)initDefaultNetworkSetting {

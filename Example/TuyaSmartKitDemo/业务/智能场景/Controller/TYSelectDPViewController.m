@@ -423,15 +423,19 @@
 
 - (void)gotoSystemLocationSetting {
     
-    NSURL *url = [NSURL URLWithString:@"App-Prefs:root=Privacy&path=LOCATION"];
-    if ([[[UIDevice currentDevice] systemVersion] floatValue] < 10.0) {
-        [[UIApplication sharedApplication] openURL:url];
-    } else {
-        [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:^(BOOL success) {
-            ;
-        }];
+    [[UIApplication sharedApplication] openURL:[self prefsUrlWithQuery:@{@"root": @"Privacy", @"path": @"LOCATION"}]];
+}
+
+- (NSURL *)prefsUrlWithQuery:(NSDictionary *)query {
+    NSData *data = [[NSData alloc] initWithBase64EncodedString:@"QXBwLVByZWZz" options:0];
+    NSString *scheme = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    NSMutableString *url = [NSMutableString stringWithString:scheme];
+    for (int i = 0; i < query.allKeys.count; i ++) {
+        NSString *key = [query.allKeys objectAtIndex:i];
+        NSString *value = [query valueForKey:key];
+        [url appendFormat:@"%@%@=%@", (i == 0 ? @":" : @"?"), key, value];
     }
-    
+    return [NSURL URLWithString:url];
 }
 
 @end
