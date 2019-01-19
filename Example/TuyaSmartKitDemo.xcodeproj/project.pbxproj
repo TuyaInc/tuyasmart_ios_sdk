@@ -356,6 +356,7 @@
 		1BF05B4E1B42803B00B3B8FC /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		1BFE2B7E1AD76A0B000EBA2C /* ViewControllerUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerUtils.h; sourceTree = "<group>"; };
 		1BFE2B7F1AD76A0B000EBA2C /* ViewControllerUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerUtils.m; sourceTree = "<group>"; };
+		6571541B21F07A3E0068D33A /* TuyaSmartKitDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TuyaSmartKitDemo.entitlements; sourceTree = "<group>"; };
 		65F4A6AD1CE32C3F00977B3F /* ty_list_empty@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ty_list_empty@2x.png"; sourceTree = "<group>"; };
 		65F4A6AE1CE32C3F00977B3F /* ty_list_empty@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ty_list_empty@3x.png"; sourceTree = "<group>"; };
 		6D1766D21CB74AEE006277AC /* MenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuItem.h; sourceTree = "<group>"; };
@@ -850,6 +851,7 @@
 		1B4CDBEA1A85A75D00EF696E /* TuyaSmartKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				6571541B21F07A3E0068D33A /* TuyaSmartKitDemo.entitlements */,
 				6D1A22BE1E4AFE3B003960BE /* TuyaSmartKit.podspec */,
 				AD95D6871C9D299C00E6AD20 /* AppDelegate.h */,
 				AD95D6861C9D299C00E6AD20 /* AppDelegate.m */,
@@ -1636,6 +1638,9 @@
 						CreatedOnToolsVersion = 6.1.1;
 						DevelopmentTeam = 94JFPTRDN5;
 						SystemCapabilities = {
+							com.apple.AccessWiFi = {
+								enabled = 1;
+							};
 							com.apple.BackgroundModes = {
 								enabled = 0;
 							};
@@ -2133,6 +2138,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = TuyaSmartKitDemo/TuyaSmartKitDemo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 94JFPTRDN5;
@@ -2146,7 +2152,7 @@
 				);
 				INFOPLIST_FILE = TuyaSmartKitDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.TuyaSmartKit-Example";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tuya.smart.sdk;
 				PRODUCT_NAME = TuyaSmartKitDemo;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -2161,6 +2167,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = TuyaSmartKitDemo/TuyaSmartKitDemo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = 94JFPTRDN5;
@@ -2174,7 +2181,7 @@
 				);
 				INFOPLIST_FILE = TuyaSmartKitDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.TuyaSmartKit-Example";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tuya.smart.sdk;
 				PRODUCT_NAME = TuyaSmartKitDemo;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
