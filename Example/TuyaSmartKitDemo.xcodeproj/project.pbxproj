@@ -98,7 +98,6 @@
 		6D6C1F7E1D34C94200F652D6 /* TPTextFieldView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6C1F3A1D34C94200F652D6 /* TPTextFieldView.m */; };
 		6D6C1F7F1D34C94200F652D6 /* TPTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6C1F3C1D34C94200F652D6 /* TPTextView.m */; };
 		6D6C1F801D34C94200F652D6 /* TPTopBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6C1F3E1D34C94200F652D6 /* TPTopBarView.m */; };
-		6D6C1F811D34C94200F652D6 /* TPWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6C1F421D34C94200F652D6 /* TPWebViewController.m */; };
 		6D6C1F821D34C94200F652D6 /* TPAnimations.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6C1F451D34C94200F652D6 /* TPAnimations.m */; };
 		6D6C1F831D34C94200F652D6 /* TPCountryCodeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6C1F471D34C94200F652D6 /* TPCountryCodeUtils.m */; };
 		6D6C1F841D34C94200F652D6 /* TPProgressUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6C1F491D34C94200F652D6 /* TPProgressUtils.m */; };
@@ -436,8 +435,6 @@
 		6D6C1F3E1D34C94200F652D6 /* TPTopBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPTopBarView.m; sourceTree = "<group>"; };
 		6D6C1F3F1D34C94200F652D6 /* TPViewConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPViewConstants.h; sourceTree = "<group>"; };
 		6D6C1F401D34C94200F652D6 /* TPViews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPViews.h; sourceTree = "<group>"; };
-		6D6C1F411D34C94200F652D6 /* TPWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPWebViewController.h; sourceTree = "<group>"; };
-		6D6C1F421D34C94200F652D6 /* TPWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPWebViewController.m; sourceTree = "<group>"; };
 		6D6C1F441D34C94200F652D6 /* TPAnimations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPAnimations.h; sourceTree = "<group>"; };
 		6D6C1F451D34C94200F652D6 /* TPAnimations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPAnimations.m; sourceTree = "<group>"; };
 		6D6C1F461D34C94200F652D6 /* TPCountryCodeUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPCountryCodeUtils.h; sourceTree = "<group>"; };
@@ -1038,8 +1035,6 @@
 				AD53CCF81F63CF82002FF245 /* UIColor+TPCategory.h */,
 				AD53CCF91F63CF82002FF245 /* UIColor+TPCategory.m */,
 				6D6C1F401D34C94200F652D6 /* TPViews.h */,
-				6D6C1F411D34C94200F652D6 /* TPWebViewController.h */,
-				6D6C1F421D34C94200F652D6 /* TPWebViewController.m */,
 				6D6C1F431D34C94200F652D6 /* Utils */,
 			);
 			path = Views;
@@ -1656,6 +1651,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 				"zh-Hans",
@@ -1932,7 +1928,6 @@
 				AD53CCF41F63CE1E002FF245 /* TPBaseLayout.m in Sources */,
 				10F981541F67FB7000B35165 /* TYSelectConditionViewController.m in Sources */,
 				10F9814A1F67FA5F00B35165 /* TYTextFieldTableViewCell.m in Sources */,
-				6D6C1F811D34C94200F652D6 /* TPWebViewController.m in Sources */,
 				ADD4505D1CAA70010037CADF /* MobileBindingViewController.m in Sources */,
 				6D93CA011CAA7368009D2C7D /* TYActivatorFinishViewController.m in Sources */,
 				6D93C9BF1CAA2820009D2C7D /* TYEZPrepareView.m in Sources */,

@@ -12,7 +12,6 @@
 #import "TYSearchOneDeviceController.h"
 #import "TYActivatorFinishViewController.h"
 #import "TYContectToAPViewController.h"
-#import "TPWebViewController.h"
 #import "TPNavigationController.h"
 #import "TYAPPrepareViewController.h"
 
@@ -67,9 +66,9 @@
 }
 
 + (void)gotoWebViewController:(NSString *)title url:(NSString *)url from:(UIViewController *)from {
-    TPWebViewController *webViewController = [[TPWebViewController alloc] initWithUrlString:url];
-    webViewController.title = title;
-    [self pushViewController:webViewController from:from];
+//    TPWebViewController *webViewController = [[TPWebViewController alloc] initWithUrlString:url];
+//    webViewController.title = title;
+//    [self pushViewController:webViewController from:from];
 }
 
 + (void)presentViewController:(UIViewController *)toController from:(UIViewController *)fromController {
